@@ -44,7 +44,7 @@
         "url": "AlteredCraft/claude-code-plugins",
         "path": "plugins/artifact-workflow",
         "ref": "main",
-        "sha": "bee1e93db72ed4b29288e6a8b4234b5b9264e73d"
+        "sha": "c0bcc8b538c2c3843fb4583eb2d66ce7983a0616"
       },
       "homepage": "https://github.com/AlteredCraft/claude-code-plugins/tree/main/plugins/artifact-workflow"
     },
@@ -55,7 +55,8 @@
         "source": "git-subdir",
         "url": "barnburner121/claude-plugin-marketplace",
         "path": "generated-plugins/access-review",
-        "ref": "main"
+        "ref": "main",
+        "sha": "6470b3dbdf66767d531844b597ddff183f4eb146"
       },
       "homepage": "https://github.com/barnburner121/claude-plugin-marketplace"
     },
@@ -343,7 +344,8 @@
         "source": "git-subdir",
         "url": "javiarmesto/ALDC-AL-Development-Collection-for-GitHub-Copilot",
         "path": "claude-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "b6f051bbe6e3800f01f7fdab9ec75915e460f878"
       },
       "homepage": "https://github.com/javiarmesto/ALDC-AL-Development-Collection-for-GitHub-Copilot"
     },
@@ -375,7 +377,8 @@
         "source": "git-subdir",
         "url": "https://github.com/awslabs/agent-plugins.git",
         "path": "plugins/amazon-location-service",
-        "ref": "main"
+        "ref": "main",
+        "sha": "59cde6d0e0f1981c8ca0178639eb3b7e54cee169"
       },
       "homepage": "https://github.com/awslabs/agent-plugins"
     },
@@ -406,7 +409,8 @@
         "source": "git-subdir",
         "url": "AnamneseAI/anamnese-plugin-marketplace",
         "path": "anamnese-core",
-        "ref": "main"
+        "ref": "main",
+        "sha": "5c8449ca5762dd46941bc8fa3b354d8306386263"
       },
       "homepage": "https://anamneseai.app/"
     },
@@ -468,7 +472,8 @@
         "source": "git-subdir",
         "url": "apiiro/mcp-server",
         "path": ".cursor-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "cf196cc2e700935842778a7f925560abf3f29281"
       },
       "homepage": "https://github.com/apiiro/mcp-server/tree/main/.cursor-plugin"
     },
@@ -1930,7 +1935,8 @@
         "source": "git-subdir",
         "url": "Larens94/codedna",
         "path": "codedna-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "6d268f550cb28c14895d45fe9335a7152cca3d25"
       },
       "homepage": "https://codedna.silicoreautomation.space/install.html"
     },
@@ -2053,7 +2059,8 @@
         "source": "git-subdir",
         "url": "eriknewton/concordia-protocol",
         "path": "plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "3eb3f85d08efe699bf177732de682efa40878a37"
       },
       "homepage": "https://github.com/eriknewton/concordia-protocol"
     },
@@ -2196,7 +2203,8 @@
         "source": "git-subdir",
         "url": "xiaolin26/Corivo",
         "path": "corivo-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "e0d56ab86dab55da6e53d53f6f545ec0996c7ce4"
       },
       "homepage": "https://github.com/xiaolin26/Corivo"
     },
@@ -2334,7 +2342,8 @@
         "source": "git-subdir",
         "url": "Barnett-Studios/cxpak",
         "path": "plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "b1c011ceac3b08bda490e7ac44b0080acb3f9892"
       },
       "homepage": "https://github.com/Barnett-Studios/cxpak"
     },
@@ -2396,7 +2405,8 @@
         "source": "git-subdir",
         "url": "AmerSarhan/darce",
         "path": "claude-code-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "3580410c226467a462c9933a36231911c64aa7e1"
       },
       "homepage": "https://darce.dev"
     },
@@ -2519,7 +2529,8 @@
         "source": "git-subdir",
         "url": "NethermindEth/defi-skills",
         "path": ".claude-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "ed4002c8b45ca6f5c47738c622f7c63c6acb7d1d"
       },
       "homepage": "https://defi-skills.nethermind.io/"
     },
@@ -3027,7 +3038,8 @@
         "source": "git-subdir",
         "url": "barnburner121/claude-plugin-marketplace",
         "path": "generated-plugins/env-guardian",
-        "ref": "main"
+        "ref": "main",
+        "sha": "5b36995a83264b2c59d39137bdfcb721f4c5bb3b"
       },
       "homepage": "https://github.com/barnburner121/claude-plugin-marketplace"
     },
@@ -3108,7 +3120,8 @@
         "source": "git-subdir",
         "url": "expo/skills",
         "path": "plugins/expo",
-        "ref": "main"
+        "ref": "main",
+        "sha": "edc2afb4f32c0b645d14c91c37e89e651016722a"
       },
       "homepage": "https://github.com/expo/skills/blob/main/plugins/expo/README.md"
     },
@@ -3351,7 +3364,8 @@
         "source": "git-subdir",
         "url": "misfitdev/claude-plugins",
         "path": "plugins/frank-grimes",
-        "ref": "main"
+        "ref": "main",
+        "sha": "822b973ceea4662b092b4476171f02cb3a41c267"
       },
       "homepage": "https://github.com/misfitdev/claude-plugins/tree/main/plugins/frank-grimes"
     },
@@ -3404,7 +3418,8 @@
         "source": "git-subdir",
         "url": "awslabs/agent-plugins",
         "path": "plugins/migration-to-aws",
-        "ref": "main"
+        "ref": "main",
+        "sha": "c51ed0d58c7f542293348aaa56636e7a30777dc0"
       },
       "homepage": "https://github.com/awslabs/agent-plugins/tree/main/plugins/migration-to-aws"
     },
@@ -3415,7 +3430,8 @@
         "source": "git-subdir",
         "url": "yn01/claude-plugins",
         "path": "genpptx",
-        "ref": "main"
+        "ref": "main",
+        "sha": "646368548add6433ed9dd676fdbcc7d65f97a863"
       },
       "homepage": "https://github.com/yn01/claude-plugins/tree/main/genpptx"
     },
@@ -3800,7 +3816,8 @@
         "source": "git-subdir",
         "url": "jackzhaojin/ai-builder-kit",
         "path": "plugins/hlx-admin-api-executor-guarded",
-        "ref": "main"
+        "ref": "main",
+        "sha": "cfb0f590ffb5083eddd4e1d3cf6dc224d05ece90"
       },
       "homepage": "https://github.com/jackzhaojin/ai-builder-kit/tree/main/plugins/hlx-admin-api-executor-guarded"
     },
@@ -3811,7 +3828,8 @@
         "source": "git-subdir",
         "url": "productstein/holomime",
         "path": "integrations/claude-code-skill",
-        "ref": "main"
+        "ref": "main",
+        "sha": "0f270af22e0b68a14c49d94adab844cc1b1af37d"
       },
       "homepage": "https://holomime.dev"
     },
@@ -4024,7 +4042,8 @@
         "source": "git-subdir",
         "url": "ozturkumut/contextro",
         "path": "insight-badger",
-        "ref": "main"
+        "ref": "main",
+        "sha": "3eeec4b7265a4fb0832c0bca73df172c509db702"
       },
       "homepage": "https://www.insightbadger.com"
     },
@@ -4494,7 +4513,8 @@
         "source": "git-subdir",
         "url": "apardawala/ai-navigator",
         "path": "lookout",
-        "ref": "main"
+        "ref": "main",
+        "sha": "67598e1e4e2b7c3a69d8498eaa327fd3bbafc152"
       },
       "homepage": "https://github.com/apardawala/ai-navigator/blob/main/lookout/README.md"
     },
@@ -4505,7 +4525,8 @@
         "source": "git-subdir",
         "url": "Bluecraft-AI/machfive-skills",
         "path": "cold-email",
-        "ref": "main"
+        "ref": "main",
+        "sha": "e58ece0c1b5d5c9d4ef1a6ab88e76195fd091b9b"
       },
       "homepage": "https://machfive.io"
     },
@@ -4516,7 +4537,8 @@
         "source": "git-subdir",
         "url": "apardawala/ai-navigator",
         "path": "magellan",
-        "ref": "main"
+        "ref": "main",
+        "sha": "67598e1e4e2b7c3a69d8498eaa327fd3bbafc152"
       },
       "homepage": "https://github.com/apardawala/ai-navigator/blob/main/magellan/README.md"
     },
@@ -4587,7 +4609,8 @@
         "source": "git-subdir",
         "url": "mapbox/mapbox-agent-skills",
         "path": ".claude-plugin/plugin.json",
-        "ref": "main"
+        "ref": "main",
+        "sha": "ca6db8f0528ca0415d51bfaf2c4c10f83277e726"
       },
       "homepage": "https://mapbox.com"
     },
@@ -4724,7 +4747,7 @@
         "url": "medusajs/medusa-claude-plugins",
         "path": "plugins/medusa-dev",
         "ref": "main",
-        "sha": "48385888e6fa424fd290f81bdf7a4e2d0b63649c"
+        "sha": "fe387b2e946c161be3d0fb86879f3a9c4fe2e6cf"
       },
       "homepage": "https://medusajs.com/"
     },
@@ -5142,7 +5165,8 @@
         "source": "git-subdir",
         "url": "JPVT1977/n360-marketplace",
         "path": "plugins/n360-engineering",
-        "ref": "main"
+        "ref": "main",
+        "sha": "463b5b5a3fcff6e8b440e0bf9281a5edf8bcd2a9"
       },
       "homepage": "https://github.com/JPVT1977/n360-marketplace"
     },
@@ -5265,7 +5289,8 @@
         "source": "git-subdir",
         "url": "HomenShum/nodebench-ai",
         "path": "packages/mcp-local/claude-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "034e3d29fa74e909ce00d7796d3eae452fd57712"
       },
       "homepage": "https://nodebenchai.com"
     },
@@ -5926,7 +5951,8 @@
         "source": "git-subdir",
         "url": "pskoett/pskoett-ai-skills",
         "path": "plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "157ed53e913cb4e0bf9692c332868bad61e5dd52"
       },
       "homepage": "https://github.com/pskoett/pskoett-ai-skills/tree/main/plugin"
     },
@@ -6001,6 +6027,17 @@
         "sha": "51211c2ebc43e2d266ed19ba623150bab4c9d3b0"
       },
       "homepage": "https://github.com/robhowley/claude-py-pit"
+    },
+    {
+      "name": "pydantic-ai",
+      "description": "Write accurate Pydantic AI code from the start. Up-to-date patterns, decision trees, and common gotchas for agents, tools, structured output, streaming, and multi-agent apps.",
+      "source": {
+        "source": "git-subdir",
+        "url": "pydantic/skills",
+        "path": "plugins/ai",
+        "ref": "main"
+      },
+      "homepage": "https://ai.pydantic.dev"
     },
     {
       "name": "python-remote-debug-skill",
@@ -6259,7 +6296,8 @@
         "source": "git-subdir",
         "url": "xoai/sage",
         "path": "tools/sage-claude-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "0df86c835f2adab871539efd0366e0d9e6ed951d"
       },
       "homepage": "https://github.com/xoai/sage"
     },
@@ -6270,7 +6308,8 @@
         "source": "git-subdir",
         "url": "eriknewton/sanctuary-framework",
         "path": "plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "feeea66f214e4179b726d9efa791a66a89b24207"
       },
       "homepage": "https://github.com/eriknewton/sanctuary-framework"
     },
@@ -6482,7 +6521,8 @@
         "source": "git-subdir",
         "url": "getsentry/cli",
         "path": "plugins/sentry-cli",
-        "ref": "main"
+        "ref": "main",
+        "sha": "716e2bad9c6162cb3c933439417aabd2e1e84ae7"
       },
       "homepage": "https://cli.sentry.dev/"
     },
@@ -6904,7 +6944,8 @@
         "source": "git-subdir",
         "url": "fjpulidop/specrails-core",
         "path": "specrails-plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "b2a4968c0011f631d480f32e7897d2fdeff3e66d"
       },
       "homepage": "https://specrails.dev/"
     },
@@ -7426,7 +7467,8 @@
         "source": "git-subdir",
         "url": "move38studios/thinkfu",
         "path": "plugin",
-        "ref": "main"
+        "ref": "main",
+        "sha": "2892d768e2bda0fd0a52fa4b181199b8cf2da61a"
       },
       "homepage": "https://thinkfu.org"
     },
@@ -8243,7 +8285,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/XPOZpublic/xpoz-claude-code-plugins.git",
-        "sha": "23b9d2ee94379146d0577bab17df7451396d2321"
+        "sha": "a00d1e91d772588f1ce992a7f6555285e4d53c56"
       },
       "homepage": "https://github.com/XPOZpublic/xpoz-claude-code-plugins"
     },
@@ -8254,7 +8296,8 @@
         "source": "git-subdir",
         "url": "MSApps-Mobile/claude-plugins",
         "path": "plugins/youtube-transcriber",
-        "ref": "main"
+        "ref": "main",
+        "sha": "88bf5d1e6e76cd3ff966103e3d273fcf797bd638"
       },
       "homepage": "https://msapps.mobi/plugins"
     },
