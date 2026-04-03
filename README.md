@@ -53,5 +53,5 @@ Each plugin is distributed under its own license. See the plugin's source reposi
 
 ## Related
 
-- [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — Anthropic-verified & reviewed plugins for claude code
-- [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — Anthropic-verified & reviewed knowledge-work plugins for cowork
+- [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) — Anthropic-verified & reviewed plugins for Claude Code
+- [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — Anthropic-verified & reviewed knowledge-work plugins for Cowork
