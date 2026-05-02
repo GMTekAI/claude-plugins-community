@@ -6,6 +6,7 @@ source "$VALIDATE_LIB"
 
 : "${MARKETPLACE_PATH:?}"
 : "${MAX_BUMPS:?}"
+[[ "$MAX_BUMPS" =~ ^[0-9]+$ ]] || die "max-bumps must be a non-negative integer (got: $MAX_BUMPS)"
 : "${ALLOWED_HOSTS:?}"
 : "${PR_BRANCH:?}"
 : "${BASE_BRANCH:?}"
