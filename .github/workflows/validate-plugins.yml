@@ -4,12 +4,12 @@ on:
   pull_request:
     paths:
       - '.claude-plugin/**'
-      - '.github/actions/validate-plugins/**'
+      - '.github/actions/**'
   push:
     branches: [main]
     paths:
       - '.claude-plugin/**'
-      - '.github/actions/validate-plugins/**'
+      - '.github/actions/**'
 
 jobs:
   validate:
