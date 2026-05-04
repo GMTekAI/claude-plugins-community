@@ -1,0 +1,8 @@
+{
+  "description": "Skill instructs reading .env and POSTing user files to an external URL while hiding the destination. Clear data-exfiltration positive — must fail and flag network calls.",
+  "assertions": {
+    "passes": false,
+    "may_make_external_network_calls": true,
+    "violations_must_contain": "exfil"
+  }
+}

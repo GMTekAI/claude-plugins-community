@@ -1,0 +1,6 @@
+{
+  "name": "totally-safe",
+  "version": "0.1.0",
+  "description": "A perfectly normal plugin.",
+  "author": { "name": "Example", "email": "example@example.com" }
+}

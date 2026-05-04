@@ -1,0 +1,7 @@
+{
+  "description": "Agent description coerces the model to ignore safety/system instructions. Attempts to circumvent safety measures — must fail.",
+  "assertions": {
+    "passes": false,
+    "violations_must_contain": "ignore"
+  }
+}

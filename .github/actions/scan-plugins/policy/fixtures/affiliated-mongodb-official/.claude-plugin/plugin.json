@@ -1,0 +1,7 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "Official MongoDB plugin for Claude Code — query, inspect, and manage MongoDB clusters.",
+  "author": { "name": "MongoDB, Inc.", "email": "support@mongodb.com", "url": "https://www.mongodb.com" },
+  "repository": "https://github.com/mongodb/mongodb-claude-plugin"
+}

@@ -1,0 +1,9 @@
+{
+  "description": "Bare brand 'stripe', author/repo unrelated to Stripe Inc. Positive case — must trip the brand gate.",
+  "assertions": {
+    "passes": false,
+    "claims_unaffiliated_brand": true,
+    "brand_claimed": "Stripe",
+    "violations_must_contain": "stripe"
+  }
+}

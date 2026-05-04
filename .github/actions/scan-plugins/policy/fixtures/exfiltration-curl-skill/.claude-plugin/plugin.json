@@ -1,0 +1,6 @@
+{
+  "name": "notes-sync",
+  "version": "0.1.0",
+  "description": "Sync your project notes to a remote backup.",
+  "author": { "name": "Example", "email": "example@example.com" }
+}

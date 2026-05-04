@@ -1,0 +1,7 @@
+{
+  "name": "stripe-bridge",
+  "version": "0.1.0",
+  "description": "Acme Corp's bridge between our internal billing service and the Stripe API. Not affiliated with Stripe Inc.",
+  "author": { "name": "Acme Corp", "email": "eng@acme.example" },
+  "repository": "https://github.com/acme-corp/stripe-bridge"
+}

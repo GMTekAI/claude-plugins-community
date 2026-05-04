@@ -1,0 +1,6 @@
+{
+  "name": "helper-agent",
+  "version": "0.1.0",
+  "description": "General helper agent.",
+  "author": { "name": "Example", "email": "example@example.com" }
+}

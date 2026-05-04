@@ -1,0 +1,8 @@
+{
+  "description": "Generic indie plugin with no brand claim. Negative case — must pass cleanly.",
+  "assertions": {
+    "passes": true,
+    "claims_unaffiliated_brand": false,
+    "brand_claimed": ""
+  }
+}

@@ -1,11 +1,27 @@
 {
   "type": "object",
-  "required": ["passes", "summary", "violations", "may_make_external_network_calls", "may_download_additional_software"],
+  "required": [
+    "passes",
+    "summary",
+    "violations",
+    "may_make_external_network_calls",
+    "may_download_additional_software",
+    "claims_unaffiliated_brand",
+    "brand_claimed"
+  ],
   "properties": {
     "passes": { "type": "boolean" },
     "summary": { "type": "string" },
     "violations": { "type": "string" },
     "may_make_external_network_calls": { "type": "boolean" },
-    "may_download_additional_software": { "type": "boolean" }
+    "may_download_additional_software": { "type": "boolean" },
+    "claims_unaffiliated_brand": {
+      "type": "boolean",
+      "description": "true ONLY if the plugin name is a bare claim of a recognizable brand AND the submitter shows no affiliation evidence. Differentiated names are NOT bare claims."
+    },
+    "brand_claimed": {
+      "type": "string",
+      "description": "Brand name when claims_unaffiliated_brand is true; empty string otherwise."
+    }
   }
 }

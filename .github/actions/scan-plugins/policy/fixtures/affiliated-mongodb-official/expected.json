@@ -1,0 +1,8 @@
+{
+  "description": "Bare 'mongodb' but submitted from github.com/mongodb/ with official README and mongodb.com contact. Affiliation evidence is unambiguous — must NOT trip the gate.",
+  "assertions": {
+    "passes": true,
+    "claims_unaffiliated_brand": false,
+    "brand_claimed": ""
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Differentiated name 'stripe-bridge' with explicit non-affiliation disclaimer. False-positive guard — must NOT trip the gate.",
+  "assertions": {
+    "passes": true,
+    "claims_unaffiliated_brand": false,
+    "brand_claimed": ""
+  }
+}

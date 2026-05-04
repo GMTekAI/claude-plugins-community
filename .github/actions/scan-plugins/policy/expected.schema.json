@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy fixture expected output",
+  "description": "Schema for fixtures/*/expected.json. additionalProperties:false catches typos in assertion keys before any Claude call.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assertions"],
+  "properties": {
+    "description": { "type": "string" },
+    "assertions": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "passes": { "type": "boolean" },
+        "claims_unaffiliated_brand": { "type": "boolean" },
+        "brand_claimed": { "type": "string" },
+        "may_make_external_network_calls": { "type": "boolean" },
+        "may_download_additional_software": { "type": "boolean" },
+        "violations_must_contain": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

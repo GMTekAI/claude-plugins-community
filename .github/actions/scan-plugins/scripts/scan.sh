@@ -133,6 +133,14 @@ while IFS= read -r ext; do
   passes="$(jq -r '.passes' <<<"$verdict")"
   summary="$(jq -r '.summary' <<<"$verdict")"
   violations="$(jq -r '.violations' <<<"$verdict")"
+  brand_flag="$(jq -r '.claims_unaffiliated_brand // false' <<<"$verdict")"
+  brand="$(jq -r '.brand_claimed // ""' <<<"$verdict")"
+
+  # Defense-in-depth: brand gate trips even if the model left passes=true.
+  if [[ "$brand_flag" == "true" ]]; then
+    passes="false"
+    [[ -n "$violations" ]] || violations="plugin name claims unaffiliated brand '$brand'"
+  fi
 
   scanned="$(jq -c --arg n "$name" --argjson v "$verdict" '. + [($v + {name:$n})]' <<<"$scanned")"
 
