@@ -9910,8 +9910,10 @@
       "name": "mem0",
       "description": "Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation history, then search, update, or forget them as new information comes in. Useful for coding assistants that remember your codebase conventions, support agents that recall customer history, research workflows that build context over weeks, or any use case where Claude resets back to zero today. Memories are scoped per user, agent, or session. Cloud-hosted, no local install.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/mem0ai/mem0.git",
+        "path": "mem0-plugin",
+        "ref": "main",
         "sha": "54a03cc7217c22afdc6153a9e61cc6413416001f"
       },
       "homepage": "https://docs.mem0.ai/integrations/claude-code"
