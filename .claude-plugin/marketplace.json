@@ -588,7 +588,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/agent-sh/agnix.git",
-        "sha": "c9e47613dc1d1eb63fb7f42ceced8f06df5b326e"
+        "sha": "5f561b29d7f2db9cfc048bcbe2f48f348b4b1b1e"
       },
       "homepage": "https://agent-sh.github.io/agnix/"
     },
@@ -1241,6 +1241,16 @@
       "homepage": "https://github.com/aptos-labs/aptos-agent-skills"
     },
     {
+      "name": "arcanum",
+      "description": "Advanced debugging, code review, deep research, technical documentation, creative ideation, and semi-autonomous development workflows with parallel theory validation, team-based research, war room investigation, root cause analysis, PR review assistance, elite technical writing, and Maestro development pipeline",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/burnsbert/claude-arcanum.git",
+        "sha": "57d56010d097169805e0d39e79a5bd4ec4ab011d"
+      },
+      "homepage": "https://github.com/burnsbert/claude-arcanum"
+    },
+    {
       "name": "arcdeck",
       "description": "Convert academic PDF papers into polished, narrative-driven PowerPoint presentations using 13 specialized AI agents. Based on discourse parsing with multi-agent critique-revise-judge refinement loops and aesthetic design principles.",
       "source": {
@@ -1783,6 +1793,16 @@
         "sha": "d52bad058977385ddce171958b15243bbe8c53c6"
       },
       "homepage": "https://github.com/qinnovates/bci-security"
+    },
+    {
+      "name": "bedrock",
+      "description": "Second Brain automation for Obsidian vaults — entity management, ingestion, compression, and sync via Claude Code skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/iurykrieger/claude-bedrock.git",
+        "sha": "7cac16ceb6064b7fbb4ec45c3ad4be31b9d9c9f0"
+      },
+      "homepage": "https://claude-bedrock.vercel.app/"
     },
     {
       "name": "bells-and-whistles",
@@ -5179,7 +5199,7 @@
         "url": "https://github.com/microsoft/Dataverse-skills.git",
         "path": ".github/plugins/dataverse",
         "ref": "main",
-        "sha": "03e391fcf0037128ade197d76b2ff34f76c24cac"
+        "sha": "b2f21c1eec233d1b20e89618c3ffcb25cfdd55e4"
       },
       "homepage": "https://github.com/microsoft/Dataverse-skills"
     },
@@ -5770,7 +5790,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/lujiafa/houtu-project-skills.git",
-        "sha": "840dff1cdd19741c6dcec369a13d5f9b0efa0ff5"
+        "sha": "8653efb6d718d449609e7814aaccdd0ba1dbbbf1"
       },
       "homepage": "https://github.com/lujiafa/houtu-project-skills/blob/main/README.md"
     },
@@ -5780,7 +5800,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/oleg-koval/docs-index-keeper.git",
-        "sha": "364e1cef2f7de7fb85b4d51194ce1ce86a97c48b"
+        "sha": "bdceece6b81645c8f1f72bbe34f9e7a17c644e39"
       },
       "homepage": "https://oleg-koval.github.io/docs-index-keeper/"
     },
@@ -7788,6 +7808,16 @@
       "homepage": "https://www.npmjs.com/package/hipocampus"
     },
     {
+      "name": "hit-em-with-the-docs",
+      "description": "Self-managing documentation system with a 15-domain hierarchy, 22-field metadata schema, intelligent pattern discovery, and GitHub Actions automation. Generates and maintains hierarchical documentation with rich metadata, auto-discovers undocumented patterns, and self-heals stale or missing docs. Available as both a CLI tool and GitHub Action for CI/CD integration.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/TheGlitchKing/hit-em-with-the-docs.git",
+        "sha": "91f1278b5f44d22add082a0df97c642f9bea36dd"
+      },
+      "homepage": "https://github.com/TheGlitchKing/hit-em-with-the-docs"
+    },
+    {
       "name": "hive",
       "description": "Bio-inspired swarm orchestrator for Claude Code. Breaks tasks into parallel subtasks, coordinates agents through stigmergy, learns across sessions with pheromone scoring, and scales concurrency adaptively. 16 mechanisms from ant colonies, honeybee swarms, and AI research.",
       "source": {
@@ -9268,7 +9298,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/verivus-oss/llm-cli-gateway.git",
-        "sha": "84608739ef5e6d306d247557fcefbffc4751dd1b"
+        "sha": "c4d2e9b1f1f2489efe244f0cc5731eb2ee43a0bc"
       },
       "homepage": "https://github.com/verivus-oss/llm-cli-gateway#readme"
     },
@@ -10951,6 +10981,16 @@
       "homepage": "https://mjbae.github.io/novel-studio/#en"
     },
     {
+      "name": "numeric-mcp-toolkit",
+      "description": "Skills for the Numeric's MCP.  Purpose-built workflows for accounting teams — rec workbooks, department anomaly scanning, cross-workspace close dashboards, audit evidence exports, close pulse reporting,  consolidated flux commentary, financial metrics, clean report exports, and executive/board-ready reports.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/geoff-lew/numeric-toolkit.git",
+        "sha": "7404c6c5c5b3961ebfa6b8926a27c7aacdcd8f4c"
+      },
+      "homepage": "https://numeric.io"
+    },
+    {
       "name": "nxtg-forge",
       "description": "Structural governance for AI coding agents. 33 agents, 23 commands, 32 skills, 8 MCP governance tools, and 7 hooks that enforce a core rule: verifier.agent != task.agent — no agent grades its own homework.\n\nAdds health scoring (A-F grades across 8 dimensions), live drift detection, quality gates, cross-agent verification, and shared memory to any Claude Code project. Optional Rust orchestrator (4MB binary) for file locking and multi-tool coordination across Claude Code, Codex CLI, and Gemini CLI.\n\n4,579 tests across the trilogy. Built from 23 years of global program delivery. MIT licensed.",
       "source": {
@@ -11036,9 +11076,19 @@
       "source": {
         "source": "url",
         "url": "https://github.com/officecli/officecli-skills.git",
-        "sha": "560fa8fde78d6dfeb60252b42cc1b196b99e5905"
+        "sha": "72a5d5e83d0a8c073748a7222aaa19eea1585a05"
       },
       "homepage": "https://github.com/officecli/officecli-skills"
+    },
+    {
+      "name": "oh-my-forge",
+      "description": "oh-my-forge is a Claude Code workflow harness that prevents agent mistakes from repeating. Built on everything-claude-code, it adds an ontology-driven structural error\nprevention system: every agent failure is classified, routed, and converted into a permanent constraint so the same error cannot structurally happen again. It also includes a\nCodex delegation system where Claude uses an ontology index as a GPS — reading only a domain entry and a spec doc (~3K tokens) instead of the full source tree, then handing\na structured BRIEF to Codex for implementation. Includes 125+ skills, specialized agents, slash commands, and automated hooks for TDD, code review, security scanning, and\ncontinuous learning.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rlagycks/oh-my-forge.git",
+        "sha": "a4ec5ce6dc77b52d5d96c17145ccc464fd0b199b"
+      },
+      "homepage": "https://github.com/rlagycks/oh-my-forge"
     },
     {
       "name": "oh-my-obsidian",
@@ -11099,6 +11149,16 @@
         "sha": "53a7b156e609475b6d841be7bb2c7b56fc93bcd5"
       },
       "homepage": "https://github.com/usmanmughaltaleemabad/One-Shot-Plugin#readme"
+    },
+    {
+      "name": "one-workflow",
+      "description": "A high-layer DevOps workflow for beginners, based on Everything-Claude-Code.\n\nOne Workflow allows you to build a mature software project with simply several commands.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ATreep/one-workflow.git",
+        "sha": "41f7a9cb1bc5b175cac1a275fc184c231a41ef90"
+      },
+      "homepage": "https://github.com/ATreep/one-workflow"
     },
     {
       "name": "oneconnecter-plugin",
@@ -11947,6 +12007,16 @@
       "homepage": "https://posthog.com/docs/model-context-protocol"
     },
     {
+      "name": "postiz",
+      "description": "Social media automation: schedule posts, manage integrations, upload media, track analytics (30+ platforms)",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gitroomhq/postiz-agent.git",
+        "sha": "238aede6c72672b3201ae0ee533ec0cd53eb51d1"
+      },
+      "homepage": "https://docs.postiz.com/cli/introduction"
+    },
+    {
       "name": "postman",
       "description": "Full API lifecycle management for Claude Code. Sync collections, generate client code, discover APIs, run tests, create mocks, publish docs, and audit security. Powered by the Postman MCP Server.",
       "category": "development",
@@ -12167,7 +12237,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/yohayetsion/product-org-os.git",
-        "sha": "8c0870e23af18567407a65ff39d965f32c5b4661"
+        "sha": "73ecc188b73376b9cf0f9daf01446629757da866"
       },
       "homepage": "https://yohayetsion.github.io/product-org-os/"
     },
@@ -13079,7 +13149,7 @@
         "url": "MSApps-Mobile/claude-plugins",
         "path": "plugins/rtl-chat-fixer",
         "ref": "main",
-        "sha": "de37cefc7badfb25917a91af4ff864021f960b33"
+        "sha": "cb178d446768e9ee6118bba8cd1a7ac58633bc47"
       },
       "homepage": "https://github.com/MSApps-Mobile/claude-plugins"
     },
@@ -13274,6 +13344,30 @@
       "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/mcp-auth"
     },
     {
+      "name": "scalekit-modular-scim",
+      "description": "Automate user provisioning and deprovisioning. Sync users, roles, and groups from Okta, Azure AD, or any SCIM-compatible directory into your app automatically.",
+      "source": {
+        "source": "git-subdir",
+        "url": "scalekit-inc/claude-code-authstack",
+        "path": "plugins/modular-scim",
+        "ref": "main",
+        "sha": "8d8ec0bc14ba7e159a110184effdd9bdf15af275"
+      },
+      "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/scim"
+    },
+    {
+      "name": "scalekit-modular-sso",
+      "description": "Add SAML or OIDC SSO to your app without replacing your auth system. Let enterprise customers log in via Okta, Azure AD, Google Workspace, and other identity providers.",
+      "source": {
+        "source": "git-subdir",
+        "url": "scalekit-inc/claude-code-authstack",
+        "path": "plugins/modular-sso",
+        "ref": "main",
+        "sha": "8d8ec0bc14ba7e159a110184effdd9bdf15af275"
+      },
+      "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/sso"
+    },
+    {
       "name": "scan-modules",
       "description": "Scan and cache project module structure for fast Claude context loading. Use /scan-modules:scan-modules to index your codebase, then Claude auto-loads the cache each session. Supports incremental updates via git diff and auto-update via post-commit hook. Works with Swift, TypeScript, Python, Go, and Rust.",
       "source": {
@@ -13391,7 +13485,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/scylladb/agent-skills.git",
-        "sha": "c944af1abd64552c268d06b6b2c4d3ae6ebeba0f"
+        "sha": "d1bb3ad94c58bf87e04d8d3ee8da12f6209e1d76"
       },
       "homepage": "https://github.com/scylladb/agent-skills"
     },
@@ -13560,7 +13654,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/pskoett/pskoett-ai-skills.git",
-        "sha": "a5d475932199238cd8b9a7320e5974e717e040f6"
+        "sha": "fe0da1c72e59fbc92d39d9ec3e13fb66c0ef987f"
       },
       "homepage": "https://github.com/pskoett/pskoett-ai-skills"
     },
@@ -13692,7 +13786,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ServiceNow/sdk.git",
-        "sha": "977806f6bcd23670d9c8b21776c14eb3ce7c3c83"
+        "sha": "06adf37ca78c270a57f93e7b9dfbb7bf16e24611"
       },
       "homepage": "https://servicenow.github.io/sdk/"
     },
@@ -15011,7 +15105,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sumup/sumup-skills.git",
-        "sha": "0fd0a911ecaffd7187fe35e914d8ead6de584ffd"
+        "sha": "ff5a23149ec84fa3e407df2caacad61a543bf049"
       },
       "homepage": "https://www.sumup.com/"
     },
@@ -15160,6 +15254,16 @@
         "sha": "182cfa1f036a64ad0c2bd1495498d8edc45de7d6"
       },
       "homepage": "https://pactflow.github.io/drift-docs/docs/how-to/generating-tests"
+    },
+    {
+      "name": "swallow-insurance-rating-engine",
+      "description": "Build, validate, analyse, and test insurance rating models with the Swallow Rating Engine via MCP",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/llow-group/swallow-claude-plugin.git",
+        "sha": "631fe3d93fc07a79a616f831eade08a5d4f4f0ba"
+      },
+      "homepage": "https://swallow.app"
     },
     {
       "name": "swift-focusengine-pro",
@@ -15683,6 +15787,16 @@
       "homepage": "https://github.com/makerdock/tidy"
     },
     {
+      "name": "tiga-gtm",
+      "description": "Build tools and scripts for using the Tiga sales intelligence platform",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tiga-labs/tiga-gtm.git",
+        "sha": "254908046692aeb4b2ff9c494f24ac2428133742"
+      },
+      "homepage": "https://github.com/tiga-labs/tiga-gtm"
+    },
+    {
       "name": "tigerpass",
       "description": "Hardware-secured crypto wallet and trading terminal for AI agents. Trade Hyperliquid perpetual futures and spot, bet on Polymarket prediction markets, swap tokens across 6 EVM chains via 0x aggregator, bridge USDC cross-chain with Circle CCTP V2, execute any smart contract, sign EIP-191/EIP-712 messages, handle x402 HTTP payments, and sell services to other agents via ACE Protocol with E2E encrypted messaging. Private keys live in Apple Secure Enclave — physically impossible to extract. The only agent wallet combining hardware security with full autonomous signing. Requires Apple Silicon Mac.",
       "source": {
@@ -15738,7 +15852,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/tinyfish-io/tinyfish-cookbook.git",
-        "sha": "d3d0fb0b9aa2c76aadcfdad72df312aef3338929"
+        "sha": "d8663c2c28b98a2e8c03d93ec81bb7f1eae37321"
       },
       "homepage": "https://docs.tinyfish.ai"
     },
@@ -16325,7 +16439,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/velt-js/velt-plugin.git",
-        "sha": "c6010caeaa90ffcc7fd26b60307d061400d1da9a"
+        "sha": "f1c1e0361647dbb0af1dfc9bfabb5a306be6ee19"
       },
       "homepage": "https://docs.velt.dev/get-started/plugins"
     },
@@ -17068,6 +17182,16 @@
         "sha": "cf9c9bc68d4aca9a9bc34fb7e9c83c6c95ce5be6"
       },
       "homepage": "https://www.wonda.sh/"
+    },
+    {
+      "name": "wordpress-com",
+      "description": "Building WordPress themes and sites from scratch can be complex - theme.json, block markup, template parts, design systems, responsive layouts. This plugin handles it for you. You describe your site (e.g., “A landing page for my pottery studio called Clay & Fire”), pick from 3 generated design directions, and get a fully deployed theme on a local WordPress Studio site.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Automattic/claude-code-wordpress.com.git",
+        "sha": "052ca970df2c577d7c651e784935186ff93e6779"
+      },
+      "homepage": "https://developer.wordpress.com/wordpress-com-claude-code-plugin/"
     },
     {
       "name": "wordpress-devkit",
