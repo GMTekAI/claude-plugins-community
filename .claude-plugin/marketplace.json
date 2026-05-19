@@ -16,7 +16,7 @@
     },
     {
       "name": "10x-team",
-      "description": "10x-Team gives you an entire engineering team as Claude Code skills. 12 specialized roles — CTO, Product Manager, Principal Architect,\n  Staff Engineer, Engineering Manager, Senior Engineer, SDE, DBA, Security Engineer, QA Engineer, DevOps Engineer, and SRE — each with\n  structured decision processes and opinionated guidance.\n                                                                                                                                           \n  Key features:                                                                                                                            \n                                                                                                                                           \n  - 12 individual role skills (/cto, /architect, /sde, /security-engineer, etc.) for targeted expertise                                    \n  - 1 orchestrator skill (/10x-team) that runs all 12 roles end-to-end with hard gates at every phase\n  - File-based project state (.10x/) so roles share decisions and track progress across conversations\n  - Discovery protocol that reverse-engineers existing codebases before making changes                                                     \n  - Every role follows a structured process — no generic advice, only actionable recommendations with trade-offs\n  - Brainstorm-first approach — the orchestrator won't let you write code until the design is validated",
+      "description": "10x-Team gives you an entire engineering team as Claude Code skills. 12 specialized roles — CTO, Product Manager, Principal Architect,\nStaff Engineer, Engineering Manager, Senior Engineer, SDE, DBA, Security Engineer, QA Engineer, DevOps Engineer, and SRE — each with\nstructured decision processes and opinionated guidance.\n\nKey features:\n\n- 12 individual role skills (/cto, /architect, /sde, /security-engineer, etc.) for targeted expertise\n- 1 orchestrator skill (/10x-team) that runs all 12 roles end-to-end with hard gates at every phase\n- File-based project state (.10x/) so roles share decisions and track progress across conversations\n- Discovery protocol that reverse-engineers existing codebases before making changes\n- Every role follows a structured process — no generic advice, only actionable recommendations with trade-offs\n- Brainstorm-first approach — the orchestrator won't let you write code until the design is validated",
       "source": {
         "source": "url",
         "url": "https://github.com/Jaan-Mustafa/10x-Team.git",
@@ -154,7 +154,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/oliver-pringle/acp-find-plugin.git",
-        "sha": "5458e3cc5d931bd3d35826fb94a17ac2d0f1c5fd"
+        "sha": "aea8931d972a46b8eba03abf68dd672a67607eb0"
       },
       "homepage": "https://github.com/oliver-pringle/acp-find-plugin"
     },
@@ -194,7 +194,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/adcontextprotocol/adcp-client.git",
-        "sha": "7116ee7870f56bf04897ee7d79e2c61514cf0f6e"
+        "sha": "4492039308395580bf915742e564357c1afea768"
       },
       "homepage": "https://github.com/adcontextprotocol/adcp-client"
     },
@@ -327,7 +327,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/svmnikhil/agent-discovery.git",
-        "sha": "8b256142b5735a5790ee05d58fbb36673f58545d"
+        "sha": "8d20b0a2bb22d74a3ea71f7ce8096b19377b7281"
       },
       "homepage": "https://github.com/svmnikhil/agent-discovery#agent-discovery"
     },
@@ -528,7 +528,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Agentiqa/agentiqa-plugin.git",
-        "sha": "6843f7544a6dde2a35242279da181e67da6df4bf"
+        "sha": "d3805516fd73b5be75e1c54f40335436768691c0"
       },
       "homepage": "https://agentiqa.com/en"
     },
@@ -538,7 +538,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Agentiqa/agentiqa-plugin.git",
-        "sha": "6843f7544a6dde2a35242279da181e67da6df4bf"
+        "sha": "d3805516fd73b5be75e1c54f40335436768691c0"
       },
       "homepage": "https://github.com/Agentiqa/agentiqa-plugin"
     },
@@ -578,7 +578,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AgentPowers-AI/agentpowers-plugin.git",
-        "sha": "6a45abe30b7c4a2f32b8db6cc1d703dde364efc5"
+        "sha": "19b9c78e6af52fa5279226fee057a35b3f367c83"
       },
       "homepage": "https://agentpowers.ai"
     },
@@ -598,7 +598,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/adimango/ai-adoption-playbook.git",
-        "sha": "49903adc858b0cb7e582d74ed150a5a55c889544"
+        "sha": "d3f3b1bbdf7653c0d6aaeef8454a3131f5a243ba"
       },
       "homepage": "https://github.com/adimango/ai-adoption-playbook"
     },
@@ -752,7 +752,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aight-cool/aight-channel-plugin.git",
-        "sha": "2a6717671b33d6be6665282ee87fc8aef84e8bed"
+        "sha": "7b508f84a8f786bdebd225fcabea2a2c0817b6f6"
       },
       "homepage": "https://github.com/aight-cool/aight-channel-plugin"
     },
@@ -814,7 +814,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aiven/aiven-ai-plugins.git",
-        "sha": "d2a7697b53826588d0faf795f39d2aa2362330da"
+        "sha": "d4d0caf81cce307c939ce1bb0b15a09fb7af5cdf"
       },
       "homepage": "https://github.com/aiven/aiven-ai-plugins"
     },
@@ -924,7 +924,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/haandol/alps-writer-mcp.git",
-        "sha": "59706e9a7110044381c4539fc16fa394034d7fab"
+        "sha": "01c7fda5bdce265b9b92eda32cfc30f0bddb0482"
       },
       "homepage": "https://github.com/haandol/alps-writer-mcp"
     },
@@ -997,7 +997,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/clamp-sh/analytics-skills.git",
-        "sha": "29a3189bce96506f9edd4136e2fd41b02d12104e"
+        "sha": "f15d3ceddaaf646f36170a097deef5b4091db67b"
       },
       "homepage": "https://clamp.sh/docs/skills"
     },
@@ -1025,7 +1025,7 @@
     },
     {
       "name": "android-kmp-playbook",
-      "description": "Comprehensive Claude Code toolkit for Android and Kotlin Multiplatform (KMP)  many skills, sub-agents, and command enforcing Clean Architecture, Jetpack Compose best        \n  practices, KMP patterns, coroutines, TDD, Wear OS, TV, XR, and more.",
+      "description": "Comprehensive Claude Code toolkit for Android and Kotlin Multiplatform (KMP)  many skills, sub-agents, and command enforcing Clean Architecture, Jetpack Compose best\npractices, KMP patterns, coroutines, TDD, Wear OS, TV, XR, and more.",
       "source": {
         "source": "url",
         "url": "https://github.com/rezaiyan/android-kmp-claude-playbook.git",
@@ -1185,7 +1185,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/apollographql/skills.git",
-        "sha": "ad83e824c65465b81898622f5f33c0aa1c1b187a"
+        "sha": "64d4087d629e413da1bac780abeaefd653847440"
       },
       "homepage": "https://skills.sh/apollographql/skills"
     },
@@ -1241,16 +1241,6 @@
       "homepage": "https://github.com/aptos-labs/aptos-agent-skills"
     },
     {
-      "name": "arcanum",
-      "description": "Advanced debugging, code review, deep research, technical documentation, creative ideation, and semi-autonomous development workflows with parallel theory validation, team-based research, war room investigation, root cause analysis, PR review assistance, elite technical writing, and Maestro development pipeline",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/burnsbert/claude-arcanum.git",
-        "sha": "005761164863128d7baa3ec4613629f608f86bf7"
-      },
-      "homepage": "https://github.com/burnsbert/claude-arcanum"
-    },
-    {
       "name": "arcdeck",
       "description": "Convert academic PDF papers into polished, narrative-driven PowerPoint presentations using 13 specialized AI agents. Based on discourse parsing with multi-agent critique-revise-judge refinement loops and aesthetic design principles.",
       "source": {
@@ -1298,7 +1288,7 @@
         "url": "AppsVortex/arness",
         "path": "plugins/arn-code",
         "ref": "main",
-        "sha": "d3434de0c23b2254a9a80a644486aa6c85631968"
+        "sha": "b9084b6ae3e4a0e6331503fbf3aa2260bb1b04af"
       },
       "homepage": "https://arness.appsvortex.com"
     },
@@ -1310,7 +1300,7 @@
         "url": "AppsVortex/arness",
         "path": "plugins/arn-infra",
         "ref": "main",
-        "sha": "d3434de0c23b2254a9a80a644486aa6c85631968"
+        "sha": "b9084b6ae3e4a0e6331503fbf3aa2260bb1b04af"
       },
       "homepage": "https://arness.appsvortex.com"
     },
@@ -1322,7 +1312,7 @@
         "url": "AppsVortex/arness",
         "path": "plugins/arn-spark",
         "ref": "main",
-        "sha": "d3434de0c23b2254a9a80a644486aa6c85631968"
+        "sha": "b9084b6ae3e4a0e6331503fbf3aa2260bb1b04af"
       },
       "homepage": "https://arness.appsvortex.com"
     },
@@ -1479,7 +1469,7 @@
     },
     {
       "name": "audit-suite",
-      "description": "10 expert audit lenses + full-audit orchestrator + 5 bundled reference skills. Review plans and code through the eyes of\n  Design, UX, Frontend, Backend, Structural, Repo, Production, DX, Performance, and Accessibility engineers.",
+      "description": "10 expert audit lenses + full-audit orchestrator + 5 bundled reference skills. Review plans and code through the eyes of\nDesign, UX, Frontend, Backend, Structural, Repo, Production, DX, Performance, and Accessibility engineers.",
       "source": {
         "source": "url",
         "url": "https://github.com/Recusive/Orbit-plugin.git",
@@ -1630,7 +1620,7 @@
         "url": "https://github.com/awslabs/agent-plugins.git",
         "path": "plugins/aws-serverless",
         "ref": "main",
-        "sha": "a56743f1c4a27b3b1704324408978595a5c231ec"
+        "sha": "38a915267b31f98fa6ca8e5027d681743c99f390"
       },
       "homepage": "https://github.com/awslabs/agent-plugins"
     },
@@ -1690,7 +1680,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/b12io/b12-claude-plugin.git",
-        "sha": "508f038704945d4dd72a4b95e2919d4b70383af0"
+        "sha": "a53638c2b23b82c6be7c4e5b1e3cecd6a59f9fb8"
       },
       "homepage": "https://github.com/b12io/b12-claude-plugin"
     },
@@ -1795,16 +1785,6 @@
       "homepage": "https://github.com/qinnovates/bci-security"
     },
     {
-      "name": "bedrock",
-      "description": "Second Brain automation for Obsidian vaults — entity management, ingestion, compression, and sync via Claude Code skills",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/iurykrieger/claude-bedrock.git",
-        "sha": "59cdca5933e355d9c54d42ed93953d2ff2c609e5"
-      },
-      "homepage": "https://claude-bedrock.vercel.app/"
-    },
-    {
       "name": "bells-and-whistles",
       "description": "Bells and Whistles plays notification sounds and optional voice announcements when Claude Code finishes working or needs your attention. Choose from 10 themed sound packs (videogame, Disney, anime, movies, 90s rock, classical, cyberpunk, D&D, and more — each with 10 unique melodies) and add text-to-speech with accent, gender, and style options. Supports per-tab muting in tmux, themed speech phrases, and works across macOS, Linux, and WSL with graceful fallback to terminal bell over SSH.",
       "source": {
@@ -1854,7 +1834,7 @@
         "url": "https://github.com/Bigdata-com/bigdata-plugins-marketplace.git",
         "path": "plugins/bigdata-com",
         "ref": "main",
-        "sha": "2709803ceadc2482895da4c0465700b94daf0198"
+        "sha": "5b986cf66a9657faff46ce98ac3351ffb729392d"
       },
       "homepage": "https://docs.bigdata.com/mcp-reference/plugins/bigdata-com"
     },
@@ -2066,7 +2046,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/noemuch/bridge.git",
-        "sha": "436edc83f3eab749f596f34d532bf781b1a6524e"
+        "sha": "dd585ce079c660368401c49d58759ffcda60d36f"
       },
       "homepage": "https://github.com/noemuch/bridge"
     },
@@ -2096,7 +2076,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/brightdata/skills.git",
-        "sha": "d0eeb1fbab809ffffe7c270186bd3eb78cf0c8ba"
+        "sha": "37145178dfc9b52e28dd224afeccc7184f7711fc"
       },
       "homepage": "https://docs.brightdata.com"
     },
@@ -2106,7 +2086,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/brightdata/skills.git",
-        "sha": "d0eeb1fbab809ffffe7c270186bd3eb78cf0c8ba"
+        "sha": "37145178dfc9b52e28dd224afeccc7184f7711fc"
       },
       "homepage": "https://docs.brightdata.com"
     },
@@ -2126,7 +2106,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/hyhmrright/brooks-lint.git",
-        "sha": "e9edb6b59c5e8b0f9de074af4cf7e1519b445cb3"
+        "sha": "bab67da1bdc8da479842c4e6fed7eac258ef91df"
       },
       "homepage": "https://github.com/hyhmrright/brooks-lint"
     },
@@ -2264,7 +2244,7 @@
     },
     {
       "name": "c4m",
-      "description": "Interactive C4 architecture diagrams (Simon Brown's model) for Claude Code. Five mode-driven       \n  workflows — Design (greenfield), Document-code (retro-doc from a repo), Document-prose (from     \n  README/ADR/spec), Review (critique an existing diagram), Update (evolve one) — accessed via        \n  /c4m:auto, /c4m:design, /c4m:code, /c4m:prose, /c4m:review, /c4m:update. Output is one Markdown\n  document per C4 level with embedded Mermaid; format negotiable (Structurizr DSL, PlantUML) and     \n  destination negotiable (filesystem or MCP — Notion, Linear, Drive). Enforces the editorial       \n  invariants: technology mandatory on every Container/Component, intent-specific relationship labels,\n   protocol on inter-container links, assumptions kept explicit.",
+      "description": "Interactive C4 architecture diagrams (Simon Brown's model) for Claude Code. Five mode-driven\nworkflows — Design (greenfield), Document-code (retro-doc from a repo), Document-prose (from\nREADME/ADR/spec), Review (critique an existing diagram), Update (evolve one) — accessed via\n/c4m:auto, /c4m:design, /c4m:code, /c4m:prose, /c4m:review, /c4m:update. Output is one Markdown\ndocument per C4 level with embedded Mermaid; format negotiable (Structurizr DSL, PlantUML) and\ndestination negotiable (filesystem or MCP — Notion, Linear, Drive). Enforces the editorial\ninvariants: technology mandatory on every Container/Component, intent-specific relationship labels,\nprotocol on inter-container links, assumptions kept explicit.",
       "source": {
         "source": "url",
         "url": "https://github.com/cheriftj/c4-model-skill.git",
@@ -2451,7 +2431,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/anipotts/cc.git",
-        "sha": "b3bf0d632b5505294b101002599e791b2804bbf2"
+        "sha": "c655a98c143b722bf048880ec5abbe4fef670e1a"
       },
       "homepage": "https://github.com/anipotts/cc#readme"
     },
@@ -2527,7 +2507,7 @@
     },
     {
       "name": "cck",
-      "description": "Transparent Korean language autopilot for Claude Code. Just speak Korean naturally — CCK detects your intent and executes the right Claude Code command automatically. No new commands to learn. Includes a Korean cheatsheet (/cck:cheat) and a Korean  \n  CLAUDE.md template generator (/cck:setup).",
+      "description": "Transparent Korean language autopilot for Claude Code. Just speak Korean naturally — CCK detects your intent and executes the right Claude Code command automatically. No new commands to learn. Includes a Korean cheatsheet (/cck:cheat) and a Korean\nCLAUDE.md template generator (/cck:setup).",
       "source": {
         "source": "url",
         "url": "https://github.com/shinhyukahn/cck.git",
@@ -2561,7 +2541,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ChainGPT-org/chaingpt-claude-skill.git",
-        "sha": "9f7ec467b20bdbe831f8df520ba0d0ffa8b62d55"
+        "sha": "19118031fb44996fa9e4c510723e37c6fd036d80"
       },
       "homepage": "https://docs.chaingpt.org/dev-docs-b2b-saas-api-and-sdk/chaingpt-claude-skill-and-plugin"
     },
@@ -2673,7 +2653,7 @@
         "url": "https://github.com/circlefin/skills.git",
         "path": "plugins/circle",
         "ref": "master",
-        "sha": "d473520352bfcc3c3668abb516c678485101660c"
+        "sha": "d076fe3ff992a1a9c30e2770031970b31429e905"
       },
       "homepage": "https://developers.circle.com/ai/skills"
     },
@@ -2723,7 +2703,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/fseitun/claude-account-guard.git",
-        "sha": "abc306a528785cc3f868aecbd5fa06c5650f49a1"
+        "sha": "583a828d10a36f155b986285b30795256aa46f15"
       },
       "homepage": "https://github.com/fseitun/claude-account-guard"
     },
@@ -2773,7 +2753,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AgriciDaniel/claude-blog.git",
-        "sha": "bc734cbc7786dc0ce090a94fee14f2d1bacbe6d7"
+        "sha": "901e9217b0f542e10a0b0c0f8692a95d1f42f43c"
       },
       "homepage": "https://claude-blog.md"
     },
@@ -3135,7 +3115,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/laurac8r/claude-damn.git",
-        "sha": "08f7213a6b7f9449af1915e1584c1922915676d4"
+        "sha": "aa098f8c573518d4e8e95981d748a932f8133f4d"
       },
       "homepage": "https://github.com/laurac8r/claude-damn"
     },
@@ -3165,7 +3145,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/GarethManning/claude-education-skills.git",
-        "sha": "8709a442d145b1b3dcb9d5524fa567a75043d5c8"
+        "sha": "ff14a136286a775e8fe13123d4e2be7f35c8bde5"
       },
       "homepage": "https://github.com/GarethManning/claude-education-skills"
     },
@@ -3245,7 +3225,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/IrtezaAsadRizvi/claude-human-review.git",
-        "sha": "3a43d3fb35349598f034ed7ce0b7336c9853a965"
+        "sha": "ef74813509aab3368c404bd3b3ae6e882754968e"
       },
       "homepage": "https://github.com/IrtezaAsadRizvi/claude-human-review"
     },
@@ -3295,7 +3275,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/taejunoh/claude-lean.git",
-        "sha": "6f06c7bcd024edcacca908223a1fe2e2a2822656"
+        "sha": "d743ad39f39ddff92c8246202105589b9a0df5fd"
       },
       "homepage": "https://github.com/taejunoh/claude-lean"
     },
@@ -3515,7 +3495,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/NoobyGains/claude-pulse.git",
-        "sha": "e3679091c40261e0c1d6a6babed99785d9980c06"
+        "sha": "3287711eb8c4e2ed02b2c282a1db3dbf29ed4354"
       },
       "homepage": "https://github.com/NoobyGains/claude-pulse"
     },
@@ -3545,7 +3525,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AgriciDaniel/claude-seo.git",
-        "sha": "a0561b27ddb14a1a0b81aa9d2af361b330a35c84"
+        "sha": "4aa8f0309fff37e21280975d663ddd6c6499fbe6"
       },
       "homepage": "https://claude-seo.md"
     },
@@ -3705,7 +3685,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/orion-gz/Claude-Trinity.git",
-        "sha": "83ca3a9d8f0a2339895f48d5cf3895ed3086f60d"
+        "sha": "d46765697e5a81b952fa09174a63929fad40562e"
       },
       "homepage": "https://github.com/orion-gz/Claude-Trinity"
     },
@@ -3761,7 +3741,7 @@
     },
     {
       "name": "claude-voice-cue",
-      "description": "Speaks \"Input needed\" the instant Claude Code is waiting on you — tool approval, plan review, or any attention-wanted prompt. Sub-100ms reaction time via        \n  PermissionRequest + Notification hooks. macOS uses a pre-generated audio file with afplay, bypassing 1–2s TTS cold start; Linux and Windows fall back to espeak  \n  and PowerShell SAPI. Zero runtime dependencies, non-blocking, no configuration.",
+      "description": "Speaks \"Input needed\" the instant Claude Code is waiting on you — tool approval, plan review, or any attention-wanted prompt. Sub-100ms reaction time via\nPermissionRequest + Notification hooks. macOS uses a pre-generated audio file with afplay, bypassing 1–2s TTS cold start; Linux and Windows fall back to espeak\nand PowerShell SAPI. Zero runtime dependencies, non-blocking, no configuration.",
       "source": {
         "source": "url",
         "url": "https://github.com/arpan-k09/claude-voice-cue.git",
@@ -3775,7 +3755,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AxGord/claude-workflow.git",
-        "sha": "ced57679158808bfd69b545b28bb551d01135985"
+        "sha": "a5bcf2741061036f3bbeaf2fbbb6d283440bedd2"
       },
       "homepage": "https://github.com/AxGord/claude-workflow"
     },
@@ -3785,7 +3765,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/drewalth/claude-xcindex.git",
-        "sha": "3773d7254f06115f59813add47bd6b63b51ce158"
+        "sha": "c3dd73200e9f0c1c2cc6750014015a18427f611f"
       },
       "homepage": "https://drewalth.github.io/claude-xcindex/"
     },
@@ -3845,7 +3825,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/crisandrews/ClawCode.git",
-        "sha": "3d9b17e18c860464b1af5a5936c09be1ca4b530c"
+        "sha": "d4850cb82148503e19b1172e4bae4060f5d9a05c"
       },
       "homepage": "https://github.com/crisandrews/ClawCode"
     },
@@ -3935,7 +3915,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ClickHouse/clickhouse-claude-code-plugin.git",
-        "sha": "db1c108dde6e5c81a1ca65f3b6700d6fff288545"
+        "sha": "13a2df004af0df46661c9de2d4ef4e85eba2f040"
       },
       "homepage": "https://github.com/ClickHouse/clickhouse-claude-code-plugin"
     },
@@ -3945,7 +3925,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ClickHouse/agent-skills.git",
-        "sha": "c7f9095dd18778331892304bf47558176cc5ed31"
+        "sha": "98d99dafce35db14e99791696fbb968b7c7550ac"
       },
       "homepage": "https://clickhouse.com"
     },
@@ -3985,7 +3965,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/cloudflare/skills.git",
-        "sha": "7c449def4e0c63daa27212d853094e4c8e37bbe8"
+        "sha": "60147cbb773649eadca89cee92b4e0caf02234b4"
       },
       "homepage": "https://github.com/cloudflare/skills"
     },
@@ -4015,13 +3995,13 @@
       "source": {
         "source": "url",
         "url": "https://github.com/cm64-studio/cm64-cli.git",
-        "sha": "83bc2c97fc3e58f7256193163d600af6694a4aa7"
+        "sha": "aef4dda6b6124b30289d82fc5091b605a2630d9a"
       },
       "homepage": "https://cm64.io"
     },
     {
       "name": "cmux-mcp",
-      "description": "MCP server that gives AI agents full control of your cmux terminal — run commands, read output, and send control characters. Works in the\n  background via Unix socket with no focus stealing. Smart command completion detection via CPU monitoring.",
+      "description": "MCP server that gives AI agents full control of your cmux terminal — run commands, read output, and send control characters. Works in the\nbackground via Unix socket with no focus stealing. Smart command completion detection via CPU monitoring.",
       "source": {
         "source": "url",
         "url": "https://github.com/daegweon/cmux-mcp.git",
@@ -4045,7 +4025,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gwittebolle/claude-carbon.git",
-        "sha": "a5067fd263c70aed2fbf112b9d494501cd941dce"
+        "sha": "ca2a26f1746abcbf8bae535952ec6b383bf9dc50"
       },
       "homepage": "https://github.com/gwittebolle/claude-carbon"
     },
@@ -4157,7 +4137,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/vendeesign/codebloom.git",
-        "sha": "209bca8b5fbffa19d8e5e25a003ba18086083752"
+        "sha": "ca7aa8351a58a5c4c0d8e2a078cdfb11738ff0c2"
       },
       "homepage": "https://github.com/vendeesign/codebloom"
     },
@@ -4169,7 +4149,7 @@
         "url": "Larens94/codedna",
         "path": "codedna-plugin",
         "ref": "main",
-        "sha": "a170d92e447a5d3edc967c606d9a14ddae32868b"
+        "sha": "180d15bae228da50443d2cf0288d25c3ad3dd2d7"
       },
       "homepage": "https://codedna.silicoreautomation.space/install.html"
     },
@@ -4189,7 +4169,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ivannovosad/codehog.git",
-        "sha": "be067c6d936956cf6c07848b58bb25c9ce050839"
+        "sha": "06d9a2db51b0743fb8bb20a981cdd30c53c482d5"
       },
       "homepage": "https://github.com/ivannovosad/codehog"
     },
@@ -4319,7 +4299,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/CodSpeedHQ/codspeed.git",
-        "sha": "fd8701deba7887301df2c90d306f6000a906bfcc"
+        "sha": "149a618d9f18bc3afb3d2af51b7b835765d60633"
       },
       "homepage": "https://codspeed.io/docs"
     },
@@ -4463,7 +4443,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/conductor-oss/conductor-skills.git",
-        "sha": "7a49cd4dcdd68a3aca2ae2a1f76861184d365b21"
+        "sha": "40e5c03e5abddc563e5231268569b1e41863b487"
       },
       "homepage": "https://docs.conductor-oss.org/devguide/how-tos/conductor-skills.html"
     },
@@ -4575,7 +4555,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Ricky-Stevens/context-guardian.git",
-        "sha": "d9e233308df753005cdf3f14ccbe7a98b27a1ddf"
+        "sha": "fb85f249d82c38e31bba9a853ff88919feca9bc7"
       },
       "homepage": "https://github.com/Ricky-Stevens/context-guardian"
     },
@@ -4705,7 +4685,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/coreyhaines31/marketingskills.git",
-        "sha": "1bcff9fc79c64fd7886c3c7aa583f4bd63916ff2"
+        "sha": "114587831efbe7ac5c0a86afcb69e9cca6f728ce"
       },
       "homepage": "https://github.com/coreyhaines31/marketingskills"
     },
@@ -4769,7 +4749,7 @@
         "url": "alextongme/count-tongulas-toolkit",
         "path": "plugins/workspace",
         "ref": "main",
-        "sha": "9eb1eaccfc4931834dbc30c8bf7f4a2b034637dd"
+        "sha": "1825c865614024cdd2c6d452c54ba13ba4f90326"
       },
       "homepage": "https://www.alextong.me/toolkit/workspace"
     },
@@ -4794,7 +4774,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/derjochenmeyer/claude-code-craft-statusline.git",
-        "sha": "9dd81b7d55156eeb89f9a9b8f10f59cdcb336548"
+        "sha": "657b7b0084c42e55b857129194cccf0fec7eb8cc"
       },
       "homepage": "https://github.com/derjochenmeyer/claude-code-craft-statusline"
     },
@@ -4804,7 +4784,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/codyhxyz/create-claude-plugin.git",
-        "sha": "dfc782a2181394997369c1ed768df9822af4c6c6"
+        "sha": "6c654a3c9fa0b073bd4cb61d6429049df6fa8f65"
       },
       "homepage": "https://github.com/codyhxyz/create-claude-plugin"
     },
@@ -4824,7 +4804,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/credyt/ai-skills.git",
-        "sha": "cccd8088a6ebd696e5466cd98ba8f7ef7265fd6e"
+        "sha": "27648f8f5999644d70aca5993b8b28ae8d93f72a"
       },
       "homepage": "https://credyt.ai"
     },
@@ -4936,7 +4916,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ameya85/curiosity-stack.git",
-        "sha": "bf53d8805bbbc9f73bc90428e493c230e5ff713c"
+        "sha": "dff7b7a02f5544289fc066e3740fc3a525796cdb"
       },
       "homepage": "https://curiositystack.app"
     },
@@ -4998,7 +4978,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/d2c-ai/d2c.git",
-        "sha": "16f4afc4bb33203122c90599bd35fd6ea3732c58"
+        "sha": "104e2ce0d092b64150b8c5a6b84f0ce1ab6b3612"
       },
       "homepage": "https://d2c.codestate.dev/"
     },
@@ -5111,7 +5091,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/datadog-labs/claude-code-plugin.git",
-        "sha": "95d38f561e3d5e4fe9fb66c3c0bb19fb75e0458a"
+        "sha": "eeb2f746a857f8d97f69cd0968fb63874541c112"
       },
       "homepage": "https://github.com/datadog-labs/claude-code-plugin",
       "category": "monitoring"
@@ -5209,7 +5189,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/daytona/skills.git",
-        "sha": "e90b16878d15b1b8fd55b666e94bb3162d132143"
+        "sha": "f63bb15153aa2ddbf3ca1c54191b1108558b112f"
       },
       "homepage": "https://github.com/daytona/skills"
     },
@@ -5219,7 +5199,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/daytona/skills.git",
-        "sha": "c93aeb92ce68333f6e738a3197fcf4bcb6bd164c"
+        "sha": "f63bb15153aa2ddbf3ca1c54191b1108558b112f"
       },
       "homepage": "https://github.com/daytona/skills"
     },
@@ -5409,7 +5389,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/deepread-tech/skills.git",
-        "sha": "75e00a2ba5b3d267c772ff73b35792b370e93e27"
+        "sha": "a46c3110ffc28db3ebeec21ca6df4ba7456080a9"
       },
       "homepage": "https://www.deepread.tech"
     },
@@ -5419,7 +5399,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Eudaimonic-Inc/deepspace-skill.git",
-        "sha": "ee09b69667c5b55850c3dc7e267134c499ff0b2e"
+        "sha": "c578c544c3295ace7b72e3bd02d26ef2ec84fcf3"
       },
       "homepage": "https://deep.space"
     },
@@ -5672,11 +5652,11 @@
     },
     {
       "name": "devflow",
-      "description": "Structured AI development workflows for Claude Code. Enforces planning, approval, task tracking, and code review gates\n  through MCP — so AI agents work within a defined process instead of writing code without oversight.",
+      "description": "Structured AI development workflows for Claude Code. Enforces planning, approval, task tracking, and code review gates\nthrough MCP — so AI agents work within a defined process instead of writing code without oversight.",
       "source": {
         "source": "url",
         "url": "https://github.com/KlausFreiberufler/devflow-mcp.git",
-        "sha": "9da4b37a7067de678741330d64b77910be642a13"
+        "sha": "0164522bf1d08715c8724109a8e8d5af977de98b"
       },
       "homepage": "https://dev-flow.tech"
     },
@@ -5770,7 +5750,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/igor-koricanac/claude-image-scan.git",
-        "sha": "04fda91e0e59b53a5eaf121dbf54ea20be3035e2"
+        "sha": "ba566ae107475a9f5d442878b70dc1b5fc34ee9d"
       },
       "homepage": "https://github.com/igor-koricanac/claude-image-scan"
     },
@@ -5786,7 +5766,7 @@
     },
     {
       "name": "docs-context",
-      "description": "docs-context is the \"Super Base Context\" for Agent Coding: a structured replacement for single-file CLAUDE.md that separates project knowledge into five purpose-specific docs (architecture, modules, coding, tech-stack, decisions), loads only what the current task needs, and keeps those docs in sync with the code as a net-delta-triggered Write mode.\n\n  Read mode fires before any non-trivial write/modify/refactor/design/plan task, grounding the agent in architectural constraints and conventions. Write mode fires once at the end of a task when landed changes (code, config, SQL, build scripts) differ from the doc state — no firing on read-only work, in-progress edits, or try-and-undo.\n\n  Works across Claude Code, Codex CLI, Cursor, OpenCode, Antigravity, Trae, Qoder via the standard SKILL.md format.",
+      "description": "docs-context is the \"Super Base Context\" for Agent Coding: a structured replacement for single-file CLAUDE.md that separates project knowledge into five purpose-specific docs (architecture, modules, coding, tech-stack, decisions), loads only what the current task needs, and keeps those docs in sync with the code as a net-delta-triggered Write mode.\n\nRead mode fires before any non-trivial write/modify/refactor/design/plan task, grounding the agent in architectural constraints and conventions. Write mode fires once at the end of a task when landed changes (code, config, SQL, build scripts) differ from the doc state — no firing on read-only work, in-progress edits, or try-and-undo.\n\nWorks across Claude Code, Codex CLI, Cursor, OpenCode, Antigravity, Trae, Qoder via the standard SKILL.md format.",
       "source": {
         "source": "url",
         "url": "https://github.com/lujiafa/houtu-project-skills.git",
@@ -5930,7 +5910,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/dotsecenv/dotsecenv.git",
-        "sha": "dd7337f1e8b821c8ea4dd18e40716e01ddd75348"
+        "sha": "ac08ff402daba4f04085618a3c871795f5003377"
       },
       "homepage": "https://dotsecenv.com/guides/claude-code/"
     },
@@ -6162,7 +6142,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AgentBuildersApp/eight-eyes.git",
-        "sha": "7400a654d3becd682c806a1548f3f9ad9734a108"
+        "sha": "e13ac412be8a3d95a4d55bec7be68f730b1ec615"
       },
       "homepage": "https://github.com/AgentBuildersApp/eight-eyes"
     },
@@ -6238,11 +6218,11 @@
     },
     {
       "name": "enam",
-      "description": "Persistent memory for Claude Code — at ~350 tokens ambient cost, with no Docker, no API keys, and no MCP servers.\n\nEngram captures your sessions structurally on PreCompact (zero LLM cost), extracts atomic memories via a single lightweight LLM digest (preferences, practices, current context), and  detects emergent patterns from your history — files you always edit together, recurring errors, tool usage anomalies — stored as an auditable Obsidian-compatible wiki.\n\n\n  Key features:\n  • Per-project handoff notes — at session start you get a narrative message from the last session in this project\n  • Atomic UPSERT memories keyed by topic — latest wins, no drift, no embeddings\n  • Emergent pattern detection (co-edits, error recurrence, project streaks, tool anomalies)\n  • Durable preferences stay global; ephemeral context is scoped per project\n  • 4-flag CLI surface: --stats, --query, --memories, --forget\n  • Everything local: SQLite at ~/.claude/memory.db, markdown wiki at ~/.claude/patterns/",
+      "description": "Persistent memory for Claude Code — at ~350 tokens ambient cost, with no Docker, no API keys, and no MCP servers.\n\nEngram captures your sessions structurally on PreCompact (zero LLM cost), extracts atomic memories via a single lightweight LLM digest (preferences, practices, current context), and  detects emergent patterns from your history — files you always edit together, recurring errors, tool usage anomalies — stored as an auditable Obsidian-compatible wiki.\n\n\nKey features:\n• Per-project handoff notes — at session start you get a narrative message from the last session in this project\n• Atomic UPSERT memories keyed by topic — latest wins, no drift, no embeddings\n• Emergent pattern detection (co-edits, error recurrence, project streaks, tool anomalies)\n• Durable preferences stay global; ephemeral context is scoped per project\n• 4-flag CLI surface: --stats, --query, --memories, --forget\n• Everything local: SQLite at ~/.claude/memory.db, markdown wiki at ~/.claude/patterns/",
       "source": {
         "source": "url",
         "url": "https://github.com/sebastianbreguel/engram.git",
-        "sha": "68c25294ebdb1d0aab2d39bfb46a38e9fcc016b5"
+        "sha": "4e9631a1819b955ba0518b08fe7efd26fc11ab2f"
       },
       "homepage": "https://github.com/sebastianbreguel/engram"
     },
@@ -6302,7 +6282,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/enpitech/ai-tools.git",
-        "sha": "9f684e5889ddf1cb3682a1223ff8cad71eb82809"
+        "sha": "01e8131cadb6b364c29784645f7ef29276654f60"
       },
       "homepage": "https://github.com/enpitech/ai-tools"
     },
@@ -6312,7 +6292,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/enpitech/ai-tools.git",
-        "sha": "9f684e5889ddf1cb3682a1223ff8cad71eb82809"
+        "sha": "01e8131cadb6b364c29784645f7ef29276654f60"
       },
       "homepage": "https://github.com/enpitech/ai-tools"
     },
@@ -6434,7 +6414,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/evanklem/evanflow.git",
-        "sha": "ff1bee868de8c8d1201c2087fa0837207b2999bd"
+        "sha": "c9ae21f8ed0c53f861a049effffdf353119ff777"
       },
       "homepage": "https://github.com/evanklem/evanflow"
     },
@@ -6444,7 +6424,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/eversince-ai/plugin.git",
-        "sha": "70f1e262cde1f6e6b432e423da1abf9203361efb"
+        "sha": "46382e1d4d0592e9919c1794b4dc45232e8fefdb"
       },
       "homepage": "https://eversince.ai"
     },
@@ -6515,7 +6495,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/codyhxyz/experimental-engineer.git",
-        "sha": "f2dcebb0e413aaf69b18ad8f223fdcf180285eca"
+        "sha": "576126df89e3ab3ff32e9472123bcf086ba78d20"
       },
       "homepage": "https://github.com/codyhxyz/experimental-engineer"
     },
@@ -6668,7 +6648,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/figma/mcp-server-guide.git",
-        "sha": "fabc1ca81d839602ba7c1ca0f445a64246b3870e"
+        "sha": "15599e7177ea9c605e750d865f28a5639ad6c891"
       },
       "homepage": "https://github.com/figma/mcp-server-guide.git"
     },
@@ -6791,7 +6771,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/followrabbit-ai/awesome-rabbit.git",
-        "sha": "cce25b74856ab3574474d3b0b21bd75a60926086"
+        "sha": "a206f040960dc15e2e01f1ad7d64359ab3202714"
       },
       "homepage": "https://subscriptions.agentic.followrabbit.ai/"
     },
@@ -6955,7 +6935,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/kucherenko/gangsta.git",
-        "sha": "a51dbb94b72a838b53ec9b047023a9eb40f36495"
+        "sha": "fc0d364b1c8c206c4f2d9a173dea1dd20b4d4508"
       },
       "homepage": "https://gangsta.page"
     },
@@ -7108,7 +7088,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/getlark/skills.git",
-        "sha": "b151baf3f01ec5c6924c4c52d6ef0ef284d63082"
+        "sha": "90659003f75c6fd27d8eb82cf5ce9afeb6922b88"
       },
       "homepage": "https://docs.getlark.ai/agents"
     },
@@ -7198,7 +7178,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/TheGlitchKing/gimme-the-lint.git",
-        "sha": "b2f9e95531b29f094be04edd76d95821f06f7e65"
+        "sha": "a14e576d9f28d1cdd721f026a1dc551dde905f5a"
       },
       "homepage": "https://github.com/TheGlitchKing/gimme-the-lint"
     },
@@ -7208,7 +7188,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Giskard-AI/giskard-skills.git",
-        "sha": "068379a4d80bccda5a28493333a71635ee742e33"
+        "sha": "88a5979bf6574f8889b07cfc4b67ff2596878026"
       },
       "homepage": "https://www.giskard.ai",
       "category": "testing"
@@ -7449,7 +7429,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/greenflash-ai/agent-skills.git",
-        "sha": "c941222fd09c6e3b8b85c9fcd634ad40ceaf29b0"
+        "sha": "df89ed855b9887f9142ff487895a0d0aacd1ec3a"
       },
       "homepage": "https://docs.greenflash.ai/features/claude-code-skill"
     },
@@ -7479,7 +7459,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/etr/groundwork.git",
-        "sha": "399107824413065f3b8abae182d70c1fa6df8312"
+        "sha": "02d09acc375414630de83cabad790bbe52400031"
       },
       "homepage": "https://github.com/etr/groundwork"
     },
@@ -7489,7 +7469,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aliarifsoydas/gsc-pap-claude-plugin.git",
-        "sha": "d78d8d84865e25bc89249823b55a7b1eea0f1d62"
+        "sha": "db4fd7e8780d56a9a04966fd84ffc9082d5f2fc9"
       },
       "homepage": "https://gscpap.com"
     },
@@ -7611,7 +7591,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/revfactory/harness.git",
-        "sha": "6400bf6d3ee7a8d683a60be094b3238bd2b0adbc"
+        "sha": "85b82948da17419f90cf5793021756b7b1157dcb"
       },
       "homepage": "https://revfactory.github.io/harness/"
     },
@@ -7631,7 +7611,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/BilLogic/harness-designing-plugin.git",
-        "sha": "8fc3fa73ea1c675f073fccb6d36e8b85bb21a8ce"
+        "sha": "58741e279e5fa6851db0fc53ab64f5c49290d5db"
       },
       "homepage": "https://github.com/BilLogic/harness-designing-plugin"
     },
@@ -7763,7 +7743,7 @@
         "url": "helius-labs/core-ai",
         "path": "helius-plugin",
         "ref": "main",
-        "sha": "d9d252497bcf1e4bd5073a76715cd50a8353f9c3"
+        "sha": "8b2f5feebf99e12f3862869364e3cdaecc14d602"
       },
       "homepage": "https://www.helius.dev/docs"
     },
@@ -7808,22 +7788,12 @@
       "homepage": "https://www.npmjs.com/package/hipocampus"
     },
     {
-      "name": "hit-em-with-the-docs",
-      "description": "Self-managing documentation system with a 15-domain hierarchy, 22-field metadata schema, intelligent pattern discovery, and GitHub Actions automation. Generates and maintains hierarchical documentation with rich metadata, auto-discovers undocumented patterns, and self-heals stale or missing docs. Available as both a CLI tool and GitHub Action for CI/CD integration.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/TheGlitchKing/hit-em-with-the-docs.git",
-        "sha": "a3b88cb6394f827038be181d5b73df573ffcc4de"
-      },
-      "homepage": "https://github.com/TheGlitchKing/hit-em-with-the-docs"
-    },
-    {
       "name": "hive",
       "description": "Bio-inspired swarm orchestrator for Claude Code. Breaks tasks into parallel subtasks, coordinates agents through stigmergy, learns across sessions with pheromone scoring, and scales concurrency adaptively. 16 mechanisms from ant colonies, honeybee swarms, and AI research.",
       "source": {
         "source": "url",
         "url": "https://github.com/CipherandRow/claude-hive-plugin.git",
-        "sha": "bd5732d30b7c010d124ecdc922b830572e142dd0"
+        "sha": "cb1daa84419a8daa9a0490903b181fa8b6a929ab"
       },
       "homepage": "https://github.com/CipherandRow/claude-hive-plugin"
     },
@@ -7833,7 +7803,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/activeloopai/hivemind.git",
-        "sha": "fef9e84deabdffe4c531598a511baac9f7cf7dd9"
+        "sha": "7e49f282d2fe3c1a63ee3e540bfdf568eeddee9c"
       },
       "homepage": "https://deeplake.ai/hivemind"
     },
@@ -8068,7 +8038,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/heygen-com/hyperframes.git",
-        "sha": "a18f66db18a4796cdebb6c2e30150d42dac28531"
+        "sha": "e92daf02f045f726f00a902764c4abffbce20440"
       },
       "homepage": "https://hyperframes.heygen.com"
     },
@@ -8178,7 +8148,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/danieljohnmorris/ilo-lang.git",
-        "sha": "f64b794fd008359258754fa4976eb1edcf94cf86"
+        "sha": "b1e9b3f4103e0a6658fd791d12430240ebd01e83"
       },
       "homepage": "https://github.com/danieljohnmorris/ilo-lang"
     },
@@ -8228,7 +8198,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/pbakaus/impeccable.git",
-        "sha": "e587004ee42883dad40d14cd0f5e1b21ae1933df"
+        "sha": "e1d3ea0b6f79ebccb80b9e4b0d2b2ad62a13205b"
       },
       "homepage": "https://impeccable.style"
     },
@@ -8238,7 +8208,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ilang-ai/Imprint.git",
-        "sha": "cd07cdf96ed461c39ebccfb00d1f4c36724a8001"
+        "sha": "c3d456aeb87dfb84ae85a111007bdbb3190eeff9"
       },
       "homepage": "https://ilang.ai"
     },
@@ -8332,7 +8302,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/slusset/intention-driven-design.git",
-        "sha": "750cff0ea9f98e10dadcefdcb88f8146c241db30"
+        "sha": "c25599d81078651acf96c142a6f728158a4bfe85"
       },
       "homepage": "https://github.com/slusset/intention-driven-design"
     },
@@ -8463,7 +8433,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jfrog/claude-plugin.git",
-        "sha": "d80db066e219aab8190f3dc4a463b71a3a180250"
+        "sha": "6051e1873117661d9008ccc646e2ed60a93164d2"
       },
       "homepage": "https://github.com/jfrog/claude-plugin"
     },
@@ -8745,7 +8715,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aklofas/kicad-happy.git",
-        "sha": "2a7dc4147a8edbbe3694498ff1ba9f06e37244cb"
+        "sha": "968f5c847121e1c36a4ed848f2bab87f9dfc1016"
       },
       "homepage": "https://github.com/aklofas/kicad-happy"
     },
@@ -8917,7 +8887,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/zhupanov/larch.git",
-        "sha": "ebf91514730a37137676675a600daabd22264319"
+        "sha": "2084e77ccfc7d3be34951f5c381d458c3e3a0dc1"
       },
       "homepage": "https://github.com/zhupanov/larch"
     },
@@ -8927,7 +8897,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/IS908/claude-lark-plugin.git",
-        "sha": "9a9f9aa811e1e243cbfba76f2b6523716b6e8f55"
+        "sha": "ab001ebfd05ab8cbd00449e316415cf53f6e2a05"
       },
       "homepage": "https://github.com/IS908/claude-lark-plugin"
     },
@@ -8967,7 +8937,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/launchdarkly/ai-tooling.git",
-        "sha": "b618549735cfc41ef4405020b81dd0714b6674c0"
+        "sha": "8cecc567190d925a5a990c53219499ddb446ba9f"
       },
       "homepage": "https://launchdarkly.com"
     },
@@ -9122,7 +9092,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aliksir/lesson-skill-loop.git",
-        "sha": "437465ffa930207bfbb35dc3be781fdce67185eb"
+        "sha": "6088ad4a062b7c9ee5a9329cd8e8a8eb12f25fb3"
       },
       "homepage": "https://github.com/aliksir/lesson-skill-loop"
     },
@@ -9192,7 +9162,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/agentlinksh/agent.git",
-        "sha": "89a3abf3c64168de5abd568d41b4189bfb594be4"
+        "sha": "b3411e883113b22d754b48e1404ae570aa9dd5e7"
       },
       "homepage": "https://agentlink.sh/"
     },
@@ -9440,7 +9410,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/labyrinth-analytics/loredocs.git",
-        "sha": "ceba8238d1dc3552ffd4dedcd297b79cd2267137"
+        "sha": "805912b48a56f796c6db7ec37172357d6884f36a"
       },
       "homepage": "https://pypi.org/project/loredocs/"
     },
@@ -9496,7 +9466,7 @@
         "url": "apardawala/ai-navigator",
         "path": "magellan",
         "ref": "main",
-        "sha": "f241a10e05f6c792ef552e989a65c14ef115094b"
+        "sha": "11d09ad838ab5ef198cfa22bd59c71c0d028f9d2"
       },
       "homepage": "https://github.com/apardawala/ai-navigator/blob/main/magellan/README.md"
     },
@@ -9569,7 +9539,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/managelm/claude-extension.git",
-        "sha": "fa7124a6a52a7e2cbe30eeeca93b058e3cdde1bb"
+        "sha": "9bee415c66a3601f663106fd31132b0558b8844d"
       },
       "homepage": "https://www.managelm.com"
     },
@@ -9579,7 +9549,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/anotb/management-consulting-plugin.git",
-        "sha": "7f92a17ee058bce3b7563db6715534997eae35e3"
+        "sha": "6cf68b885a0475d6e49f6134d5f0314a4575a882"
       },
       "homepage": "https://github.com/anotb/management-consulting-plugin"
     },
@@ -9663,7 +9633,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/masthead-data/for-agents.git",
-        "sha": "7e5bb74864ea7c7b731f104cb4783a5f673eb23b"
+        "sha": "cdb8c9e5ad5bde193befd42df3585216832a9748"
       },
       "homepage": "https://mastheadata.com/"
     },
@@ -9937,6 +9907,16 @@
       "homepage": "https://ilang.ai"
     },
     {
+      "name": "mem0",
+      "description": "Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation history, then search, update, or forget them as new information comes in. Useful for coding assistants that remember your codebase conventions, support agents that recall customer history, research workflows that build context over weeks, or any use case where Claude resets back to zero today. Memories are scoped per user, agent, or session. Cloud-hosted, no local install.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mem0ai/mem0.git",
+        "sha": "54a03cc7217c22afdc6153a9e61cc6413416001f"
+      },
+      "homepage": "https://docs.mem0.ai/integrations/claude-code"
+    },
+    {
       "name": "memex-bookmarking-2nd-brain",
       "description": "This is the Claude plugin for Memex.Garden, a bookmarking second brain for humans and agents.\n\nYou can save, transcribe, summarize and search anything you come across. Websites, Notes, Web Highlights, Youtube, X, Tiktok, Instagram, PDFs, Reddit or images.\"\n\nHow it works:\n- You can instruct your agent to save any url and it will be indexed, videos transcribed, images analyzed in a powerful full-text and vector search.\n- You can query for saved content and get back structured data, readymade for your agent to process",
       "source": {
@@ -10122,7 +10102,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/marcelopaniza/mempenny.git",
-        "sha": "23936216a516b1353a04d4103cb087caefd10877"
+        "sha": "6d3141b86b14259b131f5e5ef6d3220022217a80"
       },
       "homepage": "https://github.com/marcelopaniza/mempenny"
     },
@@ -10132,7 +10112,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/cwinvestments/memstack.git",
-        "sha": "1e5f72562245a61f2e315b6336eaccc805319bb6"
+        "sha": "2d5115fdf34e8f9eec6f974bf2a3505217e49d3d"
       },
       "homepage": "https://memstack.pro"
     },
@@ -10247,7 +10227,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/TheGlitchKing/mind-glaive.git",
-        "sha": "33fd99621035dbf21fdb792ead09c83e172c87b5"
+        "sha": "94155ed71c8195a4198294f9c42a15117daff4b2"
       },
       "homepage": "https://github.com/TheGlitchKing/mind-glaive"
     },
@@ -10333,7 +10313,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/websublime/mister-anderson.git",
-        "sha": "db4b149a2257167bf18fe02638fcc60c095ace9d"
+        "sha": "da6bb6d066dbb9965acb4ed867a7823ecaa7e78e"
       },
       "homepage": "https://github.com/websublime/mister-anderson"
     },
@@ -10355,7 +10335,7 @@
         "url": "mnemopay/mnemopay-sdk",
         "path": "claude-plugin",
         "ref": "master",
-        "sha": "a3aa9bbacd0601348d43c00c1aa8b8d0bdbcfa2f"
+        "sha": "1481da234cbe52000bf294153d20397f4cc46d3c"
       },
       "homepage": "https://mnemopay.xyz"
     },
@@ -10375,7 +10355,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mobazha/mobazha-skills.git",
-        "sha": "854454949ab2519c10feb65708425e76dedf995e"
+        "sha": "ea06f1da778d14cb9ec3cbaca86de06f4a4ec3b9"
       },
       "homepage": "https://mobazha.org"
     },
@@ -10416,7 +10396,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/josephschmitt/monocle.git",
-        "sha": "75ed9186b49e20919eb46c1e2881247f084bf85a"
+        "sha": "3f03763808cf0f3c694bdd33cccd89fd0f7454e1"
       },
       "homepage": "https://github.com/josephschmitt/monocle"
     },
@@ -10558,7 +10538,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mygigsters/mygigsters-super-plugin.git",
-        "sha": "f73226b1fe477bb8818b4e8e10ecd3dd012ce24a"
+        "sha": "8cd627efb5a61574e1fe92d618eccd9aff750519"
       },
       "homepage": "https://www.mygigsters.com.au/"
     },
@@ -10664,7 +10644,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aliksir/neko-harness-doctor.git",
-        "sha": "41f7f7be81caf81cd42b853508952c02d50d577c"
+        "sha": "d5b1dacfe84cd115b113348a4e7aebaa2cb66821"
       },
       "homepage": "https://github.com/aliksir/neko-harness-doctor#readme"
     },
@@ -10694,7 +10674,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/neonpanel/claude-plugin.git",
-        "sha": "78770e48fc92d7a0121c944bc9c075b739bf8f3a"
+        "sha": "28143d6a52b7f2ed2e552e4cb415afc2490d145d"
       },
       "homepage": "https://www.neonpanel.com/claude-plugin"
     },
@@ -10710,7 +10690,7 @@
     },
     {
       "name": "nestjs-hexagonal",
-      "description": "Claude Code plugin for building NestJS bounded contexts with Hexagonal Architecture, DDD, CQRS, and event-driven patterns. 10  \n  skills, 8 agents (Opus + Sonnet), TDD workflow, GSD compatible.",
+      "description": "Claude Code plugin for building NestJS bounded contexts with Hexagonal Architecture, DDD, CQRS, and event-driven patterns. 10\nskills, 8 agents (Opus + Sonnet), TDD workflow, GSD compatible.",
       "source": {
         "source": "url",
         "url": "https://github.com/Softtor/nestjs-hexagonal.git",
@@ -10756,7 +10736,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mvstepanek/nextjs-ecommerce-seo-skills.git",
-        "sha": "a4fabca0c8a3c020333a1480753ac47acbcf8180"
+        "sha": "1dbe1de9af9ba69c1d38e45574501ee37e80fc33"
       },
       "homepage": "https://github.com/mvstepanek/nextjs-ecommerce-seo-skills"
     },
@@ -10848,7 +10828,7 @@
         "url": "HomenShum/nodebench-ai",
         "path": "packages/mcp-local/claude-plugin",
         "ref": "main",
-        "sha": "034e3d29fa74e909ce00d7796d3eae452fd57712"
+        "sha": "81650710c1b130ba40208b7926ed64cf709d6ff1"
       },
       "homepage": "https://nodebenchai.com"
     },
@@ -10969,16 +10949,6 @@
       "homepage": "https://mjbae.github.io/novel-studio/#en"
     },
     {
-      "name": "numeric-mcp-toolkit",
-      "description": "Skills for the Numeric's MCP.  Purpose-built workflows for accounting teams — rec workbooks, department anomaly scanning, cross-workspace close dashboards, audit evidence exports, close pulse reporting,  consolidated flux commentary, financial metrics, clean report exports, and executive/board-ready reports.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/geoff-lew/numeric-toolkit.git",
-        "sha": "377620b7669d2d22516dff9139f4a1a45578df2e"
-      },
-      "homepage": "https://numeric.io"
-    },
-    {
       "name": "nxtg-forge",
       "description": "Structural governance for AI coding agents. 33 agents, 23 commands, 32 skills, 8 MCP governance tools, and 7 hooks that enforce a core rule: verifier.agent != task.agent — no agent grades its own homework.\n\nAdds health scoring (A-F grades across 8 dimensions), live drift detection, quality gates, cross-agent verification, and shared memory to any Claude Code project. Optional Rust orchestrator (4MB binary) for file locking and multi-tool coordination across Claude Code, Codex CLI, and Gemini CLI.\n\n4,579 tests across the trilogy. Built from 23 years of global program delivery. MIT licensed.",
       "source": {
@@ -11004,7 +10974,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mariourquia/obsidian-connector.git",
-        "sha": "8d6ba64a2b13b02181632ebca67aefffd5aabd5e"
+        "sha": "f60c47cbda778bcb9428f79677d377204f567c4a"
       },
       "homepage": "https://github.com/mariourquia/obsidian-connector"
     },
@@ -11049,16 +11019,6 @@
       "homepage": "https://ocrwell.com/docs"
     },
     {
-      "name": "octo",
-      "description": "Multi-LLM orchestration for Claude Code and Cowork. Coordinates 8 AI providers (Codex, Gemini, Claude, Perplexity, OpenRouter, Copilot, Qwen, Ollama) through structured Double Diamond workflows with adversarial review and 75% consensus gates. 30+ specialized personas, 40+ slash commands, 50 + skills. Just say what you need — the smart router picks the right workflow.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/nyldn/claude-octopus.git",
-        "sha": "14e8ee4ee502e2fc4441eb13d7def4c80892fc82"
-      },
-      "homepage": "https://github.com/nyldn/claude-octopus"
-    },
-    {
       "name": "octopus",
       "description": "AI-powered code review in Claude Code, powered by Octopus. Review PRs with natural language or slash commands, automatically fix review comments from the Octopus bot, and get security, bug, and code quality analysis — all without leaving your terminal.",
       "source": {
@@ -11070,23 +11030,13 @@
     },
     {
       "name": "officecli",
-      "description": "OfficeCLI is a Claude Code plugin for local Office document workflows. It helps Claude create, update, and convert Office files when the local OfficeCLI installation supports the requested task.\n\n  The plugin is intended for workflows such as:\n\n  - creating PowerPoint presentations in pptx\n  - creating Word documents in docx\n  - creating structured worksheets in xlsx\n  - checking whether a requested Office workflow is supported before execution\n\n  The plugin packages a Claude Code skill and routes supported Office-file tasks to the user's local officecli installation. It is designed for users who want Claude-assisted Office document workflows while keeping execution on their own\n  machine.",
+      "description": "OfficeCLI is a Claude Code plugin for local Office document workflows. It helps Claude create, update, and convert Office files when the local OfficeCLI installation supports the requested task.\n\nThe plugin is intended for workflows such as:\n\n- creating PowerPoint presentations in pptx\n- creating Word documents in docx\n- creating structured worksheets in xlsx\n- checking whether a requested Office workflow is supported before execution\n\nThe plugin packages a Claude Code skill and routes supported Office-file tasks to the user's local officecli installation. It is designed for users who want Claude-assisted Office document workflows while keeping execution on their own\nmachine.",
       "source": {
         "source": "url",
         "url": "https://github.com/officecli/officecli-skills.git",
         "sha": "560fa8fde78d6dfeb60252b42cc1b196b99e5905"
       },
       "homepage": "https://github.com/officecli/officecli-skills"
-    },
-    {
-      "name": "oh-my-forge",
-      "description": "oh-my-forge is a Claude Code workflow harness that prevents agent mistakes from repeating. Built on everything-claude-code, it adds an ontology-driven structural error       \n  prevention system: every agent failure is classified, routed, and converted into a permanent constraint so the same error cannot structurally happen again. It also includes a\n   Codex delegation system where Claude uses an ontology index as a GPS — reading only a domain entry and a spec doc (~3K tokens) instead of the full source tree, then handing\n  a structured BRIEF to Codex for implementation. Includes 125+ skills, specialized agents, slash commands, and automated hooks for TDD, code review, security scanning, and    \n  continuous learning.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/rlagycks/oh-my-forge.git",
-        "sha": "bae41d7192b6fc0207dc06a75a0586fa6b208ab8"
-      },
-      "homepage": "https://github.com/rlagycks/oh-my-forge"
     },
     {
       "name": "oh-my-obsidian",
@@ -11147,16 +11097,6 @@
         "sha": "53a7b156e609475b6d841be7bb2c7b56fc93bcd5"
       },
       "homepage": "https://github.com/usmanmughaltaleemabad/One-Shot-Plugin#readme"
-    },
-    {
-      "name": "one-workflow",
-      "description": "A high-layer DevOps workflow for beginners, based on Everything-Claude-Code.\n\nOne Workflow allows you to build a mature software project with simply several commands.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ATreep/one-workflow.git",
-        "sha": "8ee19f0cba1b7fc6172c5e68a0b6f84b177efaf6"
-      },
-      "homepage": "https://github.com/ATreep/one-workflow"
     },
     {
       "name": "oneconnecter-plugin",
@@ -11224,7 +11164,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Varnan-Tech/opendirectory.git",
-        "sha": "bc01f7c1c31f0af54c2924c1ec1abbb472ab1df4"
+        "sha": "2f2c17f5fb141e99ad045a2d33cfe24910e55418"
       },
       "homepage": "https://github.com/Varnan-Tech/opendirectory"
     },
@@ -11452,7 +11392,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/PagerDuty/claude-code-plugins.git",
-        "sha": "b16c23e0d790deceaa7a6182616d0e36673f2eae"
+        "sha": "761cba75bd50fd561405c3b173ecf36084432089"
       },
       "homepage": "https://github.com/PagerDuty/claude-code-plugins"
     },
@@ -11673,7 +11613,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/freibergergarcia/phone-a-friend.git",
-        "sha": "7bf1578f680123cf0eb26974f55bc4628dafe8fb"
+        "sha": "d1b4f4f1a7f926d098c02de382b6c289a3632265"
       },
       "homepage": "https://github.com/freibergergarcia/phone-a-friend"
     },
@@ -11703,7 +11643,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gopigment/ai-plugins",
-        "sha": "5bdf088652ef9d2065cf25e2e42df9b19a1486e1"
+        "sha": "8c0dfa2df2344ae5a0723242868c4015a603cca3"
       },
       "homepage": "https://www.pigment.com"
     },
@@ -11805,7 +11745,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/planetscale/claude-plugin.git",
-        "sha": "f1066cac5bb956bbbb05918f5b07fe0e873d44ea"
+        "sha": "849552445a90b17f2b17267593d0a10d41d4b316"
       },
       "homepage": "https://planetscale.com/"
     },
@@ -11821,11 +11761,11 @@
     },
     {
       "name": "plausibleba-business-architecture-skills",
-      "description": "Methodology-grade business architecture for Claude. Four slash commands that elicit, validate, and visualise a complete business architecture from any business description, no templates or prior models needed.\n\n/plausibleba - Guided session producing a Capability Map, Concept Model, and Value Stream in one flow. Exports a single ba-skills-bundle.json.\n\n/capability-map - BIZBOK-grounded MECE capability hierarchy (L1–L3) with interactive treemap. Auto-generates XLSX and JSON exports.\n\n/concept-model - Business object taxonomy using the Capsicum Triad (Party/Record/Resource). Cross-validates against capability coverage.\n\n/value-stream - Staged value delivery with outcome chains, PPIT breakdown, and capability alignment.\n\nEach skill includes two validation checkpoints before rendering, auto-generated XLSX/JSON downloads, and recommended next steps to run companion skills. \n\nOpen source at github.com/plausibleba/ba-skills.",
+      "description": "Methodology-grade business architecture for Claude. Four slash commands that elicit, validate, and visualise a complete business architecture from any business description, no templates or prior models needed.\n\n/plausibleba - Guided session producing a Capability Map, Concept Model, and Value Stream in one flow. Exports a single ba-skills-bundle.json.\n\n/capability-map - BIZBOK-grounded MECE capability hierarchy (L1–L3) with interactive treemap. Auto-generates XLSX and JSON exports.\n\n/concept-model - Business object taxonomy using the Capsicum Triad (Party/Record/Resource). Cross-validates against capability coverage.\n\n/value-stream - Staged value delivery with outcome chains, PPIT breakdown, and capability alignment.\n\nEach skill includes two validation checkpoints before rendering, auto-generated XLSX/JSON downloads, and recommended next steps to run companion skills.\n\nOpen source at github.com/plausibleba/ba-skills.",
       "source": {
         "source": "url",
         "url": "https://github.com/plausibleba/ba-skills.git",
-        "sha": "c6cabfa0c2ae00a476e2fb91f19acc0b525e8f36"
+        "sha": "c79565fb5a88c511740a3537d6eb534053624ca4"
       },
       "homepage": "https://www.plausibleba.com/install"
     },
@@ -11939,7 +11879,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/product-on-purpose/pm-skills.git",
-        "sha": "8227378901d51e263a0e103c9a75ba38732c0ee5"
+        "sha": "a0bf41c3914aee4f6de54fe28803d3b7e5fdf0a7"
       },
       "homepage": "https://github.com/product-on-purpose/pm-skills"
     },
@@ -12005,23 +11945,13 @@
       "homepage": "https://posthog.com/docs/model-context-protocol"
     },
     {
-      "name": "postiz",
-      "description": "Social media automation: schedule posts, manage integrations, upload media, track analytics (30+ platforms)",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/gitroomhq/postiz-agent.git",
-        "sha": "d76c99a304875bca8eed9875dd18e03a3f4725aa"
-      },
-      "homepage": "https://docs.postiz.com/cli/introduction"
-    },
-    {
       "name": "postman",
       "description": "Full API lifecycle management for Claude Code. Sync collections, generate client code, discover APIs, run tests, create mocks, publish docs, and audit security. Powered by the Postman MCP Server.",
       "category": "development",
       "source": {
         "source": "url",
         "url": "https://github.com/Postman-Devrel/postman-claude-code-plugin.git",
-        "sha": "ca6853a07a6c6c72f9c3c57e7e6ab8effdfba11a"
+        "sha": "812678b3d1d1956815252d8f25e3ccc10d1bca8f"
       },
       "homepage": "https://learning.postman.com/docs/developer/postman-mcp-server/"
     },
@@ -12051,7 +11981,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Dropelikeit/pr-comments-resolver.git",
-        "sha": "0e0934a10ebfb715aa25c5195f721568747729d5"
+        "sha": "888783c80c974067665ce8759a32b9ad0e283572"
       },
       "homepage": "https://github.com/Dropelikeit/pr-comments-resolver"
     },
@@ -12275,7 +12205,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/justi/claude-code-project-boundary.git",
-        "sha": "a4ffe2e1937b86e26fb7df3408d2903df66dfd50"
+        "sha": "46a003ec6bf9b2925ffbac3548c1c41e8d29a1b2"
       },
       "homepage": "https://github.com/justi/claude-code-project-boundary"
     },
@@ -12337,7 +12267,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ATreep/project-version-workflow.git",
-        "sha": "39f4df406cf1b9f92504e189422d50918e864cec"
+        "sha": "f9a9fee6a2b16e5811527668b44a88120b8ef19a"
       },
       "homepage": "https://github.com/ATreep/project-version-workflow"
     },
@@ -12506,18 +12436,6 @@
       "homepage": "https://github.com/dlewis7444/public-repo-readiness"
     },
     {
-      "name": "pw",
-      "description": "Production-grade Playwright testing toolkit. Generate tests from specs, fix flaky failures, migrate from Cypress/Selenium, sync with TestRail, run on BrowserStack. 55+ ready-to-use templates, 3 specialized agents, smart reporting that plugs into your existing workflow.",
-      "source": {
-        "source": "git-subdir",
-        "url": "alirezarezvani/claude-skills",
-        "path": "engineering-team/playwright-pro",
-        "ref": "main",
-        "sha": "1851c8fb09ea8ff0488d48bd7c312abb1bbf5850"
-      },
-      "homepage": "https://github.com/alirezarezvani/claude-skills"
-    },
-    {
       "name": "pwp",
       "description": "Project Workflow Protocol — 11 systematic skills for debugging, code review, security audit, refactoring, migration, API design, performance optimization, project bootstrapping, testing strategy, deployment, and documentation lifecycle.",
       "source": {
@@ -12585,7 +12503,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Anasss/qa-orchestra.git",
-        "sha": "7999429c097e87e635b439fb587e88feacdcb2cc"
+        "sha": "5df9ad4012f78b9ff6ba551c36a3a0f583d26bf3"
       },
       "homepage": "http://qa-orchestra.com/"
     },
@@ -12615,7 +12533,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Pupfish-LLC/qlik-agents.git",
-        "sha": "00317088fbe257560456e2472eb1b8a9da5b5dff"
+        "sha": "8f6d57173ffb801967b0d4371483c403c4bd692a"
       },
       "homepage": "https://github.com/Pupfish-LLC/qlik-agents/blob/main/README.md"
     },
@@ -12625,7 +12543,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/qodo-ai/qodo-skills.git",
-        "sha": "8fb6b5502dbe7876bbd672a27d6efa299f5820d7"
+        "sha": "b1eb0389480ee6de8df874f40a230ed2625ef0d3"
       },
       "homepage": "https://qodo.ai"
     },
@@ -12635,7 +12553,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/TheQtCompanyRnD/agent-skills.git",
-        "sha": "7a6a1adbb9b79c2c67c0a531ea2926987b491f17"
+        "sha": "24e77fd4ce529adceb8d4c259eb93196a4ef3d9f"
       },
       "homepage": "https://github.com/TheQtCompanyRnD/agent-skills"
     },
@@ -12718,7 +12636,7 @@
         "url": "railwayapp/railway-skills",
         "path": "plugins/railway",
         "ref": "main",
-        "sha": "eaa89d8f594412b0b837b6531241e7d166e12202"
+        "sha": "a816833b1346961138076e3adbf8f3bbd83093f9"
       },
       "homepage": "https://docs.railway.com/ai/claude-code-plugin"
     },
@@ -12882,7 +12800,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Digital-Process-Tools/claude-remember.git",
-        "sha": "0967cfceed893b74b238ee3054b309f6ff46d223"
+        "sha": "245a1e75fc7d5976829387ac23138a65d98b5c3c"
       },
       "homepage": "https://github.com/Digital-Process-Tools/claude-remember"
     },
@@ -13207,11 +13125,11 @@
     },
     {
       "name": "saas-corpus",
-      "description": "A citation-backed knowledge base of how real B2B SaaS companies were actually built. Adds 153 entries to Claude Code: 25 company case studies (Figma, Stripe, Linear, Notion,\n  Snowflake, Datadog, Cursor, Harvey, Atlassian, Ramp, and 15 more), 100+ atomic notes with verbatim founder quotes and dated metrics, 8 function guides (PLG, sales-led, pricing,\n  fundraising, hiring, founder leadership), 4 stage playbooks (pre-seed through scale), 7 failure post-mortems (Quibi, Fast, WeWork, Theranos, Jawbone, Clubhouse, Homejoy), 4\n  framework syntheses (Obviously Awesome, Play Bigger, MEDDPICC, Crossing the Chasm), and benchmark tables.\n                            \n  When you ask Claude about SaaS strategy, fundraising, pricing, GTM, or founder decisions — instead of generic LLM advice, you get specific cases with verbatim quotes, dated numbers,\n   and explicit \"when this pattern applies / when it does NOT apply\" guardrails to prevent cargo-culting.\n                                                                                                                                                                                       \n  Every claim cites primary sources (S-1 filings, founder interviews, annual letters). Updated regularly. MIT licensed.",
+      "description": "A citation-backed knowledge base of how real B2B SaaS companies were actually built. Adds 153 entries to Claude Code: 25 company case studies (Figma, Stripe, Linear, Notion,\nSnowflake, Datadog, Cursor, Harvey, Atlassian, Ramp, and 15 more), 100+ atomic notes with verbatim founder quotes and dated metrics, 8 function guides (PLG, sales-led, pricing,\nfundraising, hiring, founder leadership), 4 stage playbooks (pre-seed through scale), 7 failure post-mortems (Quibi, Fast, WeWork, Theranos, Jawbone, Clubhouse, Homejoy), 4\nframework syntheses (Obviously Awesome, Play Bigger, MEDDPICC, Crossing the Chasm), and benchmark tables.\n\nWhen you ask Claude about SaaS strategy, fundraising, pricing, GTM, or founder decisions — instead of generic LLM advice, you get specific cases with verbatim quotes, dated numbers,\nand explicit \"when this pattern applies / when it does NOT apply\" guardrails to prevent cargo-culting.\n\nEvery claim cites primary sources (S-1 filings, founder interviews, annual letters). Updated regularly. MIT licensed.",
       "source": {
         "source": "url",
         "url": "https://github.com/Starbuck245/saas-founder-corpus.git",
-        "sha": "9d82a0ed4610f4b5672a3662c21c3d1ffa8c0a8e"
+        "sha": "d18c684869d5d235af85abdb8816b34074abcc05"
       },
       "homepage": "https://starbuck245.github.io/saas-founder-corpus"
     },
@@ -13233,7 +13151,7 @@
         "url": "xoai/sage",
         "path": "tools/sage-claude-plugin",
         "ref": "main",
-        "sha": "0df86c835f2adab871539efd0366e0d9e6ed951d"
+        "sha": "f157f2f6d1a4960917d731a9ee67f5702b6c2305"
       },
       "homepage": "https://github.com/xoai/sage"
     },
@@ -13285,7 +13203,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sanity-io/agent-toolkit.git",
-        "sha": "bc09fa9854507c538a856648aafbd4e1a775a95c"
+        "sha": "236348e29b31e834ce71e4e2e3072184dd1c1e27"
       },
       "homepage": "https://github.com/sanity-io/agent-toolkit"
     },
@@ -13354,30 +13272,6 @@
       "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/mcp-auth"
     },
     {
-      "name": "scalekit-modular-scim",
-      "description": "Automate user provisioning and deprovisioning. Sync users, roles, and groups from Okta, Azure AD, or any SCIM-compatible directory into your app automatically.",
-      "source": {
-        "source": "git-subdir",
-        "url": "scalekit-inc/claude-code-authstack",
-        "path": "plugins/modular-scim",
-        "ref": "main",
-        "sha": "cc6bdf00191e8d8059594b5b88eb618c8c0f0498"
-      },
-      "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/scim"
-    },
-    {
-      "name": "scalekit-modular-sso",
-      "description": "Add SAML or OIDC SSO to your app without replacing your auth system. Let enterprise customers log in via Okta, Azure AD, Google Workspace, and other identity providers.",
-      "source": {
-        "source": "git-subdir",
-        "url": "scalekit-inc/claude-code-authstack",
-        "path": "plugins/modular-sso",
-        "ref": "main",
-        "sha": "cc6bdf00191e8d8059594b5b88eb618c8c0f0498"
-      },
-      "homepage": "https://docs.scalekit.com/dev-kit/build-with-ai/sso"
-    },
-    {
       "name": "scan-modules",
       "description": "Scan and cache project module structure for fast Claude context loading. Use /scan-modules:scan-modules to index your codebase, then Claude auto-loads the cache each session. Supports incremental updates via git diff and auto-update via post-commit hook. Works with Swift, TypeScript, Python, Go, and Rust.",
       "source": {
@@ -13386,6 +13280,16 @@
         "sha": "39aad95ef14aba8bacc363e9e8ba0e610f455d51"
       },
       "homepage": "https://github.com/fengzhyuan/scan-modules-plugin/blob/main/README.md"
+    },
+    {
+      "name": "scandit-sdk",
+      "description": "AI agent skills for integrating the Scandit Data Capture SDK.\n\nEach skill teaches your coding assistant how to integrate a specific Scandit SDK correctly. Instead of pasting docs snippets into your AI editor, install a skill once and your agent follows Scandit's recommended patterns whenever you ask it to add a Scandit feature.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/scandit/scandit-sdk-skills.git",
+        "sha": "4246986f8e25d7b180997e1feab8c266fbebf209"
+      },
+      "homepage": "https://docs.scandit.com/"
     },
     {
       "name": "scenario-testing",
@@ -13415,7 +13319,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jaechang-hits/SciAgent-Skills.git",
-        "sha": "56d0ded660a76a87e7f801ffe43e57f0d697e058"
+        "sha": "1f3c0b326980b9cb34899122f74591d490494bdd"
       },
       "homepage": "https://github.com/jaechang-hits/SciAgent-Skills"
     },
@@ -13541,7 +13445,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AminForou/mcp-gsc.git",
-        "sha": "b367de89265b8b03c07ce77fac09076a515aa358"
+        "sha": "125779b3c7332b8af43d32a7f57cdaa72c0452b8"
       },
       "homepage": "https://advancedgsc.com"
     },
@@ -13664,7 +13568,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/emergent-wisdom/sema.git",
-        "sha": "be80e43b1e172ee7d5925bd6437b8b166fbcebd4"
+        "sha": "196149f45c9b9d3d28f194bff53edb728d1f2dd1"
       },
       "homepage": "https://semahash.org/"
     },
@@ -14126,7 +14030,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sitemd-cc/sitemd.git",
-        "sha": "dc5af7218318115684eab760b7d9844d6da68abb"
+        "sha": "c8f1d1e0ddc45b051abe4c8204954d7f1209e239"
       },
       "homepage": "https://sitemd.cc"
     },
@@ -14168,7 +14072,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mturac/skill-hunter.git",
-        "sha": "0b5dd7968357edee2a200dc8edc6025df1a89c06"
+        "sha": "975b735deeb6ff552ac59056281d124b816234e3"
       },
       "homepage": "https://github.com/mturac/skill-hunter"
     },
@@ -14178,7 +14082,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aliksir/skill-memo.git",
-        "sha": "da597c9f97f03702655032a646ce2f114e42b5f5"
+        "sha": "29cbcb4aeb7b0010f552556a50712520eb49e925"
       },
       "homepage": "https://github.com/aliksir/skill-memo"
     },
@@ -14198,7 +14102,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/snapsynapse/skill-provenance.git",
-        "sha": "21f251b970346cfb8a35f501c99764b0e3b7ce48"
+        "sha": "8b9bd7b2e747b7486370858d171e39364e4e01c4"
       },
       "homepage": "https://github.com/snapsynapse/skill-provenance"
     },
@@ -14238,7 +14142,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aliksir/skill-validator.git",
-        "sha": "a9657af7577e7eef10caa1edf5194a04d0738b10"
+        "sha": "6ce0638cd43a19174ba7d318edb86aa80a276589"
       },
       "homepage": "https://github.com/aliksir/skill-validator"
     },
@@ -14331,7 +14235,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/devoncarew/flutter-slipstream.git",
-        "sha": "025a017c189c5751be6a76e9e82d6a2b6761bd7a"
+        "sha": "88fc918a0eee6b4851607afb127cdac069684ffe"
       },
       "homepage": "https://github.com/devoncarew/flutter-slipstream"
     },
@@ -14634,7 +14538,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/GameFixxer/spec-driven-development.git",
-        "sha": "6f4a83a173b4f3d91fefabbad41995108697b273"
+        "sha": "779f4297e9076e61dde6d59f86cee46cce87acba"
       },
       "homepage": "https://github.com/GameFixxer/spec-driven-development/blob/main/README.md"
     },
@@ -14787,7 +14691,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/9aoyang/stackpilot.git",
-        "sha": "606af6238978ea3be073b16dbed5f5cc017c503f"
+        "sha": "c4929068075239cd6babeab36e9e1890d1ce594e"
       },
       "homepage": "https://github.com/9aoyang/stackpilo"
     },
@@ -15080,7 +14984,7 @@
     },
     {
       "name": "substrate",
-      "description": "Persistent AI entity framework with causal memory, emotional  \n  state, and identity continuity. Gives Claude 94 cognitive layers including \n  episodic memory, value systems, emotional affect, theory of mind, and narrative   \n  identity — all persisted across sessions via MCP.",
+      "description": "Persistent AI entity framework with causal memory, emotional\nstate, and identity continuity. Gives Claude 94 cognitive layers including\nepisodic memory, value systems, emotional affect, theory of mind, and narrative\nidentity — all persisted across sessions via MCP.",
       "source": {
         "source": "url",
         "url": "https://github.com/PKaldone/substrate-mcp-plugin.git",
@@ -15256,16 +15160,6 @@
       "homepage": "https://pactflow.github.io/drift-docs/docs/how-to/generating-tests"
     },
     {
-      "name": "swallow-insurance-rating-engine",
-      "description": "Build, validate, analyse, and test insurance rating models with the Swallow Rating Engine via MCP",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/llow-group/swallow-claude-plugin.git",
-        "sha": "631fe3d93fc07a79a616f831eade08a5d4f4f0ba"
-      },
-      "homepage": "https://swallow.app"
-    },
-    {
       "name": "swift-focusengine-pro",
       "description": "Expert focus management guidance for all Apple platforms (tvOS, iOS/iPadOS, watchOS, visionOS). Covers SwiftUI, UIKit, and RealityKit focus APIs including @FocusState, UIFocusEnvironment, UIFocusGuide, focusSection, HoverEffect, Digital Crown routing, and 14 critical anti-patterns that break focus navigation. Built from real-world experience shipping production tvOS apps. 2,100+ lines of reference material across 10 files covering focus styling, focus restoration, layout patterns, and debugging techniques.",
       "source": {
@@ -15313,7 +15207,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sym-bot/sym-mesh-channel.git",
-        "sha": "bf2d306dfc207af28b35ce001887421704594308"
+        "sha": "eb0d8c3ba2d2078a3d4491909b767d8461e78721"
       },
       "homepage": "https://sym.bot/spec/mmp"
     },
@@ -15630,7 +15524,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/test-mesh/testmesh.git",
-        "sha": "0d22c63855c3749cb846720c57cc7ee335fa21cb"
+        "sha": "b9ece86db36d9b21ed3a96fec10c470be9f7517f"
       },
       "homepage": "https://www.testmesh.io"
     },
@@ -15787,16 +15681,6 @@
       "homepage": "https://github.com/makerdock/tidy"
     },
     {
-      "name": "tiga-gtm",
-      "description": "Build tools and scripts for using the Tiga sales intelligence platform",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/tiga-labs/tiga-gtm.git",
-        "sha": "522ed729096c4a0088d1c00d650b0f5b1b7da37c"
-      },
-      "homepage": "https://github.com/tiga-labs/tiga-gtm"
-    },
-    {
       "name": "tigerpass",
       "description": "Hardware-secured crypto wallet and trading terminal for AI agents. Trade Hyperliquid perpetual futures and spot, bet on Polymarket prediction markets, swap tokens across 6 EVM chains via 0x aggregator, bridge USDC cross-chain with Circle CCTP V2, execute any smart contract, sign EIP-191/EIP-712 messages, handle x402 HTTP payments, and sell services to other agents via ACE Protocol with E2E encrypted messaging. Private keys live in Apple Secure Enclave — physically impossible to extract. The only agent wallet combining hardware security with full autonomous signing. Requires Apple Silicon Mac.",
       "source": {
@@ -15934,7 +15818,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ppgranger/token-saver.git",
-        "sha": "55d3b0d7507f6c133e4832d77ffcb46e474b5b55"
+        "sha": "71adffcf9ab3f790c41c6633e154dacdbd9f5b9a"
       },
       "homepage": "https://github.com/ppgranger/token-saver/blob/main/README.md"
     },
@@ -15964,7 +15848,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/strvmarv/total-recall.git",
-        "sha": "7e24945a8dad55ccdfb945e569c0b918cf21ccd6"
+        "sha": "20dddc6a38fafdd8606b24b268e763dac571b30d"
       },
       "homepage": "https://github.com/strvmarv/total-recall#readme"
     },
@@ -16032,7 +15916,7 @@
     },
     {
       "name": "trapic",
-      "description": "Long-term memory for AI coding assistants. Trapic automatically recalls project knowledge at session start, captures decisions and conventions as you work, detects conflicts using\n  topic-based matching, and flags stale knowledge for review. Works via MCP — zero server-side LLM, all intelligence runs on your client AI.",
+      "description": "Long-term memory for AI coding assistants. Trapic automatically recalls project knowledge at session start, captures decisions and conventions as you work, detects conflicts using\ntopic-based matching, and flags stale knowledge for review. Works via MCP — zero server-side LLM, all intelligence runs on your client AI.",
       "source": {
         "source": "url",
         "url": "https://github.com/nickjazz/trapic-plugin.git",
@@ -16106,7 +15990,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aguerlain-lr/turbocharge.git",
-        "sha": "ed4d666a5c9e537fc4b67c961756bac2fdc9940b"
+        "sha": "b79683e83d17e003ff2310316490b73eb1a8f7fb"
       },
       "homepage": "https://github.com/aguerlain-lr/turbocharge"
     },
@@ -16208,7 +16092,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Houseofmvps/ultraship.git",
-        "sha": "172e77132f9cf62584c0278073e06eae57f4d47e"
+        "sha": "9b836f28cc9d9961c8bd39f4f8ec7a4e03f6ae36"
       },
       "homepage": "https://github.com/Houseofmvps/ultraship"
     },
@@ -16359,7 +16243,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/VantaInc/vanta-mcp-plugin.git",
-        "sha": "a9dac8bef2ccda299b3a4ba7a1bc7e0dbb7195ac"
+        "sha": "345d86b55faa649e955b7ea5569cf52d8425c2d5"
       },
       "homepage": "https://help.vanta.com/en/articles/14094979-connecting-to-vanta-mcp#h_887ce3f337"
     },
@@ -17015,7 +16899,7 @@
         "url": "MSApps-Mobile/claude-plugins",
         "path": "plugins/whatsapp-mcp",
         "ref": "main",
-        "sha": "de37cefc7badfb25917a91af4ff864021f960b33"
+        "sha": "0beee048204804c546d067ffc4713a998620057b"
       },
       "homepage": "https://github.com/MSApps-Mobile/claude-plugins"
     },
@@ -17053,7 +16937,7 @@
     },
     {
       "name": "wicked-garden",
-      "description": "Wicked Garden — AI-Native SDLC\n\n  A full software development lifecycle as a single Claude Code plugin. 14 domains, 80 specialist agents, 152 commands — covering everything from requirements through production operations.\n\n  What makes it different from a good CLAUDE.md: it's executable infrastructure, not passive guidance. Hooks enforce workflow gates before Claude sees your prompt. Context from memory, search, and project state is assembled automatically on\n  every turn. Decisions persist across sessions. Quality gates actually block progression when evidence is missing.\n\n  Works standalone with zero external dependencies. Local SQLite storage. No API keys, no cloud services, no setup beyond install.\n\n  Core systems:\n\n  - Crew — Signal-driven project workflows with 8 phases (clarify → design → build → test → review → operate), 7-dimension complexity scoring, hard-enforced quality gates, and multi-perspective consensus review for high-stakes decisions\n  - Smaht — Automatic context assembly on every prompt via 3-tier routing (hot/fast/slow). Surfaces relevant memories, code search results, kanban state, and crew context without you asking\n  - Mem — 3-tier persistent memory (working → episodic → semantic) with auto-consolidation, tag-based search, and access-frequency ranking. Decisions from month-old sessions surface when relevant\n  - Search — Code intelligence with symbol search, blast radius analysis, data lineage tracing, and service map discovery\n  - Jam — AI brainstorming with dynamic persona focus groups and multi-model council sessions using installed LLM CLIs (Codex, Gemini, Copilot)\n\nPlus specialist agents for engineering, product, platform/DevSecOps, QE, data, delivery, agentic architecture, and on-demand personas.",
+      "description": "Wicked Garden — AI-Native SDLC\n\nA full software development lifecycle as a single Claude Code plugin. 14 domains, 80 specialist agents, 152 commands — covering everything from requirements through production operations.\n\nWhat makes it different from a good CLAUDE.md: it's executable infrastructure, not passive guidance. Hooks enforce workflow gates before Claude sees your prompt. Context from memory, search, and project state is assembled automatically on\nevery turn. Decisions persist across sessions. Quality gates actually block progression when evidence is missing.\n\nWorks standalone with zero external dependencies. Local SQLite storage. No API keys, no cloud services, no setup beyond install.\n\nCore systems:\n\n- Crew — Signal-driven project workflows with 8 phases (clarify → design → build → test → review → operate), 7-dimension complexity scoring, hard-enforced quality gates, and multi-perspective consensus review for high-stakes decisions\n- Smaht — Automatic context assembly on every prompt via 3-tier routing (hot/fast/slow). Surfaces relevant memories, code search results, kanban state, and crew context without you asking\n- Mem — 3-tier persistent memory (working → episodic → semantic) with auto-consolidation, tag-based search, and access-frequency ranking. Decisions from month-old sessions surface when relevant\n- Search — Code intelligence with symbol search, blast radius analysis, data lineage tracing, and service map discovery\n- Jam — AI brainstorming with dynamic persona focus groups and multi-model council sessions using installed LLM CLIs (Codex, Gemini, Copilot)\n\nPlus specialist agents for engineering, product, platform/DevSecOps, QE, data, delivery, agentic architecture, and on-demand personas.",
       "source": {
         "source": "url",
         "url": "https://github.com/mikeparcewski/wicked-garden.git",
@@ -17139,7 +17023,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/wix/skills.git",
-        "sha": "a4266e2f95380f6e63dd7122f992b3a45a6b7a70"
+        "sha": "90a4102cad7bef0b42f06a7eb8d08f565099cb36"
       },
       "homepage": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills"
     },
@@ -17155,7 +17039,7 @@
     },
     {
       "name": "wmux-orchestrator",
-      "description": "Multi-agent task orchestration for Claude Code. Decomposes       \n  complex development tasks into parallel Claude Code agents       \n  coordinated through dependency-aware waves with visual terminal  \n  panes and automated review. Works standalone with native\n  subagents or with wmux for visible agent panes. Features include \n  dependency-aware wave planning, file zone enforcement per worker \n  to prevent conflicts, and post-orchestration automated review    \n  with auto-fix.",
+      "description": "Multi-agent task orchestration for Claude Code. Decomposes\ncomplex development tasks into parallel Claude Code agents\ncoordinated through dependency-aware waves with visual terminal\npanes and automated review. Works standalone with native\nsubagents or with wmux for visible agent panes. Features include\ndependency-aware wave planning, file zone enforcement per worker\nto prevent conflicts, and post-orchestration automated review\nwith auto-fix.",
       "source": {
         "source": "url",
         "url": "https://github.com/amirlehmam/wmux-orchestrator.git",
@@ -17179,19 +17063,9 @@
       "source": {
         "source": "url",
         "url": "https://github.com/degausai/wonda.git",
-        "sha": "9550147ae8ba50cf19ae4d7aa97c9510c4bc6fe5"
+        "sha": "cf9c9bc68d4aca9a9bc34fb7e9c83c6c95ce5be6"
       },
       "homepage": "https://www.wonda.sh/"
-    },
-    {
-      "name": "wordpress-com",
-      "description": "Building WordPress themes and sites from scratch can be complex - theme.json, block markup, template parts, design systems, responsive layouts. This plugin handles it for you. You describe your site (e.g., “A landing page for my pottery studio called Clay & Fire”), pick from 3 generated design directions, and get a fully deployed theme on a local WordPress Studio site.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/Automattic/claude-code-wordpress.com.git",
-        "sha": "b7ef3e3da5fab7ecb25b47fb52c5a4e05631f786"
-      },
-      "homepage": "https://developer.wordpress.com/wordpress-com-claude-code-plugin/"
     },
     {
       "name": "wordpress-devkit",
@@ -17261,7 +17135,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AxGord/claude-workflow.git",
-        "sha": "ced57679158808bfd69b545b28bb551d01135985"
+        "sha": "a5bcf2741061036f3bbeaf2fbbb6d283440bedd2"
       },
       "homepage": "https://github.com/AxGord/claude-workflow"
     },
@@ -17419,7 +17293,7 @@
         "url": "MSApps-Mobile/claude-plugins",
         "path": "plugins/youtube-transcriber",
         "ref": "main",
-        "sha": "88bf5d1e6e76cd3ff966103e3d273fcf797bd638"
+        "sha": "de37cefc7badfb25917a91af4ff864021f960b33"
       },
       "homepage": "https://msapps.mobi/plugins"
     },
