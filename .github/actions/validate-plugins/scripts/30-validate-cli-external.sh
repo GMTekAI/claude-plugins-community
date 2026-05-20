@@ -107,18 +107,25 @@ while IFS= read -r ext; do
   fi
 
   manifest="$target/.claude-plugin/plugin.json"
+  if [[ ! -f "$manifest" ]] && [[ -f "$target/plugin.json" ]]; then
+    manifest="$target/plugin.json"
+  fi
+
   if [[ ! -f "$manifest" ]]; then
-    if [[ -f "$target/plugin.json" ]]; then
-      manifest="$target/plugin.json"
+    # Skills-only plugin (no plugin.json shipped upstream): the marketplace
+    # synthesizes the manifest from inline fields at install time. Mirrors
+    # the skills-only branch in `claude-plugins-community-internal`'s
+    # scan-external-plugins.yml so the two validators agree on what shapes
+    # are acceptable.
+    if compgen -G "$target/skills/*/SKILL.md" >/dev/null; then
+      log "  ✓ $name OK — $ref (skills-only, no plugin.json)"
+      record_result "cli-external" "pass" "$name" "skills-only"
     else
       error "$name: no plugin manifest (.claude-plugin/plugin.json or plugin.json) — $ref"
       record_result "cli-external" "fail" "$name" "no plugin manifest — $ref"
       failures=$((failures+1))
-      continue
     fi
-  fi
-
-  if out="$(timeout "$TIMEOUT_SECS" claude plugin validate "$manifest" 2>&1)"; then
+  elif out="$(timeout "$TIMEOUT_SECS" claude plugin validate "$manifest" 2>&1)"; then
     log "  ✓ $name OK — $ref"
     record_result "cli-external" "pass" "$name" ""
   else
