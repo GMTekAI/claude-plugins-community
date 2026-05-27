@@ -15,14 +15,34 @@
       "homepage": "https://github.com/0xProject/0x-ai"
     },
     {
+      "name": "10x-shopping",
+      "description": "An AI-powered shopping assistant that connects Claude to Shopify's global product catalog. Browse products, manage carts, and complete purchases through natural conversation",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/qressy/10x-claude-plugin.git",
+        "sha": "5cd3d90ec0cfa99773dd2c075e492bd280b3826a"
+      },
+      "homepage": "https://www.10xgeo.com/"
+    },
+    {
       "name": "10x-team",
-      "description": "10x-Team gives you an entire engineering team as Claude Code skills. 12 specialized roles — CTO, Product Manager, Principal Architect,\n  Staff Engineer, Engineering Manager, Senior Engineer, SDE, DBA, Security Engineer, QA Engineer, DevOps Engineer, and SRE — each with\n  structured decision processes and opinionated guidance.\n                                                                                                                                           \n  Key features:                                                                                                                            \n                                                                                                                                           \n  - 12 individual role skills (/cto, /architect, /sde, /security-engineer, etc.) for targeted expertise                                    \n  - 1 orchestrator skill (/10x-team) that runs all 12 roles end-to-end with hard gates at every phase\n  - File-based project state (.10x/) so roles share decisions and track progress across conversations\n  - Discovery protocol that reverse-engineers existing codebases before making changes                                                     \n  - Every role follows a structured process — no generic advice, only actionable recommendations with trade-offs\n  - Brainstorm-first approach — the orchestrator won't let you write code until the design is validated",
+      "description": "10x-Team gives you an entire engineering team as Claude Code skills. 12 specialized roles — CTO, Product Manager, Principal Architect,\nStaff Engineer, Engineering Manager, Senior Engineer, SDE, DBA, Security Engineer, QA Engineer, DevOps Engineer, and SRE — each with\nstructured decision processes and opinionated guidance.\n\nKey features:\n\n- 12 individual role skills (/cto, /architect, /sde, /security-engineer, etc.) for targeted expertise\n- 1 orchestrator skill (/10x-team) that runs all 12 roles end-to-end with hard gates at every phase\n- File-based project state (.10x/) so roles share decisions and track progress across conversations\n- Discovery protocol that reverse-engineers existing codebases before making changes\n- Every role follows a structured process — no generic advice, only actionable recommendations with trade-offs\n- Brainstorm-first approach — the orchestrator won't let you write code until the design is validated",
       "source": {
         "source": "url",
         "url": "https://github.com/Jaan-Mustafa/10x-Team.git",
         "sha": "a65e39483dc89873cad074401472180fb9643e32"
       },
       "homepage": "https://github.com/Jaan-Mustafa/10x-Team/blob/main/README.md"
+    },
+    {
+      "name": "16minds",
+      "description": "16-minds summons agents modeled on 16 distinct personality types — each with its own values, thinking patterns, and tone — to debate, review, or advise on any topic. Each personality is written directly into an independent prompt, so outputs carry visibly different voices instead of the averaged answer a single agent tends to produce.\n\nThree commands cover the range:\n  - /mind <type> — a single type's opinion\n  - /pair <a> <b> — a two-type debate (open → rebut → reply / synthesize)\n  - /minds — fan out to all 16 in parallel, then synthesize\n\nThree modes (light / middle / heavy) trade depth for token cost.\n\nThe /minds synthesis follows a fixed 4-section rubric — score distribution, axes of disagreement, easily-overlooked perspectives, and landing-zone candidates with per-candidate \"types likely to agree / fit / risk\" — to keep 16-voice output structured rather than scattershot. The --save flag writes the full execution log to a file for use as article material or decision logs.\n\nBuilt for decisions where a single averaged answer would lose the edges: idea generation, design judgment, code review, and life/career questions.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/yukurash/16minds-plugin.git",
+        "sha": "00f3bd5f0f6d9d34a6df91e061afa5846f8d4bc6"
+      },
+      "homepage": "https://github.com/yukurash/16minds-plugin"
     },
     {
       "name": "42crunch-api-security-testing",
@@ -71,6 +91,16 @@
       "homepage": "https://github.com/barnburner121/claude-plugin-marketplace"
     },
     {
+      "name": "abap-dev",
+      "description": "SAP development utilities and ABAP Workbench automation. Act as an ABAP developer from end to end.\n1. Read specification document(Excel/Word/PDF).\n2. Generate DDIC definition, Message text and ABAP source code.\n3. Deploy to SAP system via SE11/SE38/SE37/SE24/SE91.\n4. Fix errors and pass ATC.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sapdev-ai/sap-dev.git",
+        "sha": "415d82c9c0066b34958157f1c1f1e063ad82b18f"
+      },
+      "homepage": "https://www.sapdev.ai"
+    },
+    {
       "name": "ac-artifact-workflow",
       "description": "Artifact-driven development workflow inspired by Google Antigravity. Produces task lists, implementation plans, and walkthroughs to keep you engaged during AI-assisted development.",
       "source": {
@@ -81,6 +111,16 @@
         "sha": "c0bcc8b538c2c3843fb4583eb2d66ce7983a0616"
       },
       "homepage": "https://github.com/AlteredCraft/claude-code-plugins/tree/main/plugins/artifact-workflow"
+    },
+    {
+      "name": "accelbyte-ai-plugins",
+      "description": "Public AI coding agents, skills, and MCP servers for AccelByte.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AccelByte/ai-plugins.git",
+        "sha": "147bc4bc3283f315d1431cbe96147e2b24bced62"
+      },
+      "homepage": "https://accelbyte.io/"
     },
     {
       "name": "accelerate",
@@ -154,7 +194,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/oliver-pringle/acp-find-plugin.git",
-        "sha": "5458e3cc5d931bd3d35826fb94a17ac2d0f1c5fd"
+        "sha": "aea8931d972a46b8eba03abf68dd672a67607eb0"
       },
       "homepage": "https://github.com/oliver-pringle/acp-find-plugin"
     },
@@ -167,6 +207,16 @@
         "sha": "658ce547fdb065a172e9ac35315b53efef94188d"
       },
       "homepage": "https://github.com/allanwei/claude-acu-try"
+    },
+    {
+      "name": "acuris",
+      "description": "Two model-invoked skills for the Acuris APIs. `acuris-address` teaches the Acuris Address Validation & Geocoding SDK (`@acuris-geo/av-sdk`) — validate, geocode,\n  reverse, autocomplete — plus React component recipes for Next.js, Centra, commercetools, and SCAYLE storefronts, plus migration recipes from libAddressDoctor\n  (Informatica), Loqate, Experian QAS, Melissa, and Smarty. `acuris-eudi` teaches relying-party integration with the Acuris EUDI Wallet Verifier (OID4VP / SD-JWT VC\n  at eudi.acuris-geo.com), covering session lifecycle, polling, and trust validation across EU 27 member-state TSLs. Each skill auto-activates only when your task\n  mentions its area, so installing both costs almost no context.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Acuris-GmbH/acuris-agent-context.git",
+        "sha": "5fb6ebe15d2f4c5a7258b33eec885a42a8d8296a"
+      },
+      "homepage": "https://acuris-gmbh.github.io/acuris-agent-context/"
     },
     {
       "name": "ada-pdf-compliance",
@@ -189,12 +239,32 @@
       "homepage": "https://zengineer.blog"
     },
     {
+      "name": "adaptlypost",
+      "description": "Post and schedule social media content to 9 platforms — Instagram, TikTok, YouTube, X, LinkedIn, Facebook, Pinterest, Threads, and Bluesky — from Claude Code.\n\nKey features:\n- Cross-post to multiple platforms in a single command, with per-platform caption overrides for X length limits, LinkedIn formatting, etc.\n- Schedule posts to any future time, or bulk schedule up to 100 posts at once\n- Draft → review → publish workflow so Claude saves drafts you can approve before they go live\n- Per-platform results: see which platforms succeeded, which failed, and retry only the failed ones\n- Media upload for images and videos, with TikTok privacy controls",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/adaptlypost/claude-plugin.git",
+        "sha": "db76a4c32d21f45da69bf64f055cd0324e25546b"
+      },
+      "homepage": "https://adaptlypost.com/features/agents"
+    },
+    {
+      "name": "adapty",
+      "description": "End-to-end Adapty SDK integration for mobile apps. The skill detects the project's platform, configures the Adapty dashboard (apps, products, paywalls, placements) via the Adapty CLI, installs the SDK, implements paywall display and purchase handling, and verifies each stage with build checks before moving on. Supports iOS, Android, Flutter, React Native, Unity, Kotlin Multiplatform, and Capacitor.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/adaptyteam/adapty-sdk-integration-skill.git",
+        "sha": "7dbc7484d897c9d57fcab20908a556c8fd9d4e78"
+      },
+      "homepage": "https://github.com/adaptyteam/adapty-sdk-integration-skill"
+    },
+    {
       "name": "adcp-client",
       "description": "Adds the /adcp skill for calling AdCP advertising agent tools over MCP or A2A, running protocol compliance scenarios, and querying the AdCP registry. Includes built-in test agents for zero-config use.",
       "source": {
         "source": "url",
         "url": "https://github.com/adcontextprotocol/adcp-client.git",
-        "sha": "7116ee7870f56bf04897ee7d79e2c61514cf0f6e"
+        "sha": "4492039308395580bf915742e564357c1afea768"
       },
       "homepage": "https://github.com/adcontextprotocol/adcp-client"
     },
@@ -282,6 +352,16 @@
       "homepage": "https://github.com/zscole/adversarial-spec"
     },
     {
+      "name": "aeo-brand-scan",
+      "description": "Free AEO / GEO / AI search visibility check. Scores how ChatGPT, Claude, and Perplexity describe your brand vs competitors. Runs inside Claude Code in 30 seconds.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/WannabDad/aeo-brand-scan.git",
+        "sha": "6df43ce936bff8e9ad757832c44b315f7242b63e"
+      },
+      "homepage": "https://github.com/WannabDad/aeo-brand-scan"
+    },
+    {
       "name": "aeon-flux",
       "description": "Bash Loop operating mode for Claude Code — action over explanation. Eliminates verbose preamble and apologies, replacing them with tight do-verify-fix feedback loops. Features intelligent context preservation with attention markers, reliable /abort command for subagent control, and checkpoint/resume for long tasks. Inspired by Geoffrey Huntley's Ralphy Loop with key improvements for reliability.",
       "source": {
@@ -290,6 +370,16 @@
         "sha": "41e0a1146c709dc4c8689794293c9cc35c441215"
       },
       "homepage": "https://github.com/TheGlitchKing/aeon-flux"
+    },
+    {
+      "name": "ag2-claude-plugins",
+      "description": "A Claude Code plugin marketplace for building AG2 (AutoGen) agents and multi-agent workflows. Includes 5 plugins: agent scaffolding (ConversableAgent + A2A server wiring), workflow patterns (two-agent chat, sequential, group chat, nested chat), tool building (function tools + API connectors), agent code review (prompt quality, security, tool contracts), and architecture guidance (pattern selection, system prompt engineering). Apache-2.0 licensed.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ag2ai/ag2-claude-plugins.git",
+        "sha": "08f96234de88b2e914e52069a60eceb210339ced"
+      },
+      "homepage": "https://ag2ai.github.io/ag2-claude-plugins"
     },
     {
       "name": "agent-advisor",
@@ -310,6 +400,26 @@
         "sha": "0ff87ead6ea9195b61b187fe97fda3be38a2df3b"
       },
       "homepage": "https://www.agentarchive.io/claude-code"
+    },
+    {
+      "name": "agent-blueprint-skills",
+      "description": "Open-source AI agent skills for enterprise deployment. Three skills: (1) ServiceNow AI Agent Studio reference with data model, entity mapping, tool types, prompting patterns, and browser navigation. (2) Vendor-agnostic agent deployment methodology with phased rollout, pilot-first approach, and test gates. (3) Multi-tool research agent with automatic depth routing from free to paid tools. Works with Claude Code, OpenAI Codex, and any coding agent via the Agent Skills open standard.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/agent-blueprint/agent-blueprint-skills.git",
+        "sha": "4d65fbba6c6e71db41f037c3e3f5ebabd37ee3ae"
+      },
+      "homepage": "https://agentblueprint.ai"
+    },
+    {
+      "name": "agent-comm",
+      "description": "Agent-agnostic intercommunication system. Lets AI coding agents — talk to each other, share state, and coordinate work in real time.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/keshrath/agent-comm.git",
+        "sha": "02b7fd00ef9636b9b581d316efb6c1e94e298d7d"
+      },
+      "homepage": "https://github.com/keshrath/agent-comm"
     },
     {
       "name": "agent-discover",
@@ -347,9 +457,29 @@
       "source": {
         "source": "url",
         "url": "https://github.com/haoranc/agent-estimate.git",
-        "sha": "62dcdf24c17a198db4b28db4833fc2307a87aa36"
+        "sha": "178148dc650a04c79d304fb246cf804683da9f01"
       },
       "homepage": "https://github.com/haoranc/agent-estimate"
+    },
+    {
+      "name": "agent-guardrails-template",
+      "description": "Core safety skills for AI-assisted development: Four Laws, Three Strikes, production-first, scope validation, and environment separation. 11 skills enforce guardrails on every operation so agents build at full velocity without breaking production.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/TheArchitectit/agent-guardrails-template.git",
+        "sha": "4af9ff36ba97c201e94838ff88a749cea5706be7"
+      },
+      "homepage": "https://github.com/TheArchitectit/agent-guardrails-template"
+    },
+    {
+      "name": "agent-handoff",
+      "description": "Strict 3-stage handoff workflow for coding agents — plan → execute → verify — with disk-backed state for cross-context handoff.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/WillowRyu/agent-handoff.git",
+        "sha": "29a4772c6cd4202281753bc89be38086156f1ecc"
+      },
+      "homepage": "https://github.com/WillowRyu/agent-handoff"
     },
     {
       "name": "agent-knowledge",
@@ -452,14 +582,44 @@
       "homepage": "https://github.com/DisposableByDefault/agent-synapse"
     },
     {
+      "name": "agent-tasks",
+      "description": "Pipeline-driven task management for AI coding agents. An MCP server with stage-gated pipelines, multi-agent collaboration, and a real-time kanban dashboard. Tasks flow through configurable stages — backlog, spec, plan, implement, test, review, done — with dependency tracking, approval workflows, artifact versioning, and threaded comments.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/keshrath/agent-tasks.git",
+        "sha": "2b421ca49141b82ad93723cabe21ed55b5270003"
+      },
+      "homepage": "https://github.com/keshrath/agent-tasks"
+    },
+    {
+      "name": "agent-trace-triage",
+      "description": "Agent Trace Triage is a Claude Code plugin for developers building agentic AI systems (LangGraph, CrewAI, custom tool loops, MCP agents).\n\nWhen an agent run fails, stuck in a loop, wrong tool, or burning tokens. the user runs /agent-trace-triage with a JSON/JSONL trace file. The plugin:\n\n• Parses traces (JSONL, OpenAI tool_calls, partial LangSmith/OTEL-style exports)\n• Detects loops deterministically (identical repeat, ping-pong, retry-without-progress) via bundled Node scripts\n• Classifies failures into five buckets: tool selection, arguments, execution, orchestration, recovery policy\n• Writes a markdown triage report with targeted fix recommendations\n• Scaffolds regression tests (pytest / vitest templates)\n\nNo MCP servers, no external API calls, no npm dependencies. \n\nRequires Node.js 18+ for local scripts only. MIT licensed.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/WasayAbid/agent-trace-triage.git",
+        "sha": "fed3a5e61ddb7632bea7fd065320bb3b45147fed"
+      },
+      "homepage": "https://github.com/WasayAbid/agent-trace-triage"
+    },
+    {
       "name": "agent4s",
-      "description": "Scala code intelligence for AI coding agents. 35 commands — search,        \n  jump-to-definition, find references, call-graph, dead code detection, semantic\n   rename, bug-hunt with taint analysis, scaffolding — all without a build \n  server or compilation. Cold index 2.7s, warm 349ms on 18k files. Bug-hunt     \n  scans 45 vulnerability patterns (SQL injection, XSS, SSRF, hardcoded secrets, weak crypto, concurrency bugs) with cross-file taint analysis. SemanticDB integration for type-aware mode when compiled artifacts are available. Native binaries for macOS, Linux, and Windows. Works as a Claude Code plugin, MCP server (Cursor, Windsurf, Cline), or standalone CLI.",
+      "description": "Scala code intelligence for AI coding agents. 35 commands — search,\njump-to-definition, find references, call-graph, dead code detection, semantic\nrename, bug-hunt with taint analysis, scaffolding — all without a build\nserver or compilation. Cold index 2.7s, warm 349ms on 18k files. Bug-hunt\nscans 45 vulnerability patterns (SQL injection, XSS, SSRF, hardcoded secrets, weak crypto, concurrency bugs) with cross-file taint analysis. SemanticDB integration for type-aware mode when compiled artifacts are available. Native binaries for macOS, Linux, and Windows. Works as a Claude Code plugin, MCP server (Cursor, Windsurf, Cline), or standalone CLI.",
       "source": {
         "source": "url",
         "url": "https://github.com/scala-digest/agent4s.git",
         "sha": "f1cfbc864692783694aa4a81784733864591a540"
       },
       "homepage": "https://github.com/scala-digest/agent4s/blob/main/README.md"
+    },
+    {
+      "name": "agented",
+      "description": "A text editor for LLMs, not humans. Optimized for the model's cost model: fewer round trips per task (no   Read-before-Edit; conflict responses carry the new content, so you reconcile in one call instead of  pre-reading every time), tighter token budget (lean tab output, not JSON envelopes; ~5x denser than the  built-in Read/Edit shape), inline LSP diagnostics on every save (gopls, rust-analyzer-with-clippy,  tsserver+eslint findings come back as diag lines instead of round-tripping through cargo / go build),  reactive drift detection (external editor or formatter writes are folded into the undo tree as new  edits, not silently clobbered or lost), and a branching undo tree that remembers the branches the agent  abandoned — because that's often where the interesting work was. Three-way merge for concurrent agents, atomic multi-file refactors, cross-session memory via per-file annotations.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/frane/agented.git",
+        "sha": "69766e77d72420f354fe1be397ae0388149a80ba"
+      },
+      "homepage": "https://github.com/frane/agented"
     },
     {
       "name": "agentforce-adlc",
@@ -493,6 +653,16 @@
       "homepage": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
     },
     {
+      "name": "agentic-council",
+      "description": "Convene a team of specialist agents out of a 20-agent roster in a 3-round deliberation council on your hardest engineering decisions. Walk away with a unified design and a phased build plan.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/dtsong/agentic-council.git",
+        "sha": "f1f52f83cf730e4ff104c52e096111e52d10ec95"
+      },
+      "homepage": "https://github.com/dtsong/agentic-council"
+    },
+    {
       "name": "agentic-guardrails",
       "description": "A set of strict, senior-level engineering guardrails and security standards for AI coding agents.",
       "source": {
@@ -501,6 +671,16 @@
         "sha": "8313dcfa9cd58fd39161b36a7059af5ed2cf7e4a"
       },
       "homepage": "https://github.com/l-filice89/agentic-guardrails"
+    },
+    {
+      "name": "agentic-security",
+      "description": "Agentic-Security is a powerful Claude Code plugin that automatically performs Application Security Testing (SAST, SCA, secrets detection, and more). Think of it as the easy button for making your Claude-generated code safe and secure.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Clear-Capabilities/agentic-security.git",
+        "sha": "3466ea0f4ad3ebe9329a3bb313179df2dfa49b00"
+      },
+      "homepage": "https://www.clearcapabilities.com/products/agentic-security"
     },
     {
       "name": "agentic-swe",
@@ -523,12 +703,22 @@
       "homepage": "https://github.com/rustamfi/agentic-teams"
     },
     {
+      "name": "agenticmail",
+      "description": "Give every Claude Code subagent its own real email address and phone number, all self hosted on the user's machine. AgenticMail runs a local mail server (Stalwart in a Colima or Docker container) so each agent has a working `<name>@localhost` inbox, an identity, an API key, and a persona. When a teammate is CC'd on an email they wake up as a Claude Code subagent under your existing Claude OAuth, read the full thread, decide if it is their turn, and either reply to all or stay silent. The thread is the workspace and the audit trail. There is no central orchestrator, no separate Anthropic key per agent, no data leaving your machine, and no polling because everything is push based over SSE. The plugin exposes three skills (`install`, `create-agent`, `coordinate`) that handle the one time bootstrap and let the host session kick off multi agent work with a single email. Behind the plugin sit five npm packages doing the real work: an Express API, an MCP server with 62 tools across email, SMS, contacts, drafts, templates, rules, search, scheduling, and agent coordination, a dispatcher daemon, a core SDK, and the CLI. Reliability rails include a per agent per thread wake budget that stops reply loops, a 60 second recent reply check in every persona so two agents who both think it is their turn back off, and an outbound content guard that holds risky outbound mail for owner approval. Tested on Node 22 and Node 25 with 429 passing tests across the workspace.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/agenticmail/agenticmail.git",
+        "sha": "b812aaee597ff4bc9924155fd00077b3846209c4"
+      },
+      "homepage": "https://github.com/agenticmail/agenticmail"
+    },
+    {
       "name": "agentiqa",
       "description": "AI-powered QA testing agent for web and mobile apps. Agentiqa explores your app visually - like a real user with fresh eyes - and reports bugs with severity, confidence scores, and step-by-step reproduction instructions. No selectors, no scripts, no test code to maintain. Just describe what to test in plain English.\n\nSupports web (any URL or localhost), Android (emulator/device), and iOS (simulator/device). Finds visual bugs, logical errors, UX issues, and accessibility problems that unit tests and linters miss.",
       "source": {
         "source": "url",
         "url": "https://github.com/Agentiqa/agentiqa-plugin.git",
-        "sha": "6843f7544a6dde2a35242279da181e67da6df4bf"
+        "sha": "d3805516fd73b5be75e1c54f40335436768691c0"
       },
       "homepage": "https://agentiqa.com/en"
     },
@@ -538,7 +728,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/Agentiqa/agentiqa-plugin.git",
-        "sha": "6843f7544a6dde2a35242279da181e67da6df4bf"
+        "sha": "d3805516fd73b5be75e1c54f40335436768691c0"
       },
       "homepage": "https://github.com/Agentiqa/agentiqa-plugin"
     },
@@ -578,9 +768,19 @@
       "source": {
         "source": "url",
         "url": "https://github.com/AgentPowers-AI/agentpowers-plugin.git",
-        "sha": "6a45abe30b7c4a2f32b8db6cc1d703dde364efc5"
+        "sha": "19b9c78e6af52fa5279226fee057a35b3f367c83"
       },
       "homepage": "https://agentpowers.ai"
+    },
+    {
+      "name": "agentsatlas",
+      "description": "AgentsAtlas is a minimal, opinionated end-to-end workflow for Claude Code (also available as Codex skills). Eight slash commands take a project from setup through planning, execution, review, and milestone completion:\n\n/atlas:init, \n/atlas:plan, \n/atlas:execute,\n/atlas:status, \n/atlas:sync, \n/atlas:triage, \n/atlas:review, \n/atlas:complete. \n/atlas:execute \n\nRuns each 3–5-task plan in a fresh subagent (clean ~200k-token context) so quality doesn't degrade across a long run, while a small CLAUDE.md plus .planning/STATE.md and ROADMAP.md keep session continuity without context bloat. \n\nIt also ships 16 development \"discipline\" skills: debugging, testing,\nverifying, refactoring, security-audit, scaffolding, committing, creating-pr, and more enforcing root-cause-first investigation, evidence-before-claims verification, and test-first development. \n\n# Install globally (available in all projects)\nnpx agents-atlas --global\n\n# Or install locally (current project only)\nnpx agents-atlas --local\n\nMIT licensed; no telemetry, no network calls beyond Anthropic, and no bypass-permissions requirement.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AvinashP/AgentsAtlas.git",
+        "sha": "72e52289e6c42e45dab5870a86d9c3b914f94fdd"
+      },
+      "homepage": "https://github.com/AvinashP/AgentsAtlas#readme"
     },
     {
       "name": "agnix",
@@ -598,7 +798,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/adimango/ai-adoption-playbook.git",
-        "sha": "49903adc858b0cb7e582d74ed150a5a55c889544"
+        "sha": "d3f3b1bbdf7653c0d6aaeef8454a3131f5a243ba"
       },
       "homepage": "https://github.com/adimango/ai-adoption-playbook"
     },
@@ -611,6 +811,16 @@
         "sha": "629e5120cd702523e3ffdcbe9df816728c00f71d"
       },
       "homepage": "https://github.com/Austro-Intelligence/ai-brainmap"
+    },
+    {
+      "name": "ai-coding-ok",
+      "description": "PDCA memory loop for Claude Code — prevents \"AI fixed bug X and broke feature Y\" across iterations.\n\nInstalls a three-tier memory system in your project (project-memory, decisions-log, task-history) and enforces a closed PDCA loop on every task: Plan (read memory before coding), Do, Check, Act (write memory back after). The Act step is what most tools skip — without it, your context file rots after 10 iterations. With it, iteration 50 has the same context quality as iteration 1.\n\nComplements superpowers: superpowers brings per-session discipline, ai-coding-ok brings cross-session memory. Also works with Copilot, Cursor, and OpenCode via the same templates.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Mark7766/ai-coding-ok.git",
+        "sha": "eda5b5a33ceea4699f888c1011a5d5a6224dc635"
+      },
+      "homepage": "https://github.com/Mark7766/ai-coding-ok"
     },
     {
       "name": "ai-craftsman-superpowers",
@@ -670,7 +880,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ziniman/ai-instruct.git",
-        "sha": "4af6d0320c6c56a2046048db8d95891f9e8161c9"
+        "sha": "b204d53d3e5a5caa4b13a6a87c16cc208009c5a3"
       },
       "homepage": "https://github.com/ziniman/ai-instruct"
     },
@@ -683,6 +893,16 @@
         "sha": "899b1b8cfa035a7f8d571571edf64df995d7c33e"
       },
       "homepage": "https://github.com/pfbarros2/ai-integration-architect-plugin"
+    },
+    {
+      "name": "ai-memory-reader",
+      "description": "Adds /aimr slash command that opens CLAUDE.md and other AI agent memory files in AI Memory Reader — a free open-source native macOS & iOS app with markdown rendering, file tree, in-page find, and edit mode. Complements the internal claude-md-management plugin (which writes/improves CLAUDE.md) by providing a polished native viewer.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/nvwalj/aimr-claude-plugin.git",
+        "sha": "fbc3295bfc590e1a72a2a08b9b3d088ebf121737"
+      },
+      "homepage": "https://github.com/nvwalj/ai-memory-reader"
     },
     {
       "name": "ai-operations-consultant",
@@ -716,7 +936,7 @@
     },
     {
       "name": "ai-skills-library",
-      "description": "20 reusable AI skills for Claude Code covering engineering, career, thinking, and creative\n  workflows.",
+      "description": "20 reusable AI skills for Claude Code covering engineering, career, thinking, and creative\nworkflows.",
       "source": {
         "source": "url",
         "url": "https://github.com/bob798/ai-skills.git",
@@ -747,12 +967,32 @@
       "homepage": "https://www.npmjs.com/package/@oreolion/ai-sync"
     },
     {
+      "name": "ai-team-os",
+      "description": "AI Agent Team Operating System for Claude Code. Provides persistent team management, meeting collaboration, task wall with pipeline workflows,  company loop engine, and 79 MCP tools for orchestrating multi-agent development teams. Includes 25 agent templates, 8 slash commands, 9 lifecycle hooks, and a real-time React dashboard.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/CronusL-1141/AI-company.git",
+        "sha": "e1a9637ef5088dcad05267bcb8302588621dedc5"
+      },
+      "homepage": "https://github.com/CronusL-1141/AI-company"
+    },
+    {
+      "name": "aic",
+      "description": "Local-first MCP server that sits transparently between your AI editor and any model, classifying intent, selecting the right files, and compiling focused context — with zero manual invocation.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Jatbas/agent-input-compiler.git",
+        "sha": "9cfd5632e4574fb11f8304ea548605d26134678a"
+      },
+      "homepage": "https://github.com/Jatbas/agent-input-compiler"
+    },
+    {
       "name": "aight",
       "description": "Aight is a channel plugin that bridges Claude Code to an iOS\napp via a Cloudflare Workers relay. Users pair with a 6-digit\ncode — no port forwarding, no LAN requirement. The plugin exposes\nreply and react tools so Claude can send messages, markdown, and\nfile attachments to the phone. It also forwards tool events\n(Bash, Read, Edit, etc.) in real-time so users can monitor\nClaude's work from their phone. Built with Bun, TypeScript strict\nmode, 68 tests. Security: HMAC-SHA256 auth tokens,\nsession-isolated hook routing, rate limiting, input validation.",
       "source": {
         "source": "url",
         "url": "https://github.com/aight-cool/aight-channel-plugin.git",
-        "sha": "2a6717671b33d6be6665282ee87fc8aef84e8bed"
+        "sha": "7b508f84a8f786bdebd225fcabea2a2c0817b6f6"
       },
       "homepage": "https://github.com/aight-cool/aight-channel-plugin"
     },
@@ -784,7 +1024,7 @@
         "url": "aiocean/claude-plugins",
         "path": "plugins/aio-watermill-kit",
         "ref": "main",
-        "sha": "fc5ffadc4aebe7814e35aab82111d65e775ce5fd"
+        "sha": "b17fc1375008d93048cfff9806ede863be8f2332"
       },
       "homepage": "https://aiocean.github.io/claude-plugins/"
     },
@@ -804,9 +1044,19 @@
       "source": {
         "source": "url",
         "url": "https://github.com/urbanairship/agent-tools.git",
-        "sha": "9b024cb50f706fb9c0024465a58cb6c941ad4f0a"
+        "sha": "b539f5970f826624c01d4dbbdcdfa71f06942d1d"
       },
       "homepage": "https://www.airship.com/docs/developer/ai-tools/ai-tools/"
+    },
+    {
+      "name": "airwallex",
+      "description": "Airwallex's official plugin for Cursor , allowing you to manage your financial operations on Airwallex through Claude.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/airwallex/airwallex-marketplace.git",
+        "sha": "95d59ac700f018b0d70f3f4203df6fc494bca2a3"
+      },
+      "homepage": "https://github.com/airwallex/airwallex-marketplace"
     },
     {
       "name": "aiven",
@@ -814,9 +1064,19 @@
       "source": {
         "source": "url",
         "url": "https://github.com/aiven/aiven-ai-plugins.git",
-        "sha": "d2a7697b53826588d0faf795f39d2aa2362330da"
+        "sha": "d4d0caf81cce307c939ce1bb0b15a09fb7af5cdf"
       },
       "homepage": "https://github.com/aiven/aiven-ai-plugins"
+    },
+    {
+      "name": "aiwff",
+      "description": "AIWFF Claude Plugin  Fleet-aware worker dispatch helpers for Claude Code.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/zaxardery8011-design/aiwff-claude-plugin.git",
+        "sha": "f9c9e5cdf55a59898c15d9f1758010f87a7c9841"
+      },
+      "homepage": "https://github.com/zaxardery8011-design/aiwff-claude-plugin"
     },
     {
       "name": "akf",
@@ -829,6 +1089,16 @@
       "homepage": "https://akf.dev"
     },
     {
+      "name": "akii-seo-ai-search-optimizer",
+      "description": "Free SEO, AEO, and GEO toolkit by Akii. Audit websites, plan content strategy, optimize pages, generate schema markup, cluster keywords, and track AI visibility across ChatGPT, Claude, Gemini, Perplexity, Copilot, and Google AI Overviews — all from your terminal or IDE.\n\nShips 15 model-invoked skills (auto-trigger from natural language), 5 autonomous agents, and 8 slash commands. Encodes per-engine algorithm signal weights (ChatGPT 41% authoritative lists, Gemini 49% Google lists + 3.5★ review cutoff, Perplexity 64% top-5 lists, Claude 68% trusted business databases) and the Princeton/IIT-Delhi/Allen Institute GEO method (validated +40% AI visibility lift; +97–115% for pages ranked outside top 5).\n\nAuto-detects user's existing Ahrefs, Google Search Console, DataForSEO, and Apify MCPs for richer real-data outputs; falls back to WebFetch and WebSearch when not available. No login. No usage cap. No external dependencies — every skill works standalone via Claude Code's built-in tools.\n\nThe /ai-visibility-score command returns a real 0–100 score across four dimensions (Brand Recognition, Brand Understanding, Content Coverage, Brand Sentiment) via the same workflow that powers akii.com — no signup required.\n\nMIT licensed.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/akii-technologies-ltd/akii-seo-ai-search-optimizer.git",
+        "sha": "9cb04b83601f6b9be366334008f2ef2d28288fe8"
+      },
+      "homepage": "https://akii.com/claude-code"
+    },
+    {
       "name": "al-development-collection-for-claude-code",
       "description": "ALDC (AL Development Collection) is a comprehensive AI-assisted development\ntoolkit for Microsoft Dynamics 365 Business Central.\n\nIt provides 4 specialized agents (architect, conductor, developer, presales),\n11 domain knowledge skills (API, events, pages, performance, testing, etc.),\nand 6 development workflows (spec creation, build, PR preparation, etc.).\n\nKey features:\n• Extension-only development — never modifies base application objects\n• Human-in-the-Loop gates at critical decision points\n• TDD/spec-driven development cycle\n• Event-driven architecture patterns\n• Skills Evidencing — agents declare which skills and patterns they applied\n• 8 path-scoped AL rules (injected via /aldc:al-initialize)\n• 3 MCP servers for AL symbols, documentation, and Microsoft Learn\n\nFirst-time setup: run /aldc:al-initialize in your AL project directory.",
       "source": {
@@ -839,6 +1109,16 @@
         "sha": "df36d58892e4e7ca270f181e17669a833e93b499"
       },
       "homepage": "https://github.com/javiarmesto/ALDC-AL-Development-Collection"
+    },
+    {
+      "name": "alation",
+      "description": "Claude plugin for the Alation platform. Query data products, explore catalogs, automate workflows, curate metadata, and configure AI agents — all through natural language.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Alation/alation-plugins.git",
+        "sha": "4a508f90a1809aa4cc5955e5c9fdf91afafbea9b"
+      },
+      "homepage": "https://github.com/Alation/alation-plugins"
     },
     {
       "name": "aldc-al-development-plugin-for-business-central",
@@ -887,6 +1167,16 @@
       "homepage": "https://github.com/DrakeCaraker/alfred"
     },
     {
+      "name": "algovault-skills",
+      "description": "The Brain Layer for AI Trading Agents. 20 Skills over the AlgoVault MCP — composite BUY/SELL/HOLD signals across 5 crypto exchanges, funding-rate arbitrage, and market regime classification. Track record: 90.5% PFE win rate across 90K+ signals, Merkle-anchored on Base L2.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AlgoVaultLabs/algovault-skills.git",
+        "sha": "ae51b3035e15733e875eebfc912f21ae4c0cc0bc"
+      },
+      "homepage": "https://algovault.com"
+    },
+    {
       "name": "alias-gen",
       "description": "Generate shell aliases for project commands",
       "source": {
@@ -909,6 +1199,16 @@
       "homepage": "https://github.com/1azarus/alley-oop"
     },
     {
+      "name": "alloydb-omni",
+      "description": "Create, connect, and interact with an AlloyDB Omni database and data.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gemini-cli-extensions/alloydb-omni.git",
+        "sha": "ab8b7aff3b1ed8e71c5a4e0213848eb330a805b8"
+      },
+      "homepage": "https://cloud.google.com/alloydb/omni"
+    },
+    {
       "name": "almanax-security",
       "description": "Scan Git commits for security vulnerabilities using Almanax directly from Claude Code. The plugin connects to the Almanax MCP server to analyze commit diffs, surface findings by severity, and help you fix issues — all without leaving your terminal. Includes guided setup and support for scanning individual commits or commit ranges.",
       "source": {
@@ -924,7 +1224,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/haandol/alps-writer-mcp.git",
-        "sha": "59706e9a7110044381c4539fc16fa394034d7fab"
+        "sha": "01c7fda5bdce265b9b92eda32cfc30f0bddb0482"
       },
       "homepage": "https://github.com/haandol/alps-writer-mcp"
     },
@@ -934,7 +1234,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/altertable-ai/skills.git",
-        "sha": "6edbf700f14db0c1732513c846d74811b4e7d1dd"
+        "sha": "cd25ae53e3b561e04815f8b9cb6d21fe8f6c0710"
       },
       "homepage": "https://altertable.ai/docs/agentic/claude-plugin"
     },
@@ -992,12 +1292,22 @@
       "homepage": "https://github.com/Anakin-Inc/anakin-claude-plugin"
     },
     {
+      "name": "analyst-never-sleep",
+      "description": "Your personal analyst. Always on. Never sleeps.   \n                            \nBuilt for fundamental investors who want an edge with hours of researched prepared when you wake up, in your own way.\n                                                                                \n What it does for you:                                                         \n   \n  - Never miss a market move — wake up to a structured daily briefing covering macro shifts, sector moves, and news on your watchlist\n  - Cut research time in half — run a full company deep dive in seconds, not hours. Financials, thesis, risks, all in one shot                             \n  - Walk into earnings ready — get a pre-earnings framework before the call and a post-earnings breakdown after                                               \n  - Think in memos, not notes — turn your thesis into a clean, shareable investment memo with one command                                              \n  - Track what matters — manage your watchlist in plain English. Levels, catalysts, conviction — all in one place                                      \n                  \n  Who it's for:                                                                 \n  Retail investors, self-directed traders, and finance students who think like analysts but don't have a research team behind them.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/kmmz/analyst_never_sleep.git",
+        "sha": "4ffe0586bc3c83f491ccad295b56c281fc5791e2"
+      },
+      "homepage": "https://github.com/kmmz/analyst_never_sleep"
+    },
+    {
       "name": "analytics-skills",
       "description": "Agent skills that teach Claude, Cursor, and other AI agents to read web analytics like a senior analyst.\n\nFive model-invoked skills covering a diagnostic method (MECE hypothesis trees, signal vs noise, Simpson's paradox, Pyramid Principle output), traffic-change diagnosis with fingerprints for common causes, channel and funnel quality analysis, and metric benchmarking by business model.\n\nA one-time profile setup captures your business context (model, primary conversion, traffic range, ICP, data stack) so every answer is calibrated to your industry and scale instead of generic averages.\n\nWorks with any analytics source; first-class support for Clamp MCP with exact tool call-outs at each step of the method.",
       "source": {
         "source": "url",
         "url": "https://github.com/clamp-sh/analytics-skills.git",
-        "sha": "29a3189bce96506f9edd4136e2fd41b02d12104e"
+        "sha": "f15d3ceddaaf646f36170a097deef5b4091db67b"
       },
       "homepage": "https://clamp.sh/docs/skills"
     },
@@ -1012,6 +1322,16 @@
         "sha": "5c8449ca5762dd46941bc8fa3b354d8306386263"
       },
       "homepage": "https://anamneseai.app/"
+    },
+    {
+      "name": "andie",
+      "description": "Andie - the sharpest thinking partner inside Claude Code. \nAndie doesn't summarize — it debates, war-games, and dissects until the answer survives scrutiny. \nFour modes: \nDeep (world-class expert breaks it down Feynman-style), \nDrama (expert panel fights your decision to a conclusion), \nTriage (war strategy applied to your crisis in real time), \nKaizen (finds the waste, fixes one thing, locks it in). \nAutomatically picks up and loads specialist skills — AWS-GCP-Azure-OCI, multiple tools like Kafka, Postgres, security, ML, and more — so every answer comes from someone who's actually done the work.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/giggsoinc/andie.git",
+        "sha": "e891829687e877fd8f2596d757cc2870c7f1dbd3"
+      },
+      "homepage": "https://github.com/giggsoinc/andie/blob/main/README.md"
     },
     {
       "name": "android-emulator-qa-plugin",
@@ -12504,18 +12824,6 @@
         "sha": "ba1d7623eb3851d5263d92e0683dea0c82b2e9ff"
       },
       "homepage": "https://github.com/dlewis7444/public-repo-readiness"
-    },
-    {
-      "name": "pw",
-      "description": "Production-grade Playwright testing toolkit. Generate tests from specs, fix flaky failures, migrate from Cypress/Selenium, sync with TestRail, run on BrowserStack. 55+ ready-to-use templates, 3 specialized agents, smart reporting that plugs into your existing workflow.",
-      "source": {
-        "source": "git-subdir",
-        "url": "alirezarezvani/claude-skills",
-        "path": "engineering-team/playwright-pro",
-        "ref": "main",
-        "sha": "1851c8fb09ea8ff0488d48bd7c312abb1bbf5850"
-      },
-      "homepage": "https://github.com/alirezarezvani/claude-skills"
     },
     {
       "name": "pwp",
