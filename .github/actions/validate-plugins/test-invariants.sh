@@ -92,6 +92,15 @@ EOF
 assert_fires "I5 exemption is whole-word, not prefix" I5 "$f"
 SHA_EXEMPT_FIXTURE=""
 
+# A name with a space must not splice across two adjacent exempt entries.
+f=$(mk i5-exempt-splice <<'EOF'
+{"plugins":[{"name":"foo bar","description":"ten chars ok","source":{"source":"url","url":"https://github.com/x/y"}}]}
+EOF
+)
+SHA_EXEMPT_FIXTURE="foo bar"
+assert_fires "I5 spaced name cannot splice exempt entries" I5 "$f"
+SHA_EXEMPT_FIXTURE=""
+
 # I6/I7: per-file mode invariants — need an entries-dir with a misnamed file
 mkdir -p "$TMP/entries"
 cat > "$TMP/entries/wrong.json" <<'EOF'

@@ -81,7 +81,7 @@ while IFS= read -r entry; do
 
   # Deliberately-unpinned entries: nothing to bump. Plain log, not skip() —
   # this is steady-state policy, not a per-run anomaly worth a ::warning.
-  if [[ "$SHA_EXEMPT" == *" $name "* ]]; then
+  if [[ "$name" =~ ^[a-z0-9][a-z0-9-]{1,63}$ && "$SHA_EXEMPT" == *" $name "* ]]; then
     log "$name: unpinned by policy (sha-exempt); not bumping"
     skipped="$(jq -c --arg n "$name" --arg r "unpinned by policy (sha-exempt)" '. + [{name:$n, reason:$r}]' <<<"$skipped")"
     continue

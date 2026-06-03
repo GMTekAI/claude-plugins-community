@@ -94,7 +94,10 @@ while IFS= read -r entry; do
     fi
   fi
   if [[ ! "$sha" =~ ^[0-9a-f]{40}$ ]]; then
-    if [[ -z "$sha" && "$SHA_EXEMPT" == *" $name "* ]]; then
+    # The name must itself be I11-shaped before consulting the list: in
+    # repos where I11 is a warning, a name containing a space could otherwise
+    # splice across two adjacent exempt entries ("foo bar" vs "foo" + "bar").
+    if [[ -z "$sha" && "$name" =~ ^[a-z0-9][a-z0-9-]{1,63}$ && "$SHA_EXEMPT" == *" $name "* ]]; then
       # Exemption waives only a MISSING sha. A sha that is present but
       # malformed is a typo in a pin, never an intentional unpinned source.
       info "invariant I5: $name has no source.sha (allowed via sha-exempt)"
