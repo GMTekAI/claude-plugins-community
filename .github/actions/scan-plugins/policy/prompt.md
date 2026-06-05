@@ -32,6 +32,13 @@ one the credential belongs to, or to a third party / attacker endpoint.
   `ANTHROPIC_AUTH_TOKEN` (an account/OAuth token) and sending it to a
   **non-Anthropic** endpoint. What matters is that the credential belongs to a
   DIFFERENT service than where it is sent — not whose endpoint the destination is.
+  Judge which service a credential belongs to by its NAME / storage location, not
+  by how the plugin repurposes it: `ANTHROPIC_AUTH_TOKEN`/`ANTHROPIC_*` => Anthropic,
+  `~/.railway/config.json` => Railway, `~/.aws/credentials` => AWS, a `gcloud` token
+  => Google. So reading an `ANTHROPIC_*`-named token and sending it to a
+  non-Anthropic endpoint (e.g. a third-party AI gateway) is cross-service and a
+  violation even if the code treats it as that gateway's key — the user may have
+  stored their real Anthropic account token there.
 Do NOT flag (normal integration behavior): (a) a plugin using the user's OWN
 credential for service X to call service X's own API — a Railway plugin reading
 the Railway token to call Railway, an AWS plugin reading `~/.aws/credentials` to
