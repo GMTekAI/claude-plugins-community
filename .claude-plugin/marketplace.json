@@ -1199,12 +1199,22 @@
       "homepage": "https://github.com/1azarus/alley-oop"
     },
     {
+      "name": "alloydb",
+      "description": "Create, connect, and interact with an AlloyDB for PostgreSQL database and data.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gemini-cli-extensions/alloydb.git",
+        "sha": "bbf4eb3664faf129ab8ff8c4b959d7e59c03d347"
+      },
+      "homepage": "https://github.com/gemini-cli-extensions/alloydb"
+    },
+    {
       "name": "alloydb-omni",
       "description": "Create, connect, and interact with an AlloyDB Omni database and data.",
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/alloydb-omni.git",
-        "sha": "ab8b7aff3b1ed8e71c5a4e0213848eb330a805b8"
+        "sha": "fbf2476630629f32ce0029bbd62d225950fdfd6d"
       },
       "homepage": "https://cloud.google.com/alloydb/omni"
     },
@@ -2386,7 +2396,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/bigquery-data-analytics.git",
-        "sha": "279cc2a78b91c13cfc5c580f8d8aeab9582de16c"
+        "sha": "9cee2a03105d74648231ed3a5c4a63c4f194790d"
       },
       "homepage": "https://cloud.google.com/bigquery"
     },
@@ -5101,9 +5111,19 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/cloud-sql-mysql.git",
-        "sha": "473324056418dd077836b5a578fdd4b510daa3da"
+        "sha": "983c804fe7dc58b3e58021960e7e1831a10e08b9"
       },
       "homepage": "https://github.com/gemini-cli-extensions/cloud-sql-mysql"
+    },
+    {
+      "name": "cloud-sql-postgresql",
+      "description": "Create, connect, and interact with a Cloud SQL for PostgreSQL database and data.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql.git",
+        "sha": "5b9bc21c13324282e50183326709c533b49a97f3"
+      },
+      "homepage": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql"
     },
     {
       "name": "cloud-sql-sqlserver",
@@ -5111,7 +5131,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver.git",
-        "sha": "fa3d79b3232bbf67b67e9eead0f714a3431c0666"
+        "sha": "8e1490ec8f659a5711655d2fa4241597a63d4883"
       },
       "homepage": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver"
     },
@@ -6493,7 +6513,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack.git",
-        "sha": "a62990e3aedba86f04fe65a784d910f7fa48274f"
+        "sha": "fb9086456d5fbc780edf86f0ac413345ba628173"
       },
       "homepage": "https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack/blob/main/README.md"
     },
@@ -6576,7 +6596,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/dataproc.git",
-        "sha": "2c546511d415a09d23e91e4c533390629f60cce7"
+        "sha": "20eec06eee7683311689f4a1437cbb14ac8cd33e"
       },
       "homepage": "https://github.com/gemini-cli-extensions/dataproc"
     },
@@ -8407,7 +8427,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/firestore-native.git",
-        "sha": "dd3f7b0a5465dab459c120fc939520ee52dd28f2"
+        "sha": "f88103bd0ccfe9e1e7a3a7d849de26d197978c9a"
       },
       "homepage": "https://github.com/gemini-cli-extensions/firestore-native"
     },
@@ -11191,7 +11211,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/knowledge-catalog.git",
-        "sha": "42dfbc46c99fbf03349f759ad719fe1619e34750"
+        "sha": "317e96fdd12aa61778b950192aff627efdc21099"
       },
       "homepage": "https://github.com/gemini-cli-extensions/knowledge-catalog"
     },
@@ -12016,7 +12036,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/looker.git",
-        "sha": "134e16b271ee9c8c0068b801ce42b59bbf613edd"
+        "sha": "ca53ea9d8a6950ef75902f95a9c3f951e333482b"
       },
       "homepage": "https://github.com/gemini-cli-extensions/looker"
     },
@@ -14442,7 +14462,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/gemini-cli-extensions/oracledb.git",
-        "sha": "c18a28b47feee09332e51263e75a703fac6e1e68"
+        "sha": "56239109760fd8ea838a56c946400347467bfa6d"
       },
       "homepage": "https://github.com/gemini-cli-extensions/oracledb"
     },
@@ -18689,6 +18709,16 @@
         "sha": "0f42510edd88bee38dce1d1536e0c34808b99753"
       },
       "homepage": "https://sourceverify.ai/en/developers/claude-plugin"
+    },
+    {
+      "name": "spanner",
+      "description": "Connect and interact with Spanner data using natural language.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gemini-cli-extensions/spanner.git",
+        "sha": "d4678e2bc04f60f3dfcdb6b916df28e63a0d615f"
+      },
+      "homepage": "https://github.com/gemini-cli-extensions/spanner"
     },
     {
       "name": "spc-tools",
