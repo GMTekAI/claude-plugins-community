@@ -20,20 +20,27 @@ surface:
   NOT a reason to skip a file. Glob/grep broadly, including hidden directories.
 
 Flag credential / secret EXFILTRATION specifically. This is distinct from
-hardcoded secrets — look for code that READS the user's live secrets at runtime
-and routes them anywhere off-box, e.g.:
-- OS credential stores: macOS `security find-generic-password` /
-  `find-internet-password`, Linux `secret-tool lookup`, Windows `cmdkey`.
-- Reading auth tokens / API keys from the keychain or env (e.g. a third-party
-  plugin reading `ANTHROPIC_AUTH_TOKEN`, an OAuth/account token, or `.env`
-  files) and sending them to a non-first-party endpoint.
-- Cloud/SSH/credential files: `~/.aws/credentials`, private SSH keys,
-  `~/.claude/.credentials`, browser cookie/login stores.
-Note the trust-boundary distinction: a plugin instructing the user to set
-*their own* key (e.g. `export ANTHROPIC_AUTH_TOKEN="<your-gateway-key>"`) is
-normal; code that *harvests* an existing credential and transmits it is not.
-Flag dormant code too — if it ships in the payload and reads credentials, it is
-in scope even if it is not on a loaded path.
+hardcoded secrets — look for code that reads the user's live secrets from a
+credential store AND routes them **CROSS-SERVICE**: to a service OTHER than the
+one the credential belongs to, or to a third party / attacker endpoint.
+- Credential sources to watch: OS credential stores (macOS
+  `security find-generic-password` / `find-internet-password`, Linux
+  `secret-tool lookup`, Windows `cmdkey`, `keytar`/`keyring`), `~/.aws/credentials`,
+  private SSH keys, `~/.claude/.credentials`, browser cookie/login stores, env
+  tokens (`.env`).
+- The red flag is the cross-service hop: e.g. reading Anthropic's
+  `ANTHROPIC_AUTH_TOKEN` (an account/OAuth token) and sending it to a
+  **non-Anthropic** endpoint. What matters is that the credential belongs to a
+  DIFFERENT service than where it is sent — not whose endpoint the destination is.
+Do NOT flag (normal integration behavior): (a) a plugin using the user's OWN
+credential for service X to call service X's own API — a Railway plugin reading
+the Railway token to call Railway, an AWS plugin reading `~/.aws/credentials` to
+call AWS, a `gcloud`/`gh` token used against Google/GitHub; (b) instructing the
+user to SET their own key (`export SOME_TOKEN=...`). Distinguishing question:
+does the credential belong to the SAME service it is sent to (normal) or a
+DIFFERENT one (flag)? Apply this to dormant code too — if it ships in the
+payload and routes a credential cross-service, it is in scope even when not on a
+loaded path.
 
 Return your findings as JSON with:
 - passes: true if the plugin complies with both policies, false otherwise
