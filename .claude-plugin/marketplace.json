@@ -915,16 +915,6 @@
       "homepage": "https://github.com/pfbarros2/ai-integration-architect-plugin"
     },
     {
-      "name": "ai-iq",
-      "description": "Give your AI long-term memory in one command. SQLite-based persistent memory with hybrid search (keyword + semantic + graph), beliefs, predictions, knowledge graphs, and dream mode. Works with any Python agent — not locked to Claude.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/kobie3717/ai-iq.git",
-        "sha": "c835836c1d8a0fed79003acfd749e6855fc26572"
-      },
-      "homepage": "https://github.com/kobie3717/ai-iq"
-    },
-    {
       "name": "ai-memory-reader",
       "description": "Adds /aimr slash command that opens CLAUDE.md and other AI agent memory files in AI Memory Reader — a free open-source native macOS & iOS app with markdown rendering, file tree, in-page find, and edit mode. Complements the internal claude-md-management plugin (which writes/improves CLAUDE.md) by providing a polished native viewer.",
       "source": {
@@ -1057,16 +1047,6 @@
         "sha": "b17fc1375008d93048cfff9806ede863be8f2332"
       },
       "homepage": "https://aiocean.github.io/claude-plugins/"
-    },
-    {
-      "name": "aip-claude-code",
-      "description": "Adds AIP-signed identity to Claude Code MCP tool calls. Wraps an upstream MCP server with Ed25519-signed JWT tokens for verifiable tool-call provenance",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/sunilp/aip-claude-code.git",
-        "sha": "d404c0fe86400e4ebf48bc5879a240501859991a"
-      },
-      "homepage": "https://github.com/sunilp/aip-claude-code"
     },
     {
       "name": "airport-pickups-london",
@@ -6503,16 +6483,6 @@
       "homepage": "https://curiositystack.app"
     },
     {
-      "name": "cv-creator",
-      "description": "Most CV tools treat regional and industry differences as styling. They aren't — a US 1-pager, a UAE 2-page CV with photo and visa status, an academic CV with a publication list, and a German Lebenslauf with\ntabular layout and signature are structurally different documents. cv-creator separates regional archetypes (length, photo conventions, personal-detail rules, section order) from industry overlays (section\nemphasis, must-have credentials, bullet patterns) and composes them at fill time.\n\nThe skill operates in four modes from a single entry point:\n\n- Create — asks region, industry, seniority, and target role; loads the right template; turns your notes into a filled CV; builds PDF + DOCX.\n- Improve bullets — rewrites pasted bullets against an action-verb + quantified-result + impact rubric.\n- Review — scores an existing CV against region norms (length, photo, structure, ATS hazards) and returns a prioritized punch list.\n- ATS-optimize — diffs your CV against a pasted job description and proposes specific keyword and emphasis edits without inventing skills you don't have.\n\nThe skill is opinionated about honesty: it never fabricates metrics, employers, dates, or credentials. If a bullet has no quantifiable hook, it asks for one rather than making one up.\n\nKey features (bullet list)\n\n- 5 region archetypes — US/Canada, UK/EU, Germany (Lebenslauf), Academic, UAE/GCC — each with proper length, photo, personal-detail, and section conventions\n- 7 industry overlays — tech, nursing, finance, sales, trades, creative, executive — composable with any region\n- 4 modes — create, improve bullets, review, ATS-optimize\n- PDF + DOCX output via pandoc (with WeasyPrint HTML→PDF fallback when LaTeX isn't installed)\n- Healthcare licensure-aware — DOH/DHA/MOH (UAE), NMC (UK), state board (US), Approbation (DE), with proper credential placement for nursing\n- Real reference docs, not buzzwords — region norms matrix, bullet rubric, ATS rules, review checklist\n- 3 fully-rendered example CVs included (nurse/UAE, tech/US, academic/UK) so users see exactly what the skill produces",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/farazfookeer/cv-creator.git",
-        "sha": "d0498333238da00a295c949ef7a91da2de5a77b1"
-      },
-      "homepage": "https://github.com/farazfookeer/cv-creator"
-    },
-    {
       "name": "cv-skills",
       "description": "Skills for performing classical image processing operations: format conversion, SVG rendering, resize/crop/rotate, color adjustment, filters, segmentation/morphology, and compositing/blending",
       "source": {
@@ -7293,16 +7263,6 @@
       "homepage": "https://github.com/agent-sh/deslop"
     },
     {
-      "name": "destreamed",
-      "description": "Destreamed turns Claude Code into a workflow agent with memory. Tasks, decisions, and progress live in streams of \"beats\" — each step Claude takes lands as an echo your team can read. Rules enforce team standards. Approval gates keep humans in control of material changes. Nothing gets lost across sessions, branches, or context resets.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/destreamed/claude-plugin.git",
-        "sha": "a260585cabcf122757c8a90a32c55ed9459e1137"
-      },
-      "homepage": "https://destreamed.com"
-    },
-    {
       "name": "dev-environment-doctor",
       "description": "Detect and fix local environment issues before they break your workflow.\n\nDev Environment Doctor runs safe, read-only checks for environment variables, services, and tool versions, and provides clear, actionable fixes to keep your development setup healthy.",
       "source": {
@@ -7423,16 +7383,6 @@
         "sha": "7874629984b2a7fb41e8fd407f58e5f597d6e8f6"
       },
       "homepage": "https://github.com/yhyatt/dishonest-code-audit/blob/main/README.md"
-    },
-    {
-      "name": "disputron",
-      "description": "File Disputron cases without leaving Claude Code. Disputron is an AI courtroom where two sides argue, an AI judge rules, and the verdict is public. This plugin adds slash commands — /disputron-file, /disputron-respond, /disputron-status — that route to the hosted MCP server at disputron.ai/api/mcp.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/disputron/disputron-agent-kit.git",
-        "sha": "f414e3cb305436e03cb4c5c9528dbf15b45a64e7"
-      },
-      "homepage": "https://disputron.ai/developers"
     },
     {
       "name": "distill",
@@ -8892,16 +8842,6 @@
         "sha": "822b973ceea4662b092b4476171f02cb3a41c267"
       },
       "homepage": "https://github.com/misfitdev/claude-plugins/tree/main/plugins/frank-grimes"
-    },
-    {
-      "name": "french-legal-prompt",
-      "description": "French legal toolkit for Claude — search Légifrance codes, French case law (Cour de cassation et juridictions du fond), the Journal Officiel, and collective bargaining agreements (KALI).\nIncludes 5 slash commands, 5 auto-triggered skills, and 4 preconfigured MCP servers. Built for  lawyers, in-house counsel, and law students who need AI that cites official sources.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/zevra-tech/legal-prompt.git",
-        "sha": "73ea7fdddba455f7a2c4e84e5d9e1c509aad2b81"
-      },
-      "homepage": "https://mcp-juridique.fr"
     },
     {
       "name": "fresh-eyes-review",
@@ -11590,16 +11530,6 @@
       "homepage": "https://trykopi.ai/mcp-docs"
     },
     {
-      "name": "korean-beauty-booking",
-      "description": "Book appointments at 1300+ top-rated Korean dermatology & plastic surgery clinics in Seoul, Busan, and Jeju directly from your AI assistant. Supports hospital matching, appointment submission, price checking, and live customer service in Chinese, English, Japanese, and Thai.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/BeautsGO/beautsgo-booking.git",
-        "sha": "28ccdb41a80c21e348720b3fad1c800acc8f7e13"
-      },
-      "homepage": "https://i.beautsgo.com"
-    },
-    {
       "name": "kotlin-lsp",
       "description": "Real-time Kotlin code intelligence for Claude via kotlin-language-server. Gives Claude instant diagnostics, go-to-definition, find-references, and type information for .kt and .kts files — no build step required.",
       "source": {
@@ -13687,16 +13617,6 @@
         "sha": "5c38502ad685c1a0ff8fd7936fd5f839b84243f1"
       },
       "homepage": "https://www.lithosai.com"
-    },
-    {
-      "name": "mozart-orchestration",
-      "description": "Multi-agent orchestration pipeline for Claude Code: DELIVER (build), AUDIT (review), DIAGNOSE (investigate). Conducts 14 specialist subagents through research, plan, review, implement, verify, document with live narration.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/jstuart0/mozart-orchestration.git",
-        "sha": "8e674b447c46cede5ae71b13d26f61dab8203032"
-      },
-      "homepage": "https://github.com/jstuart0/mozart-orchestration"
     },
     {
       "name": "mpp-inspector",
@@ -17798,16 +17718,6 @@
         "sha": "525bbdd2c5184a4638220b985533f4cda29c85a5"
       },
       "homepage": "https://github.com/Prajhan26/sculpture-plugin"
-    },
-    {
-      "name": "scylladb",
-      "description": "Collection of ScyllaDB agent skills for use in agentic workflows. These skills provide coding agents with deep knowledge of ScyllaDB Cloud, ScyllaDB data modeling, and ScyllaDB Vector Search.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/scylladb/agent-skills.git",
-        "sha": "cd319077d60093318f84a60815f4e4b66661ef66"
-      },
-      "homepage": "https://github.com/scylladb/agent-skills"
     },
     {
       "name": "sdd",
@@ -22240,16 +22150,6 @@
         "sha": "0c48423b9b3ef9c6dfc036b5e9b36920637b923b"
       },
       "homepage": "https://waggle.zone/"
-    },
-    {
-      "name": "wake-storefront",
-      "description": "AI-powered development assistance for Wake Commerce Storefront. Agents, skills, workflows, and tools for building headless storefronts, checkout flows, migrations, security audits, performance reviews, and code quality.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/wake-engineering/ai-plugin.git",
-        "sha": "f045a1398a0ce722a18ff8aca691807d0cd04aaf"
-      },
-      "homepage": "https://github.com/wake-engineering/ai-plugin/blob/main/README.md"
     },
     {
       "name": "waldo-fyi",
