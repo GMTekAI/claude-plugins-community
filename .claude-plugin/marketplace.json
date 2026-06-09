@@ -301,6 +301,16 @@
       "homepage": "https://github.com/haandol/adr-writer"
     },
     {
+      "name": "ads",
+      "description": "Manage ad campaigns on Meta, Google, and TikTok from Claude Code. Create campaigns with audience targeting and keyword research, pull performance metrics with breakdowns, browse competitor ads across ad libraries, and generate AI ad creatives. Draft-first workflow — nothing goes live without approval. Multi-account support for agencies.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/adkit/adkit-plugin.git",
+        "sha": "7732fd558846851f06a98407cd798748dec84e84"
+      },
+      "homepage": "https://adkit.so/features/ads-mcp"
+    },
+    {
       "name": "ads-agent",
       "description": "AdsAgent turns Claude into your always-on Google Ads analyst. Audit account health, set up new campaigns from scratch, analyze Quality Score and Ad Rank, manage keywords and bids, mine search terms for negatives, generate A/B-tested ad copy, configure tracking, and run bulk operations across hundreds of keywords — all through conversation. No dashboards, no spreadsheets, no clicking through the Google Ads UI.\nUnder the hood: 40+ MCP tools with full read/write access to your Google Ads data, plus three built-in skills — /ads for campaign management, /ads-audit for account health scoring, and /ads-copy for ad copywriting.",
       "source": {
@@ -437,7 +447,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/svmnikhil/agent-discovery.git",
-        "sha": "8b256142b5735a5790ee05d58fbb36673f58545d"
+        "sha": "8d20b0a2bb22d74a3ea71f7ce8096b19377b7281"
       },
       "homepage": "https://github.com/svmnikhil/agent-discovery#agent-discovery"
     },
@@ -783,6 +793,16 @@
       "homepage": "https://github.com/AvinashP/AgentsAtlas#readme"
     },
     {
+      "name": "agentscommunity",
+      "description": "Auto-recover from known tool, API, and workflow failures. When Claude Code hits an error with n8n, HubSpot, Supabase, Slack, Stripe, or other tools, this plugin searches a local knowledge base of fix cards and injects a concise fix hint — no cloud calls, no tokens wasted on retries. Includes automatic secret redaction, failure/success tracing, and a community-contributed fix card system.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mahmoudsheikh94/agent-community-plugin.git",
+        "sha": "c18fb8cd7dc1c28a0e8b64fb13ea168ba35c8b9a"
+      },
+      "homepage": "https://github.com/mahmoudsheikh94/agent-community-plugin"
+    },
+    {
       "name": "agnix",
       "description": "Lint agent configurations before they silently fail. 414 validation rules across Claude Code, Codex CLI, OpenCode, Cursor, GitHub Copilot, Gemini CLI, Cline, Windsurf, Roo Code, Amp, and Kiro - validates CLAUDE.md, AGENTS.md, SKILL.md, hooks.json, MCP server configs, and plugin manifests. Auto-fix included for safe issues; SARIF output for GitHub Code Scanning. Distributed as CLI (npm + Cargo), official GitHub Action (`agent-sh/agnix`), and IDE extensions for VS Code, JetBrains, Neovim, and Zed. Rules sourced from official specs, academic research on agent prompt design, and real-world failure patterns from production deployments. Mentioned in awesome-claude-code.",
       "source": {
@@ -893,6 +913,16 @@
         "sha": "899b1b8cfa035a7f8d571571edf64df995d7c33e"
       },
       "homepage": "https://github.com/pfbarros2/ai-integration-architect-plugin"
+    },
+    {
+      "name": "ai-iq",
+      "description": "Give your AI long-term memory in one command. SQLite-based persistent memory with hybrid search (keyword + semantic + graph), beliefs, predictions, knowledge graphs, and dream mode. Works with any Python agent — not locked to Claude.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/kobie3717/ai-iq.git",
+        "sha": "c835836c1d8a0fed79003acfd749e6855fc26572"
+      },
+      "homepage": "https://github.com/kobie3717/ai-iq"
     },
     {
       "name": "ai-memory-reader",
@@ -1027,6 +1057,16 @@
         "sha": "b17fc1375008d93048cfff9806ede863be8f2332"
       },
       "homepage": "https://aiocean.github.io/claude-plugins/"
+    },
+    {
+      "name": "aip-claude-code",
+      "description": "Adds AIP-signed identity to Claude Code MCP tool calls. Wraps an upstream MCP server with Ed25519-signed JWT tokens for verifiable tool-call provenance",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sunilp/aip-claude-code.git",
+        "sha": "d404c0fe86400e4ebf48bc5879a240501859991a"
+      },
+      "homepage": "https://github.com/sunilp/aip-claude-code"
     },
     {
       "name": "airport-pickups-london",
@@ -1653,6 +1693,16 @@
       "homepage": "https://www.alpa.llc/plugins"
     },
     {
+      "name": "arcjet",
+      "description": "Arcjet is the runtime policy engine for AI features. Authorize tools, control budgets, and protect against spam and bots. A developer-first approach to securing AI applications.\n\nThis plugin makes your AI coding agent an Arcjet security expert.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/arcjet/arcjet-plugin.git",
+        "sha": "5774b72afc2dfe919dbc7fedcbb6e8a909042e8d"
+      },
+      "homepage": "https://docs.arcjet.com/arcjet-plugin"
+    },
+    {
       "name": "aria",
       "description": "Aria is a guided music-release workflow for artists, managers, and labels. It walks through a complete lifecycle — from raw idea or finished track to pitched, released, and live on a smart link — through nine progressive phase skills and the hosted aria MCP. Every artifact is grounded in your real catalog, streaming intelligence, and sonic analysis (BPM, key, genres, moods). No hallucinated playlists. No invented metrics. Plugin code is open source (MIT); the MCP backend is Patchline-hosted and authenticated via Cognito OAuth.",
       "source": {
@@ -2012,6 +2062,16 @@
       "homepage": "https://authorautomations.social"
     },
     {
+      "name": "authorityprompt-installer",
+      "description": "AuthorityPrompt Installer — Claude Code Skill\n\nOne-click installer for the [AuthorityPrompt](https://authorityprompt.com) AI-visibility stack on \"any website\", no sysadmin required. Detects your hosting, walks you through platform-specific install steps, verifies each step with HTTP probes, and runs a 12-layer canonical-AI-profile audit at the end.\n\nWhat this skill does\n\nAfter registering your domain in your AuthorityPrompt dashboard and downloading the `authorityprompt-<domain>.zip` bundle, point Claude Code at it. The skill will:\n\n1. \"Detect your hosting platform\" (WordPress, Webflow, Wix, Squarespace, Shopify, Ghost, Vercel, Netlify, Cloudflare Pages, GitHub Pages, Carrd, Tilda, Framer, Notion, Bitrix, Apache, custom nginx VPS) via HTTP fingerprinting.\n2. \"Generate exact step-by-step instructions\" for that platform — labels, button names, file paths, where to paste each snippet.\n3. \"Verify each step\" with `curl` against your live site as you complete it.\n4. \"Run the full audit\" at the end and tell you whether your AI-readable profile is production-grade.\n\nOutput: every page on your site has the AP head tags, your `/.well-known/` endpoints serve the 5 AP files with correct Content-Type, and your AP dashboard starts receiving heartbeat pings from AI bot visits.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/authorityprompt/authorityprompt-installer.git",
+        "sha": "9cf9158ef7cb1d98e935719dbe0ab1d2f896c8c1"
+      },
+      "homepage": "https://authorityprompt.com"
+    },
+    {
       "name": "auto-approve-compound-bash",
       "description": "Auto-approve compound Bash commands (pipes, chains, subshells) by parsing each segment via shfmt AST and checking against allow/deny lists",
       "source": {
@@ -2137,6 +2197,16 @@
       "homepage": "https://colwill.github.io/axon"
     },
     {
+      "name": "axonflow-governance",
+      "description": "Policy enforcement, PII detection, and audit trails for Claude Code. Automatically evaluates governed tool inputs against 80+ governance policies before execution — blocks dangerous commands like reverse shells, SSRF, credential access, and destructive operations, detects sensitive data in tool outputs, and records compliance-grade audit trails for governed actions. Includes 6 MCP tools for explicit policy checks, audit search, and governance stats.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/getaxonflow/axonflow-claude-plugin.git",
+        "sha": "e94e3951d07a20bb29cd0d7736202218d2c85f74"
+      },
+      "homepage": "https://docs.getaxonflow.com/docs/integration/claude-code/"
+    },
+    {
       "name": "azure",
       "description": "Transform Claude into an Azure expert. This plugin integrates the Azure MCP server and specialized Azure skills to move beyond generic advice. It enables Claude to perform real-world tasks: listing resources, validating deployments, diagnosing infrastructure issues, and optimizing costs across 50+ Azure services. Perfect for developers using Claude Code who need direct, actionable Azure integration.",
       "source": {
@@ -2255,6 +2325,16 @@
         "sha": "065008a8d4b0896c02713d2f12aaf2bd399274a0"
       },
       "homepage": "https://www.npmjs.com/package/backpack-ontology"
+    },
+    {
+      "name": "bahama",
+      "description": "Bahama is the agent-first cloud platform that gives your agents the power to seamlessly build, test, provision resources, and deploy entire apps to the web with zero setup.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/bahamaAI/plugin.git",
+        "sha": "ecc1e7fc30a61dc7bd61551a7c006ddf5d01779d"
+      },
+      "homepage": "https://www.bahama.ai"
     },
     {
       "name": "bake-claude-md-files",
@@ -3270,6 +3350,16 @@
       "homepage": "https://github.com/todd-chamberlain/claude-channel-mattermost"
     },
     {
+      "name": "channelhub",
+      "description": "Multi-session channel for Claude Code. Manage all your Claude Code sessions from a single Telegram bot, web dashboard, or CLI. Run a persistent daemon that accepts connections from multiple Claude sessions, routes messages between frontends and sessions, relays tool permission prompts for remote approval, and supports agent team coordination.\nIncludes native MCP permission relay, Telegram login for web access, per-session trust levels, file uploads to project folders, prompt tag toggles (TDD, Superpowers, etc.), and directory browser for spawning sessions.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mahdi-awadi/channelhub.git",
+        "sha": "efbdc0ec94f7c76cdeab5c2d1fe5b0a8208d3dc9"
+      },
+      "homepage": "https://github.com/mahdi-awadi/channelhub"
+    },
+    {
       "name": "char-index-skill",
       "description": "Character-level index-based string manipulation as a Claude Code Skill",
       "source": {
@@ -3936,6 +4026,16 @@
       "homepage": "https://github.com/balamuthu1/claude-crew"
     },
     {
+      "name": "claude-cursor-orchestration",
+      "description": "Claude Code + Cursor Agent orchestration system. Delegates coding tasks to Cursor Agent via ACP bridge │\n  │              │  with Phase 0-8 pipeline.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ax-inc-dev/claude-cursor-orchestration.git",
+        "sha": "a1e9ed6c3b429201bc278b4f9251621446518ceb"
+      },
+      "homepage": "https://github.com/ax-inc-dev/claude-cursor-orchestration"
+    },
+    {
       "name": "claude-daily-journal",
       "description": "Conversational daily journaling with emotional floor detection, optional behavior accountability, and an optional advisory panel. Saves structured Obsidian markdown entries.",
       "source": {
@@ -4436,6 +4536,16 @@
       "homepage": "https://andytango.github.io/claude-review-loop-site/"
     },
     {
+      "name": "claude-rules-injector",
+      "description": "Auto-injects a \"critical rules\" prompt at the start of every Claude Code turn via UserPromptSubmit hook. Tiny, auditable, MIT. Includes\n  an r-check skill for on-demand rule lookup. Behavior-shaping (not permission enforcement) — keeps your CLAUDE.md rules salient across\n  long sessions.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/hinanohart/claude-rules-injector.git",
+        "sha": "2547de2cd2b07f226ae0d340a86dd09f4d9b2e23"
+      },
+      "homepage": "https://github.com/hinanohart/claude-rules-injector"
+    },
+    {
       "name": "claude-security-linter",
       "description": "A pre-tool-use hook plugin that automatically scans code for security vulnerabilities before Claude writes it to disk. Detects eval() usage, Function constructor abuse, hardcoded API keys and secrets, Bearer tokens, AWS credentials, innerHTML/outerHTML XSS vectors, inline private keys, and GitHub personal access tokens. Uses a two-tier severity system: errors block the write with detailed remediation guidance, while warnings allow the write but inject advisory context. Runs as pure Node.js wi...",
       "source": {
@@ -4856,6 +4966,16 @@
       "homepage": "https://github.com/DoHyun468/claw-hwp"
     },
     {
+      "name": "claw-maven-plugin",
+      "description": "Pre-deployment AI agent governance — audit agent configs for governance gaps, score posture on an A–F scale, generate signed trust manifests, and enforce budget caps. ClawMaven governs the agents you build, not the tool you build them with. Connects via MCP to clawmaven.com.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/foodyogi/clawmaven-plugin.git",
+        "sha": "f69354627e7bd35c4f557fc6974f0ff4b4bdad47"
+      },
+      "homepage": "https://clawmaven.com/plugins/claude-code"
+    },
+    {
       "name": "clawback",
       "description": "Webhooks and cron scheduling for Claude Code. Receive events\nfrom external services like GitHub, Stripe, and Sentry, route\nthem to the right session, and let Claude act on them\nautomatically. Events are durably queued, delivered one at a\ntime, and survive connection drops.",
       "source": {
@@ -5044,6 +5164,16 @@
         "sha": "9012709cbdf4b50c558470562815ef265da97741"
       },
       "homepage": "https://github.com/jucor/clojure-lsp-plugin"
+    },
+    {
+      "name": "clone",
+      "description": "Clone is a Claude Code plugin that runs Clone Loop: an in-session automation loop powered by Clone MCP next-prompt prediction.\n\nWhen Claude Code tries to stop, Clone Loop's Stop hook calls Clone MCP to predict what the user would likely ask next. If the prediction clears the configured confidence threshold, the hook passes the prediction payload back to Claude so it can continue working in the same session. If confidence is too low or Clone MCP fails, the loop stops and asks for human input.\n\nClone Loop is designed for iterative coding tasks where simply replaying the original prompt is not enough. It preserves standard loop safety controls such as max iterations and completion promises, while adding confidence-gated continuation through Clone.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cloneisyou/clone-claude-plugin.git",
+        "sha": "e9e291b1853be3d154b1c7359747e6084551e6dc"
+      },
+      "homepage": "https://github.com/cloneisyou/clone-claude-plugin#readme"
     },
     {
       "name": "closed-rings",
@@ -5738,6 +5868,16 @@
       "homepage": "https://kahidreamers.com/products#consensus"
     },
     {
+      "name": "consistent-ui",
+      "description": "Enforce UI consistency across an entire codebase — detects drift in spacing, typography, colors, components, iconography, and interaction patterns across web, native mobile, and server-rendered templates. Generates a P0–P3 report and remediation plan.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/thevrus/consistent-ui.git",
+        "sha": "fd69dd754b5076818749331df95f787f9469d6c1"
+      },
+      "homepage": "https://github.com/thevrus/consistent-ui"
+    },
+    {
       "name": "constellation",
       "description": "nteractive project generator with a visual web UI. Select your tech stack from 88+ technologies across 6 categories (frontend, backend, database, infrastructure, testing, monitoring), then AI-generates a\nfully functional project with working CRUD endpoints, database schemas, Docker configs, CI/CD pipelines, and more. Includes GitHub integration for repo creation and online tech search via npm, PyPI, and\ncrates.io.",
       "source": {
@@ -5768,6 +5908,16 @@
       "homepage": "https://github.com/PeterMalmkjaer/content-analysis-plugin"
     },
     {
+      "name": "content-intelligence",
+      "description": "Competitive ad intelligence inside Claude and other AI agents. Discover brands, build knowledge sets, analyze ad content, coach creators, vet influencers, run audience deep-dives, and generate strategic insights — all powered by Adology's data platform.\n\nThe content-intelligence plugin connects your AI agent to your Adology workspace, giving you access to competitive ad intelligence directly in conversation. You can search for brands, manage knowledge sets, run content analysis, coach influencer accounts, vet creator partnerships, and produce strategy artifacts without leaving your AI agent.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/adologyai/content-intelligence-plugin.git",
+        "sha": "19ebfd2469dc0b4fc1bede25a9010241791edfcd"
+      },
+      "homepage": "https://github.com/adologyai/content-intelligence-plugin"
+    },
+    {
       "name": "content-studio",
       "description": "Full content pipeline for thought leadership. Write, brainstorm, and analyze LinkedIn posts, blog posts, and opinion pieces. Includes 8 specialized skills, voice-matched writing, engagement analysis, and a\nvisual Kanban editor.",
       "source": {
@@ -5778,6 +5928,16 @@
         "sha": "852272ec21cebab98202df967dffee127209b6bc"
       },
       "homepage": "https://ai-first.techwolf.ai"
+    },
+    {
+      "name": "contentful",
+      "description": "Teaches your AI agent how to build with Contentful. Includes skills for core CMS concepts, Next.js integration, content model migrations, and personalization/A/B testing — plus live MCP connections to your Contentful spaces for reading and writing content directly.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/contentful/skills.git",
+        "sha": "300b87d3ee11b13927cede2e086329c4c1083ac3"
+      },
+      "homepage": "https://github.com/contentful/skills"
     },
     {
       "name": "contentstack-vibe-docs",
@@ -5890,6 +6050,16 @@
       "homepage": "https://www.contextstellar.com"
     },
     {
+      "name": "continuum",
+      "description": "Claude Code never dies. Auto-spawn new session when context hits 97%, with turn-by-turn fact snapshots that survive across sessions. Solves context-window exhaustion that /compact (lossy) and /exit (destructive) cannot.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/BB20260410/continuum.git",
+        "sha": "41bd28f7ea880686b0a9fd050d7a8afb093478c3"
+      },
+      "homepage": "https://github.com/BB20260410/continuum"
+    },
+    {
       "name": "conversation-log",
       "description": "Auto-detect and log non-development conversations (business, support, consultations) as structured Markdown files .",
       "source": {
@@ -5910,6 +6080,16 @@
       "homepage": "https://conversiontools.io/docs/claude-plugin"
     },
     {
+      "name": "convertapi",
+      "description": "ConvertAPI allows you to convert, transform, and process files in over 200 formats, from PDFs and Office documents to images, web pages, e-books, and archives. It also brings a full PDF toolkit (merge, split, OCR, compress, watermark, redact, protect) into the conversation.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ConvertAPI/convertapi-mcp.git",
+        "sha": "6bdf058528c2bb4cf7c68776820985a585ce9fba"
+      },
+      "homepage": "https://www.convertapi.com/integration/mcp-server"
+    },
+    {
       "name": "conveyancing-toolkit",
       "description": "Specialist AI skills for UK residential conveyancing. Includes deterministic SDLT (property transfer tax) calculations with daily-updated rates, leasehold saleability assessment with lender eligibility across 13 major UK lenders, and a full Lender's Handbook pre-screen covering 90+ Part 1 checks and Part 2 requirements for 67 individual lenders. Built for conveyancers, estate agents, and property professionals. Free and open source.",
       "source": {
@@ -5918,6 +6098,16 @@
         "sha": "fb953b7efb1942b8ffb91b2d649a3d06d0cf8c64"
       },
       "homepage": "https://github.com/MoverlyLtd/conveyancing-toolkit"
+    },
+    {
+      "name": "cookiedclaw",
+      "description": "A Telegram bridge for your Claude Code session. cookiedclaw runs as a plugin with a bundled MCP server inside your existing interactive session, exposing it to a Telegram bot you control. Get live tool-call streaming in your DM, permission relay from your phone, image dispatch (send and receive screenshots), and daemon mode so long runs survive when you close the terminal. Uses your existing Claude Code auth and runs entirely on your own server.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cookiedclaw/cookiedclaw-claude-code.git",
+        "sha": "1bc778fb0fa559253e90ac3c03dd629c43a3c6e3"
+      },
+      "homepage": "https://cookiedclaw.com"
     },
     {
       "name": "cookiy",
@@ -6311,6 +6501,16 @@
         "sha": "dff7b7a02f5544289fc066e3740fc3a525796cdb"
       },
       "homepage": "https://curiositystack.app"
+    },
+    {
+      "name": "cv-creator",
+      "description": "Most CV tools treat regional and industry differences as styling. They aren't — a US 1-pager, a UAE 2-page CV with photo and visa status, an academic CV with a publication list, and a German Lebenslauf with\ntabular layout and signature are structurally different documents. cv-creator separates regional archetypes (length, photo conventions, personal-detail rules, section order) from industry overlays (section\nemphasis, must-have credentials, bullet patterns) and composes them at fill time.\n\nThe skill operates in four modes from a single entry point:\n\n- Create — asks region, industry, seniority, and target role; loads the right template; turns your notes into a filled CV; builds PDF + DOCX.\n- Improve bullets — rewrites pasted bullets against an action-verb + quantified-result + impact rubric.\n- Review — scores an existing CV against region norms (length, photo, structure, ATS hazards) and returns a prioritized punch list.\n- ATS-optimize — diffs your CV against a pasted job description and proposes specific keyword and emphasis edits without inventing skills you don't have.\n\nThe skill is opinionated about honesty: it never fabricates metrics, employers, dates, or credentials. If a bullet has no quantifiable hook, it asks for one rather than making one up.\n\nKey features (bullet list)\n\n- 5 region archetypes — US/Canada, UK/EU, Germany (Lebenslauf), Academic, UAE/GCC — each with proper length, photo, personal-detail, and section conventions\n- 7 industry overlays — tech, nursing, finance, sales, trades, creative, executive — composable with any region\n- 4 modes — create, improve bullets, review, ATS-optimize\n- PDF + DOCX output via pandoc (with WeasyPrint HTML→PDF fallback when LaTeX isn't installed)\n- Healthcare licensure-aware — DOH/DHA/MOH (UAE), NMC (UK), state board (US), Approbation (DE), with proper credential placement for nursing\n- Real reference docs, not buzzwords — region norms matrix, bullet rubric, ATS rules, review checklist\n- 3 fully-rendered example CVs included (nurse/UAE, tech/US, academic/UK) so users see exactly what the skill produces",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/farazfookeer/cv-creator.git",
+        "sha": "d0498333238da00a295c949ef7a91da2de5a77b1"
+      },
+      "homepage": "https://github.com/farazfookeer/cv-creator"
     },
     {
       "name": "cv-skills",
@@ -7093,6 +7293,16 @@
       "homepage": "https://github.com/agent-sh/deslop"
     },
     {
+      "name": "destreamed",
+      "description": "Destreamed turns Claude Code into a workflow agent with memory. Tasks, decisions, and progress live in streams of \"beats\" — each step Claude takes lands as an echo your team can read. Rules enforce team standards. Approval gates keep humans in control of material changes. Nothing gets lost across sessions, branches, or context resets.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/destreamed/claude-plugin.git",
+        "sha": "a260585cabcf122757c8a90a32c55ed9459e1137"
+      },
+      "homepage": "https://destreamed.com"
+    },
+    {
       "name": "dev-environment-doctor",
       "description": "Detect and fix local environment issues before they break your workflow.\n\nDev Environment Doctor runs safe, read-only checks for environment variables, services, and tool versions, and provides clear, actionable fixes to keep your development setup healthy.",
       "source": {
@@ -7213,6 +7423,16 @@
         "sha": "7874629984b2a7fb41e8fd407f58e5f597d6e8f6"
       },
       "homepage": "https://github.com/yhyatt/dishonest-code-audit/blob/main/README.md"
+    },
+    {
+      "name": "disputron",
+      "description": "File Disputron cases without leaving Claude Code. Disputron is an AI courtroom where two sides argue, an AI judge rules, and the verdict is public. This plugin adds slash commands — /disputron-file, /disputron-respond, /disputron-status — that route to the hosted MCP server at disputron.ai/api/mcp.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/disputron/disputron-agent-kit.git",
+        "sha": "f414e3cb305436e03cb4c5c9528dbf15b45a64e7"
+      },
+      "homepage": "https://disputron.ai/developers"
     },
     {
       "name": "distill",
@@ -7467,6 +7687,16 @@
         "sha": "a89686dc089f6cf67c84d72a01c375c5d4db90cf"
       },
       "homepage": "https://github.com/Teese999/Dopamine/blob/main/README.md"
+    },
+    {
+      "name": "dotforge",
+      "description": "configuration governance for Claude Code — bootstrap, audit (0-10), sync, and evolve .claude/ across projects. 18 skills, 7 agents, 16 stacks. Zero dependencies.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/luiseiman/dotforge.git",
+        "sha": "0d7dcb4462c2cb62be7eeaac1baad5fa99004620"
+      },
+      "homepage": "https://github.com/luiseiman/dotforge"
     },
     {
       "name": "dotnet-pilot",
@@ -7733,6 +7963,16 @@
       "homepage": "https://easysend.co/mcp"
     },
     {
+      "name": "ecc",
+      "description": "ECC is the open agent harness system for Claude Code: battle-tested skills, specialized agents, hook workflows, MCP integrations, and operator playbooks for real engineering teams. It makes Claude Code more reliable, teachable, and reusable across coding, review, research, security, setup, and connected-tool workflows.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/affaan-m/everything-claude-code.git",
+        "sha": "1e8c7e7994223e0ff337d1626cd08e04a1ae67ed"
+      },
+      "homepage": "https://ecc.tools"
+    },
+    {
       "name": "echosy",
       "description": "Read, search, and summarize Echosy meeting transcripts (.echo files) directly from Claude Code",
       "source": {
@@ -7963,6 +8203,16 @@
       "homepage": "https://github.com/HotRedMat/ensembra"
     },
     {
+      "name": "enterprise-marketing-os",
+      "description": "35-skill, 5-agent Claude plugin that replaces the 40-year-old marketing operating system. Gives brands and in-house teams direct control of their growth — paid media, CRM, MMM, Price-Pack Architecture, algorithmic marketing science, and QBR reporting in one governed OS. It covers the 3 main teams and RGM 1. Marketing & Coms (Working+Non-Working Media) 2. Shopper + Trade Marketing + Marketing Science and analytics.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/afelipeg/Anthropic-Skills-for-enterprise-marketing-os.git",
+        "sha": "0d62174b7c6a4bf275f86a475843e4ec299c517f"
+      },
+      "homepage": "https://github.com/afelipeg/Anthropic-Skills-for-enterprise-marketing-os"
+    },
+    {
       "name": "enuff-is-enuff-unsubscribe",
       "description": "Find recurring email and make it stop with Claude. Scan inbox exports, review brand-by-brand in chat, then unsubscribe one item at a time with per-action approval. Local-first; runs anywhere Claude Code does, with no extra installs.",
       "source": {
@@ -8161,7 +8411,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/guohaonan-shy/excalidrawer.git",
-        "sha": "7828307cb28d499146bea78abbd7663cbe5a136d"
+        "sha": "7b6be036c8a8fede3cd4339e184756cdfb17a270"
       },
       "homepage": "https://github.com/guohaonan-shy/excalidrawer"
     },
@@ -8642,6 +8892,16 @@
         "sha": "822b973ceea4662b092b4476171f02cb3a41c267"
       },
       "homepage": "https://github.com/misfitdev/claude-plugins/tree/main/plugins/frank-grimes"
+    },
+    {
+      "name": "french-legal-prompt",
+      "description": "French legal toolkit for Claude — search Légifrance codes, French case law (Cour de cassation et juridictions du fond), the Journal Officiel, and collective bargaining agreements (KALI).\nIncludes 5 slash commands, 5 auto-triggered skills, and 4 preconfigured MCP servers. Built for  lawyers, in-house counsel, and law students who need AI that cites official sources.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/zevra-tech/legal-prompt.git",
+        "sha": "73ea7fdddba455f7a2c4e84e5d9e1c509aad2b81"
+      },
+      "homepage": "https://mcp-juridique.fr"
     },
     {
       "name": "fresh-eyes-review",
@@ -9840,6 +10100,16 @@
       "homepage": "https://shrimp.hermitsh.ai"
     },
     {
+      "name": "heroku",
+      "description": "Heroku skills, commands, hooks, and optional Heroku Code MCP wiring for Claude Code. Helps agents safely handle Heroku deployments, app operations, config vars, Postgres, add-ons, logs, pipelines, review apps, AppLink, Connect, and Managed Inference.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/dsouzaAnush/heroku-plugin.git",
+        "sha": "e732432eeefabe7ebdcf73169725fb47dbd9495f"
+      },
+      "homepage": "https://github.com/dsouzaAnush/heroku-plugin#readme"
+    },
+    {
       "name": "hig-compliance-auditor",
       "description": "Audits codebases and design systems against Apple's Human Interface Guidelines. Scans SwiftUI, UIKit, CSS, HTML, and JavaScript for HIG violations across iOS, iPadOS, macOS, watchOS, tvOS, visionOS, and Web/PWA targets. Generates structured compliance reports with severity tiers (Critical, High, Medium, Low), platform-specific guidance, accessibility audit results, and actionable remediation options. Applies fixes on user approval with inline attribution comments referencing the specific HIG guideline violated. Covers typography and Dynamic Type, semantic color systems, Dark Mode architecture, Liquid Glass material usage, layout and safe areas, touch target sizing, SF Symbols compliance, App Store Review Guidelines 2025/2026, and AI transparency requirements.",
       "source": {
@@ -10177,6 +10447,16 @@
       "homepage": "https://hunaras.com"
     },
     {
+      "name": "hunter",
+      "description": "Find and verify professional email addresses, search contacts by domain, enrich company and person data, and run end-to-end B2B prospecting workflows — all through natural language. Connects to your Hunter account to use your existing credits.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/hunter-io/claude-plugin.git",
+        "sha": "592cd27476935013d3652c2e2810f5267bd65a02"
+      },
+      "homepage": "https://hunter.io"
+    },
+    {
       "name": "hunter-for-claude",
       "description": "Find and organize companies without leaving Claude. This app connects directly to Hunter to help you discover businesses that match your criteria, enrich them with reliable company-level data, and save the ones you care about.\n\nYou can search for companies using natural language (for example, by location, industry, size, or technologies), review results with domain-level insights, and enrich any company to get structured information such as industry, headcount range, headquarters location, and tech stack. When a company looks relevant, you can save it straight to your Hunter Leads for later use.\n\nDesigned for sales, marketing, and research workflows, the app focuses on fast exploration and clean company data. No personal data, no guesswork, just actionable company insights inside Claude.",
       "source": {
@@ -10205,6 +10485,16 @@
         "sha": "3dca3e2a125a1446474d308b932f6b950671ff26"
       },
       "homepage": "https://hyday.web.app"
+    },
+    {
+      "name": "hyper-marketing",
+      "description": "Hyper Marketing MCP connects Claude Code to Meta, Google Ads, TikTok, LinkedIn, Amazon, Instagram, Pinterest, and 160+ marketing integrations, skills, and built-in tools through a single connector. Agents can launch and optimize ad campaigns, publish organic social content, improve SEO and AI search visibility, automate blog posting, scrape Meta Ads Library and social media platforms, generate ad creative and video, and analyze performance across major ad platforms, GA4, GTM, Search Console, BigQuery, and more.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/hyperfx-ai/marketing-skills.git",
+        "sha": "2a9bc1935ef5e1880836f245fed9a2cced2073b3"
+      },
+      "homepage": "https://www.hyperfx.ai/docs/mcp/connect-claude-code"
     },
     {
       "name": "hyperflow",
@@ -10414,7 +10704,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ilang-ai/Imprint.git",
-        "sha": "cd07cdf96ed461c39ebccfb00d1f4c36724a8001"
+        "sha": "c3d456aeb87dfb84ae85a111007bdbb3190eeff9"
       },
       "homepage": "https://ilang.ai"
     },
@@ -10561,6 +10851,16 @@
       "homepage": "https://infiniteclaud.com/"
     },
     {
+      "name": "inflight",
+      "description": "Design feedback plugin for AI coding agents. Share your work for design review on Inflight — automatically detects your staging URL, generates a tailored feedback guide, and creates a version for your team to review. Then fetch structured feedback (polls, vibe checks, element pins with DOM context, recordings with transcripts) and implement changes directly from your agent.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/inflightsoftware/inflight-plugin.git",
+        "sha": "392329cedfd46c2bc9682edd081761d2b0215bb0"
+      },
+      "homepage": "https://www.inflight.co/"
+    },
+    {
       "name": "infynon-pkg",
       "description": "Universal package security manager — intercepts install commands across 14 ecosystems (npm, yarn, pnpm, bun, pip, uv, poetry, cargo, go, gem, composer, nuget, hex, pub), scans lock files for CVEs via OSV.dev, auto-fixes vulnerable dependencies, deep dependency auditing, and scheduled vulnerability monitoring with email alerts.",
       "source": {
@@ -10684,6 +10984,16 @@
       "homepage": "https://github.com/ironyjk/investment-framework"
     },
     {
+      "name": "ireview",
+      "description": "AI-to-AI code review router powered by I-Lang protocol. Any OpenAI-compatible model reviews your Claude Code output. DeepSeek, GPT, Gemini, Ollama — change one line in config. Structured I-Lang instructions in, structured findings out. No Codex CLI, no Node.js, no ChatGPT login.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ilang-ai/iReview.git",
+        "sha": "caa4c087620ad6c3cd6c3c5d3c0fdc85ee6a5abe"
+      },
+      "homepage": "https://ilang.ai"
+    },
+    {
       "name": "iris",
       "description": "The agent eval standard for MCP. Score every agent output for quality, safety, and cost. 12 built-in eval rules cover completeness, relevance, safety (PII detection, prompt injection), and cost thresholds. Log traces with hierarchical spans, evaluate outputs inline, and track costs across all your agents. No SDK, no code changes — add one line to your MCP config. Open source, MIT licensed.",
       "source": {
@@ -10734,6 +11044,16 @@
       "homepage": "https://github.com/jaequery/dot-claude"
     },
     {
+      "name": "jambonz-skills",
+      "description": "This plugin makes jambonz, the Voice AI orchestration platfomr, a first-class citizen in Claude Code. It ships four skills covering decision-making (which verb, which transport), implementation recipes (voice AI agents, IVR, call control, configuration), an index of runnable starter apps, and per-IDE setup for the jambonz MCP server. Together with the hosted jambonz MCP server at https://mcp-server.jambonz.app/mcp, Claude Code generates correct, type-safe jambonz code on the first try — no docs hunting, no hallucinated verbs, no copy-pasting from outdated tutorials.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jambonz/skills.git",
+        "sha": "82ee0b69c88854ab7980b9042d78a3086e6b9176"
+      },
+      "homepage": "https://github.com/jambonz/skills/blob/main/README.md"
+    },
+    {
       "name": "jamdesk",
       "description": "Gives Claude deep knowledge of the Jamdesk documentation platform — 25+ MDX components with full props and examples, complete docs.json configuration schema, 8 navigation patterns, 19 CLI commands, and writing standards. Claude loads only the reference sections relevant to each task, keeping context efficient.",
       "source": {
@@ -10772,6 +11092,30 @@
         "sha": "ab52957043484c5a4096e896700594b7f2b7db41"
       },
       "homepage": "https://github.com/civitas-cerebrum/jarvis-plugin/"
+    },
+    {
+      "name": "jarvis-goal",
+      "description": "Goal-driven autonomous execution with built-in irreversibility guard. Port of Anthropic /goal (Claude Code v2.1.139) that automatically pauses for explicit user approval when detecting unrecoverable operations — git push, repo visibility changes, payment, secret exposure, mass data deletion. Self-check enforces evidence-based completion declarations.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Ramsbaby/jarvis",
+        "path": "plugins/jarvis-goal",
+        "ref": "main",
+        "sha": "c426c6845945673a4da2b0eb5b168679ef554092"
+      },
+      "homepage": "https://github.com/Ramsbaby/jarvis"
+    },
+    {
+      "name": "jarvis-plan-review",
+      "description": "11-section rigorous design plan review covering problem framing, scope boundaries, architecture, security, observability, deployment, performance, reliability, testing, maintainability, and migration. Adapted from gstack /plan-ceo-review for sole-developer and AI-pair-programming workflows. Returns Pass/Risk/Block verdict per section with concrete falsification evidence.",
+      "source": {
+        "source": "git-subdir",
+        "url": "Ramsbaby/jarvis",
+        "path": "plugins/jarvis-plan-review",
+        "ref": "main",
+        "sha": "c426c6845945673a4da2b0eb5b168679ef554092"
+      },
+      "homepage": "https://github.com/Ramsbaby/jarvis"
     },
     {
       "name": "jelly-pet",
@@ -10984,6 +11328,16 @@
         "sha": "5b8515273b20d9cfc19dc1e81ffba953b918f69e"
       },
       "homepage": "https://github.com/clouddrove/claude-skills/"
+    },
+    {
+      "name": "kaggle-skill",
+      "description": "Complete Kaggle integration: competition reports, dataset/model downloads, notebook execution, hackathons, and badges.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/shepsci/kaggle-skill.git",
+        "sha": "1b5d70de918377a0ea6c979f75c12dda1090cdad"
+      },
+      "homepage": "https://github.com/shepsci/kaggle-skill"
     },
     {
       "name": "kaizen",
@@ -11236,6 +11590,16 @@
       "homepage": "https://trykopi.ai/mcp-docs"
     },
     {
+      "name": "korean-beauty-booking",
+      "description": "Book appointments at 1300+ top-rated Korean dermatology & plastic surgery clinics in Seoul, Busan, and Jeju directly from your AI assistant. Supports hospital matching, appointment submission, price checking, and live customer service in Chinese, English, Japanese, and Thai.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/BeautsGO/beautsgo-booking.git",
+        "sha": "28ccdb41a80c21e348720b3fad1c800acc8f7e13"
+      },
+      "homepage": "https://i.beautsgo.com"
+    },
+    {
       "name": "kotlin-lsp",
       "description": "Real-time Kotlin code intelligence for Claude via kotlin-language-server. Gives Claude instant diagnostics, go-to-definition, find-references, and type information for .kt and .kts files — no build step required.",
       "source": {
@@ -11448,6 +11812,16 @@
         "sha": "a158645f9f3147d844c6af6b346d3a3d3df3c8b4"
       },
       "homepage": "https://github.com/Lcontext/Lcontext/tree/main/plugin"
+    },
+    {
+      "name": "lead411",
+      "description": "Search B2B contacts and companies, enrich accounts, unlock contact details, and push records to CRM — one-click Lead411 intelligence inside Claude",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/lead411/lead411-mcp-plugin.git",
+        "sha": "3d0cef2593900f0eb0969710206929b66f5b2c12"
+      },
+      "homepage": "https://www.lead411.com"
     },
     {
       "name": "leader-as-coach",
@@ -11856,7 +12230,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/verivus-oss/llm-cli-gateway.git",
-        "sha": "84608739ef5e6d306d247557fcefbffc4751dd1b"
+        "sha": "c4d2e9b1f1f2489efe244f0cc5731eb2ee43a0bc"
       },
       "homepage": "https://github.com/verivus-oss/llm-cli-gateway#readme"
     },
@@ -12101,6 +12475,16 @@
         "sha": "6a53756d435346968e21e4981d83b2fa76df653d"
       },
       "homepage": "https://myceliumai.co/plugins/luma-mcp"
+    },
+    {
+      "name": "lusha",
+      "description": "The Lusha plugin gives Claude access to Lusha’s verified B2B data layer - 300M+ business contacts, company intelligence, direct emails, phone numbers, mobile numbers, and buying signals. \n\nIts core capability is signal-based prospecting: identifying companies or contacts showing real buying signals like funding, hiring growth, headcount changes, job changes, and promotions, then retrieving verified decision maker phone numbers, emails, titles, and company context in one workflow. \n\nUse it to enrich contacts, build ICP-driven prospect lists, find buyers from real market signals, and discover lookalike companies or contacts from your best customers. Built with GDPR, CCPA, SOC 2 Type II, ISO 27701, and ISO 42001 compliance.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/lusha-oss/lusha-mcp-plugin.git",
+        "sha": "8fc71d5473ea40e01a92001787f0f3caaf5ca30e"
+      },
+      "homepage": "https://github.com/lusha-oss/lusha-mcp-plugin"
     },
     {
       "name": "m365-it-admin-library",
@@ -13305,6 +13689,16 @@
       "homepage": "https://www.lithosai.com"
     },
     {
+      "name": "mozart-orchestration",
+      "description": "Multi-agent orchestration pipeline for Claude Code: DELIVER (build), AUDIT (review), DIAGNOSE (investigate). Conducts 14 specialist subagents through research, plan, review, implement, verify, document with live narration.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jstuart0/mozart-orchestration.git",
+        "sha": "8e674b447c46cede5ae71b13d26f61dab8203032"
+      },
+      "homepage": "https://github.com/jstuart0/mozart-orchestration"
+    },
+    {
       "name": "mpp-inspector",
       "description": "Inspect, debug, and test Machine Payments Protocol (HTTP 402) endpoints directly from Claude Code. Parses spec-compliant WWW-Authenticate challenges, discovers MPP endpoints on any domain, compares pricing across services, validates receipts, and dry-runs payment flows. Supports Tempo, Stripe, Lightning, Solana, and Card payment methods. Includes 4 slash commands (/mpp-inspect, /mpp-scan, /mpp-flow, /mpp-protocol) and 5 MCP tools for programmatic access.",
       "source": {
@@ -13993,6 +14387,16 @@
       "homepage": "https://github.com/thettwe/nyann/blob/main/README.md"
     },
     {
+      "name": "oaisys-cloud",
+      "description": "OAISYS connects Claude Code to an OAISYS workspace through a hosted MCP endpoint. It gives Claude secure tool access for workspace inspection, account inventory, usage and credit checks, cost estimation, supported workflow actions, scraper tools, profile updates, and account metadata management. The plugin keeps API keys local, uses the standard x-api-key authentication pattern.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/OAISYS-Org/oaisys-claude-plugin.git",
+        "sha": "58224743db27c49d4589230c4db7eb3842058443"
+      },
+      "homepage": "https://oaisys.cloud/claude"
+    },
+    {
       "name": "observability-skills",
       "description": "Configure OpenTelemetry context propagation (OTEL_PROPAGATORS) for services in Kubernetes — especially when using mirrord to intercept traffic.",
       "source": {
@@ -14018,7 +14422,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mariourquia/obsidian-connector.git",
-        "sha": "8d6ba64a2b13b02181632ebca67aefffd5aabd5e"
+        "sha": "c939b87ad7fab589e3dfd14b00bd6be3963707d4"
       },
       "homepage": "https://github.com/mariourquia/obsidian-connector"
     },
@@ -14058,7 +14462,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mariourquia/obsidian-connector.git",
-        "sha": "f60c47cbda778bcb9428f79677d377204f567c4a"
+        "sha": "c939b87ad7fab589e3dfd14b00bd6be3963707d4"
       },
       "homepage": "https://github.com/mariourquia/obsidian-connector"
     },
@@ -14477,6 +14881,16 @@
       "homepage": "https://github.com/DuckrOverload/duckr-plugins"
     },
     {
+      "name": "orcool",
+      "description": "Orcool brings UGC ad production directly into your Cowork workflow. Generate a 15-second 9:16 Pure UGC Testimonial ad for any mobile app — one AI avatar, four scenes, animated packshot, app-screen B-roll — entirely through Orcool MCP tools, no Veo/ElevenLabs/Replicate keys required. The bundled MCP server exposes the full Orcool Studio surface: brand and signal management, avatars, footages, concepts, creative packs, and video rendering. Includes App Store packshot extraction, creative-pack auditing with hard invariants (scene count, footage-vs-talking-head balance, max scene durations), and optional ad-library research via Meta Ad Library, TikTok Ads Library, and brand social accounts (when used with Claude in Chrome).",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/orcool-org/agent-plugin.git",
+        "sha": "4c80cbafc87f5b6660e0b168ca67f6247cbbb878"
+      },
+      "homepage": "https://app.orcool.com"
+    },
+    {
       "name": "origami-ms",
       "description": "Connect Claude to Origami.ms — query records, create and update data, manage entities, run workflows, and build complete Origami environments through natural language. Includes 14 API tools and 3 expert skills for building, troubleshooting, and integrating with Origami.",
       "source": {
@@ -14572,6 +14986,16 @@
       "homepage": "https://github.com/sortlist/overloop-cli"
     },
     {
+      "name": "oxagen",
+      "description": "Connect Claude Code to your Oxagen workspace. Oxagen provides typed ontology access, durable agent memory, multi-agent coordination, code graph, and 50+ slash commands. Engineered for code, but the same surface powers incident response, security triage, customer-impact analysis, and research workflows. Visit https://www.oxagen.ai for more information or visit the plugin documentation at https://docs.oxagen.ai/docs/plugins/claude-code-plugin. The repo is open source, if you wish to make improvements to the plugin you may do so by submitting a pull request to the repo https://github.com/oxagenai/claude-code-plugin make sure to read CONTRIBUTING.md prior to creating your pull requests.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/oxagenai/claude-code-plugin.git",
+        "sha": "6e41e3ecd880007fd89fd30be930dce19f804962"
+      },
+      "homepage": "https://docs.oxagen.ai/docs/plugins/claude-code-plugin"
+    },
+    {
       "name": "oya",
       "description": "A planning skill that helps users start their day or week with intention and clarity.",
       "source": {
@@ -14590,6 +15014,16 @@
         "sha": "4bb457156beb8a7d4f03d236994279c3075205d2"
       },
       "homepage": "https://www.p2claw.com/"
+    },
+    {
+      "name": "pacelab-workout-creator",
+      "description": "Generate structured interval workouts with Claude — Tabata, AMRAP, EMOM, Circuit, Rounds, For Time, and more. Pacelab Workout Creator builds the full workout structure (blocks, exercises, reps, durations, rest periods, progressive overload) and returns a shareable link that opens the workout directly in the Pacelab Intervals iOS or Android app. Perfect for athletes and coaches who want to design workouts in natural language and train with a precise interval timer.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/StringoStarr/pacelab-workout-creator.git",
+        "sha": "c74a8c402a0e35c90657442358033174294ee4e1"
+      },
+      "homepage": "https://pacelabintervals.com/"
     },
     {
       "name": "paddle",
@@ -16156,6 +16590,16 @@
       "homepage": "https://github.com/nentrapper-g-rod/claude-quick-question/"
     },
     {
+      "name": "quickdesign",
+      "description": "AI media generation + competitor ad intelligence in your terminal and Claude Code: multi-segment UGC videos (Seedance 2.0 R2V, Sora 2, Kling), image edits with multi-product references (Nano Banana 2, GPT Image), Spy Brands ad library, brand DNA scrape, and one-click ads — all driven by a Claude Code skill that teaches the agent eight cardinal rules and per-model gotchas",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/quickdesignio/quickdesign-cli.git",
+        "sha": "586d4c1ddcc516634d428056a13ad095a046ffba"
+      },
+      "homepage": "https://quickdesign.io"
+    },
+    {
       "name": "railguard",
       "description": "Railguard is a safer, context-aware alternative to --dangerously-skip-permissions for Claude Code.\n\nInstead of choosing between approving every command manually or giving Claude unrestricted access, Railguard sits in the middle. It intercepts every tool call — Bash, Write, Edit, Read — and makes policy-based decisions: allow safe commands instantly, block dangerous ones automatically, and ask for human approval when it's not sure.\n\nOut of the box, Railguard comes with 29 default rules covering destructive operations like terraform destroy, rm -rf, DROP TABLE, and git force-push. It detects evasion attempts (base64 encoding, chr() construction, variable substitution, shell wrapping), restricts file access with path fencing (blocking ~/.ssh, ~/.aws, /etc), snapshots every file write for one-click rollback, and logs every decision to a structured audit trail.\n\nEverything is customizable through a simple railguard.yaml file in your project directory.",
       "source": {
@@ -16443,6 +16887,16 @@
       "homepage": "https://github.com/high5-ventures/apple-reminders-for-claude"
     },
     {
+      "name": "remote",
+      "description": "Manage HR, payroll, contractors, time off, expenses, and timesheets on Remote — the global employment platform — directly from Claude Code. The plugin connects Claude to the Remote MCP server (HTTP + OAuth, no API keys to copy) and ships task-specific skills with built-in validation and PII guardrails so the assistant stays accurate and safe on real workforce data.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/remoteoss/remote-for-ai.git",
+        "sha": "554cdaaaee92adc699d8fccd3efe52834d6185f3"
+      },
+      "homepage": "https://developer.remote.com/"
+    },
+    {
       "name": "remote-system-maintenance",
       "description": "Structured procedures for Linux system diagnostics and maintenance via SSH/tmux with Ubuntu/Debian cleanup checklists",
       "source": {
@@ -16645,6 +17099,26 @@
       "homepage": "https://github.com/roomi-fields/rtfm"
     },
     {
+      "name": "revelata",
+      "description": "Equity research and fundamental analysis skills powered by Revelata deepKPI.\nPull structured KPI time series, full SEC filing markdown (10-K, 10-Q, 8-K), 10-K-derived company summaries, and more — directly into Claude Chat, Cowork or Code.\n\nThe skills cover a growing set of fundamental workflows for equity research: KPI lookup, filing-text retrieval, derived metric calculation, peer benchmarking, seasonality analysis, and analyst-report pressure-testing.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/revelata/deepkpi-agents.git",
+        "sha": "ab9113b990130d5bcd89c7d1600fe524f0a9cedd"
+      },
+      "homepage": "https://www.revelata.com/for-ai-builders"
+    },
+    {
+      "name": "revenoid",
+      "description": "AI sales workflow on MCP — discover, research, enrich, and engage prospects across 24 tools.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Revenoid-Inc/revenoid-claude-plugin.git",
+        "sha": "5108972c1a6403b5595ba8e5730e33146d8c4ff8"
+      },
+      "homepage": "https://revenoid.com/mcp"
+    },
+    {
       "name": "revensi",
       "description": "A 12-skill audit suite that simulates how AI buying agents (ChatGPT, Claude, Gemini, Perplexity) read a B2B SaaS site, then write a prioritized gap report that your repair agents can close.",
       "source": {
@@ -16744,6 +17218,16 @@
         "sha": "4193fe155fe4d9b2ba2092e3e2bec4b3e893e51c"
       },
       "homepage": "https://github.com/benjaroy/riff"
+    },
+    {
+      "name": "rill",
+      "description": "This plugin contains skills for developing and querying Rill projects. Rill is a business intelligence platform where resources are defined as declarative, version-controlled YAML files. The plugin contains instructions for developing Rill projects locally, including dedicated skills for each of the major resource types in Rill: connectors, models, metrics views, explore dashboards, canvas dashboards and themes. It also contains a skill for data analysis when querying a deployed Rill project over MCP.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rilldata/agent-skills.git",
+        "sha": "65ccd1fda895c3e60327b6274abfcd0c574d3e32"
+      },
+      "homepage": "https://docs.rilldata.com/guide/ai/mcp"
     },
     {
       "name": "ripplo",
@@ -17022,6 +17506,16 @@
         "sha": "0e50679ed94dc2a2425f03c44a5d100d6a846b34"
       },
       "homepage": "https://github.com/jiten-singh-shahi/salesforce-claude-code/blob/main/README.md"
+    },
+    {
+      "name": "saleshandy-plugin",
+      "description": "Saleshandy brings B2B prospecting and lead enrichment into Claude Code. Describe what you want in plain language and Claude routes the request to the right Saleshandy workflow. There are no API keys to manage and no commands to memorize.\n\nThe plugin ships two workflows. Both work via natural language or an explicit slash command.\n\n1. Discover and enroll\nDescribe an ideal customer profile and Claude searches Saleshandy Lead Finder, optionally enriches the matches, and (if you confirm) enrolls them into a sequence step. Try things like:\n -  Find HR managers at 51 to 200 employee companies in the Europe\n -  Get me 20 fintech CTOs with phones and add them to my sequence\n\n2. Enrich leads\nPaste a LinkedIn URL, a company domain, or \"Name at Company\" and Claude reveals the verified work email, plus phone if you ask for it. Try things like:\n -  Enrich https://linkedin.com/in/ \n -  Look up saleshandy.com - include phones\n\nWhat you get\nBrowser-based OAuth sign-in. No API keys, no rotation.\nSequence enrollments always show a preview and wait for your confirmation. The model never picks the sequence or step for you.\n\nMissing fields are left blank instead of guessed. Enrichment is async, so the plugin returns a request ID rather than blocking.\nBuilt-in caps on Lead Finder calls so a single conversation cannot burn through credits.\n\nRequirements\nA Saleshandy account (free signup) with Lead Finder credits. Email reveal costs about 1 credit per lead. Email plus phone reveal costs about 7 credits per lead.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/saleshandy/saleshandy-plugin.git",
+        "sha": "f716dbb2256b768034be0a184d3fe80acd469e40"
+      },
+      "homepage": "https://docs.saleshandy.com/en/articles/15070199-how-to-use-the-saleshandy-plugin-in-claude-code"
     },
     {
       "name": "sanctuary-framework",
@@ -17311,7 +17805,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/scylladb/agent-skills.git",
-        "sha": "d1bb3ad94c58bf87e04d8d3ee8da12f6209e1d76"
+        "sha": "cd319077d60093318f84a60815f4e4b66661ef66"
       },
       "homepage": "https://github.com/scylladb/agent-skills"
     },
@@ -17360,6 +17854,16 @@
         "sha": "d70ad7cb176c5eb327ba5711107038bd2cd50443"
       },
       "homepage": "https://github.com/vellus-ai/sdlc-kit/tree/main/plugins/extended#readme"
+    },
+    {
+      "name": "sdlc-wizard",
+      "description": "SDLC enforcement for Claude Code — makes Claude plan before coding, write tests before implementation (TDD), self-review changes, and ask when uncertain. Built on 15+ years of software engineering experience. Includes hooks for automatic enforcement, skills for guided workflows, and CI integration for PR review and E2E scoring.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/BaseInfinity/sdlc-wizard.git",
+        "sha": "d25e58f64466514b073a37f85c1311c3830e0881"
+      },
+      "homepage": "https://github.com/BaseInfinity/sdlc-wizard"
     },
     {
       "name": "search-console-mcp",
@@ -18554,6 +19058,26 @@
       "homepage": "https://github.com/ironyjk/software-framework"
     },
     {
+      "name": "sokosumi",
+      "description": "Sokosumi connects Claude Code to the Sokosumi AI agent marketplace through MCP. It lets users discover agents and coworkers, create tasks with coworkers like Hannah and Elena, hire specialist agents, monitor jobs, inspect outputs, and manage Sokosumi workflows directly from Claude Code. The plugin includes MCP tools plus slash-command workflows for /sokosumi:hannah, /sokosumi:elena, /sokosumi:research, /sokosumi:market, /\n  sokosumi:agents, /sokosumi:jobs, and /sokosumi:tasks.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/masumi-network/Sokosumi-MCP.git",
+        "sha": "d3b841a83c769a2c3c27700bc2f84b11aa69efa8"
+      },
+      "homepage": "https://github.com/masumi-network/Sokosumi-MCP#method-3-claude-code-plugin"
+    },
+    {
+      "name": "sola-security",
+      "description": "Connect Claude Code to your Sola Security workspace. Ask questions about your security posture, investigate threats, run SQL across every connected data source, and turn natural language into answers grounded in your real data — all read-only and scoped to your workspace.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/SolaSecurity/claude-code-sola.git",
+        "sha": "9d3c92c81c4ae0ed47949494d12039fd4ee75897"
+      },
+      "homepage": "https://sola.security/"
+    },
+    {
       "name": "solidity-lsp",
       "description": "Solidity language server plugin for Claude Code — go-to-definition, hover, diagnostics, and autocomplete for .sol files",
       "source": {
@@ -18791,6 +19315,16 @@
       "homepage": "https://github.com/ferrarimarlon/specforge"
     },
     {
+      "name": "specix",
+      "description": "Spec-driven development for Claude Code — a 14-module workflow system with 4 progressive verification layers. Define what to build before coding, verify with real evidence\nbefore shipping.\n\nKey features:\n• Spec-driven artifacts: every change produces 4 documents (charter, deltas, blueprint, lineup) as source of truth on disk\n• Four verification layers: micro → functional → semantic → quality, each answering a different question\n• Git-optional: 12 of 14 modules work without git — full workflow for local dev, prototypes, and learning projects\n• Executable lineup: tasks include exact file paths, complete code blocks, and runnable verify commands\n• Cross-session recovery: state lives on disk, resume exactly where you left off\n• Self-learning: accumulates successful patterns and pitfalls across sessions\n• Anti-AI-default frontend design: refuses generic purple gradients, Inter font, pill buttons\n• Dual triggering: natural language matching + slash commands (/specix:build, /specix:draft, etc.)",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/devnomad-byte/specix.git",
+        "sha": "62cfc6c9dcfdcf919887b50c2346c404d7a4d81d"
+      },
+      "homepage": "https://github.com/devnomad-byte/specix#readme"
+    },
+    {
       "name": "specops",
       "description": "Spec-driven development workflow - transforms ideas into structured specifications (requirements, design, tasks) before implementation.",
       "source": {
@@ -18822,6 +19356,16 @@
         "sha": "70fcb44fdabf9904898b4bc9842ca198c5581817"
       },
       "homepage": "https://github.com/spiceai/skills"
+    },
+    {
+      "name": "spinorflip",
+      "description": "Turn any topic or list into a decision wheel. Ask Claude what to eat, watch, try, or choose, it generates options and returns a shareable spinorflip.com link you can spin instantly. No setup required.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/leobyday/spinorflip-plugin.git",
+        "sha": "13a169f3baa58570b791d8067d81c4e004cff7c7"
+      },
+      "homepage": "https://www.spinorflip.com"
     },
     {
       "name": "spm",
@@ -19877,6 +20421,18 @@
       "homepage": "https://github.com/lexsocket/tenders"
     },
     {
+      "name": "tensorfeed",
+      "description": "Live, machine-readable AI ecosystem and regulated-domain data through TensorFeed.ai's hosted MCP server. AI news across 12+ sources, model pricing across providers, AI service status, security advisories (MITRE CVE / CISA KEV / FIRST.org EPSS / OSV.dev), SEC EDGAR filings, FDA regulatory data (FAERS, drug labels, recalls, MAUDE), and US energy indicators via EIA Open Data. 17 free MCP tools, no auth required.",
+      "source": {
+        "source": "git-subdir",
+        "url": "RipperMercs/tensorfeed",
+        "path": "claude-plugins/tensorfeed",
+        "ref": "main",
+        "sha": "d507cde1f03b9ba09b779f983ddb0ceaa260c2a4"
+      },
+      "homepage": "https://tensorfeed.ai"
+    },
+    {
       "name": "terminal-chromium",
       "description": "Full Chromium browser in your terminal for Claude Code. Launches carbonyl (a terminal Chromium renderer using unicode half-block characters) in a tmux split pane and controls it via CDP (Chrome DevTools Protocol). Browse, click, type, evaluate\nJS, take screenshots, get accessibility trees, and extract page content -- all programmatically from within a Claude Code session. Works over SSH, renders at 60 FPS, supports WebGL/WebGPU.",
       "source": {
@@ -20385,6 +20941,16 @@
       "homepage": "https://github.com/ampactor-labs/tokensafe"
     },
     {
+      "name": "toprank",
+      "description": "Open-source Claude Code skills for SEO, GEO, Google Ads",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/nowork-studio/toprank.git",
+        "sha": "b5bf765fd43deab189c2491a6d64ce279504ed11"
+      },
+      "homepage": "https://github.com/nowork-studio/toprank"
+    },
+    {
       "name": "total-recall",
       "description": "Coding Agents forget everything when a session ends. total-recall fixes that: a shared memory layer that persists across sessions, tools, and devices.\n\nMemory is organized into three tiers (Hot / Warm / Cold) with a 4,000-token budget enforced automatically — so Claude gets relevant context injected at session start without carrying stale noise. Semantic search (all-MiniLM-L6-v2 embeddings, offline) retrieves the right memories on demand.\n\nA knowledge base lets you ingest READMEs, API docs, and architecture notes that are retrieved semantically when relevant. An eval framework lets you measure retrieval quality, run benchmarks, and compare config changes — so you know memory is actually helping.\n\nAll state is local: SQLite + ONNX embeddings, no external services, no API keys required.\n\nWorks across Claude Code, Copilot CLI, Cursor, Cline, and OpenCode — existing memories auto-import on first run.",
       "source": {
@@ -20433,6 +20999,16 @@
         "sha": "aae87d1448cdb2d091cf4c3d1984a76eb2c8db8d"
       },
       "homepage": "https://github.com/mnemox-ai/tradememory-protocol"
+    },
+    {
+      "name": "traderspy",
+      "description": "Real-time crypto futures intelligence powered by AI. Track whale and smart money positions across Binance, Hyperliquid, Bybit, and OKX. Get AI-generated trading signals with technical analysis, access the elite trader leaderboard, and monitor market-wide position data — all from Claude Code.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/target1m/traderspy-mcp.git",
+        "sha": "fa98de8c0df92a76a1234e15d12a2bad847b263a"
+      },
+      "homepage": "https://traderspy.app"
     },
     {
       "name": "trail",
@@ -20487,6 +21063,16 @@
       "homepage": "https://trapic.ai/docs"
     },
     {
+      "name": "travel-hacker",
+      "description": "Travel hacking with points, miles, and award flights — across 27 mileage programs, 6 hotel programs, 6 MCP servers, and 42 skills covering flight search, hotel comparison, loyalty balance tracking, transfer optimization, and trip planning. Compares cash and award routes side-by-side, detects credit-card portal benefit stacks (Amex FHR/THC, Chase Edit), and pulls live balances from AwardWallet to recommend specific transfer paths with cents-per-point math. Built from the workflows of a real points hacker who books most of his own travel through these tools.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/borski/travel-hacking-toolkit.git",
+        "sha": "79d9a2a4478cd18b2a85c083179849874bbcb274"
+      },
+      "homepage": "https://github.com/borski/travel-hacking-toolkit"
+    },
+    {
       "name": "travel-search-and-booking-api-and-skills",
       "description": "Search flights, hotels, attractions, concerts, and more with natural language. No browser tabs. No app switching. Just ask.",
       "source": {
@@ -20505,6 +21091,36 @@
         "sha": "505ad033d0e07b787b8634a171ff27d4cf96e6ad"
       },
       "homepage": "https://developers.tray.com.br"
+    },
+    {
+      "name": "trendyol-marketplace-integration",
+      "description": "Developer tool for Trendyol Marketplace Product Integration APIs (TR, V2, and International).\nCovers endpoint discovery, integration planning, payload generation, schema validation,\ncurl generation, test fixtures, and async batch tracking — all grounded in a remote MCP server.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Trendyol/trendyol-integration-developer-tool.git",
+        "sha": "ec79081f42ee2a3d275c89172c89cc88387d40b5"
+      },
+      "homepage": "https://developers.trendyol.com/"
+    },
+    {
+      "name": "trendyol-marketplace-integration-plugin",
+      "description": "Trendyol Integration Developer Tool is a Claude Code plugin that transforms your coding assistant into a specialist for Trendyol Marketplace Product Integration APIs. Instead of relying on training data that may be outdated, the plugin connects to a live MCP server that holds the canonical definitions of every endpoint — method, path, headers, request schema, response schema, business rules, enum values, and known inconsistencies.\n\nThe plugin covers three API domains in its first release: Trendyol Marketplace Product Integration API (TR), Trendyol Marketplace Product Integration V2 API (TR), and Trendyol International Marketplace Product Integration API.\n\nWhen you ask Claude to build a Trendyol integration, the plugin enforces a structured workflow: plan first, read the live endpoint contract, validate the payload before proposing it as ready, generate stage-first curl commands and language-specific implementation guides, and implement async batch tracking after every mutation. It supports both TR and GLOBAL marketplaces, handles marketplace-specific validation rules (vatRate enum enforcement, storefrontCode), and adapts generated code to your existing repository structure rather than imposing greenfield patterns.\n\nA built-in PreToolUse safety hook intercepts any tool call targeting the Trendyol production API and blocks it unless the call includes explicit confirmation, risk acknowledgement, and a stated reason. All generated curl commands and test requests target the stage environment by default.\n\nSupported implementation languages: TypeScript, JavaScript, Kotlin, Java, Python, Go, C#, PHP, Ruby.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Trendyol/trendyol-integration-developer-tool.git",
+        "sha": "bae9ff44c09850ff647c39cf695b6a27a307cd84"
+      },
+      "homepage": "https://developers.trendyol.com/reference"
+    },
+    {
+      "name": "tres-finance-plugin",
+      "description": "The official TRES Finance plugin for Claude Code. Connects to your TRES Finance account via OAuth and provides AI-powered skills for blockchain accounting workflows — including wallet onboarding, reconciliation gap resolution, ERP invoice/bill matching, balance validation, transaction analysis, report interpretation, and contact management. No API token required; authenticate once and Claude handles the rest.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Tres-Finance-Public/tres-claude-plugin.git",
+        "sha": "766ae863967722c136e3834561da7c9b754fdf1c"
+      },
+      "homepage": "https://tres-finance.notion.site/TRES-Finance-Plugin-35752be4ce1b802088c4e9d376b6fd35?pvs=73"
     },
     {
       "name": "trinity",
@@ -20717,6 +21333,16 @@
         "sha": "726bddce63f6564fad5c1643787367a3d41cdc53"
       },
       "homepage": "https://typedeck.app/help/#claude-plugin"
+    },
+    {
+      "name": "ui-color-palette",
+      "description": "A Claude Code plugin that generates, audits, and deploys WCAG-compliant color palettes to Figma, Penpot, Sketch, and Framer — from natural-language prompts.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/a-ng-d/claude-ui-color-palette.git",
+        "sha": "9541181f8a39cc2377cc2496ce2722a84c2c664a"
+      },
+      "homepage": "https://docs.ui-color-palette.com/claude"
     },
     {
       "name": "ui-kit",
@@ -21332,6 +21958,16 @@
       "homepage": "https://www.vibiz.ai/docs"
     },
     {
+      "name": "video-analyze",
+      "description": "Watch and analyze video files and video URLs (YouTube, Vimeo, TikTok, X/Twitter, Instagram, Twitch, Reddit, and any site yt-dlp supports). Extracts frames via ffmpeg and transcripts via whisper.cpp, with a YouTube-caption fast path for ~10x speedup. No third-party AI dependency — all processing is local. Adds a /video slash command and an auto-triggering skill that activates whenever Claude sees a video file path or video URL in the conversation.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sryharsha781-ctrl/claude-video-analyze.git",
+        "sha": "fadb7b8d2cf00d9db7c7796e7a024c98305af145"
+      },
+      "homepage": "https://github.com/sryharsha781-ctrl/claude-video-analyze"
+    },
+    {
       "name": "video-library-classifier",
       "description": "A Claude Code / Cowork plugin for videographers who need to organize large libraries of footage before editing in Final Cut Pro.",
       "source": {
@@ -21606,6 +22242,26 @@
       "homepage": "https://waggle.zone/"
     },
     {
+      "name": "wake-storefront",
+      "description": "AI-powered development assistance for Wake Commerce Storefront. Agents, skills, workflows, and tools for building headless storefronts, checkout flows, migrations, security audits, performance reviews, and code quality.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wake-engineering/ai-plugin.git",
+        "sha": "f045a1398a0ce722a18ff8aca691807d0cd04aaf"
+      },
+      "homepage": "https://github.com/wake-engineering/ai-plugin/blob/main/README.md"
+    },
+    {
+      "name": "waldo-fyi",
+      "description": "The Waldo fyi plugin extends Claude with Waldo's marketing and strategy toolkit: it connects to a curated MCP endpoint and adds skills that auto-route prompts to the right tools for social listening, ad intelligence, trends research, and more.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/waldo-fyi/waldo-claude-plugin.git",
+        "sha": "79cf2e063ac46473a7371241317688a5cbcf59d5"
+      },
+      "homepage": "https://agentic.waldo.fyi/docs/mcp"
+    },
+    {
       "name": "warmysender",
       "description": "Cold email campaigns, email warmup, LinkedIn outreach, and 20M+ B2B lead database. Connect your WarmySender account to Claude via remote MCP server with OAuth 2.1. Manage campaigns, prospects, mailboxes, warmup settings, LinkedIn sequences, and suppression lists through natural language.",
       "source": {
@@ -21848,6 +22504,16 @@
         "sha": "0beee048204804c546d067ffc4713a998620057b"
       },
       "homepage": "https://github.com/MSApps-Mobile/claude-plugins"
+    },
+    {
+      "name": "whimsical",
+      "description": "Create flowcharts, mind maps, wireframes, sequence diagrams, sticky notes, and docs in Whimsical from your conversation. Iterate with follow-up prompts, open boards in Whimsical to edit and collaborate, or search and reference existing boards in your workspace.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/WhimsicalCode/mcp-server-guide.git",
+        "sha": "f64a50aa1ec2ab65f047935ecdfbb842fd900f5e"
+      },
+      "homepage": "https://github.com/WhimsicalCode/mcp-server-guide"
     },
     {
       "name": "whitegloveai-highered",
@@ -22282,6 +22948,16 @@
       "homepage": "https://github.com/XPOZpublic/xpoz-claude-code-plugins"
     },
     {
+      "name": "xysq",
+      "description": "Persistent, consent-first memory for Claude Code. Connects every session to your xysq vault so Claude remembers decisions, preferences, and project context across chats. No re-explaining, no copy-pasted briefs.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/xysq-ai/xysq-claude-plugin.git",
+        "sha": "225efee35a5cb4e93e95654ea864b78634147922"
+      },
+      "homepage": "https://docs.xysq.ai"
+    },
+    {
       "name": "youdotcom-agent-skills",
       "description": "Skills-only plugin: 8 integration skills for AI SDK, Claude Agent SDK, OpenAI, crewAI, LangChain, Teams.ai, direct API, and CLI. No MCP servers declared. Excellent security posture (W011 defense throughout). Fix PR #24 merged — .claude-plugin/plugin.json added.",
       "source": {
@@ -22369,6 +23045,16 @@
       "homepage": "https://github.com/bradselph/zero-trust-feature-team"
     },
     {
+      "name": "zeropath",
+      "description": "Bring ZeroPath's AppSec harness into the agent environment. Scan local edits (SAST, secrets, SCA, IaC), triage findings from your ZeroPath organization, run custom security rules, and verify fixes wired natively into Claude Code.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ZeroPathAI/zeropath-agent-plugin.git",
+        "sha": "5476ce5bcd8c41e5df0c4cdf1f71834b673de19c"
+      },
+      "homepage": "https://github.com/ZeroPathAI/zeropath-agent-plugin"
+    },
+    {
       "name": "zforge",
       "description": "Standardized GitHub development workflow skills.\n\nType a slash command, get a disciplined workflow. TDD, branch isolation, PR review, quality checklist — every time, no exceptions.",
       "source": {
@@ -22420,6 +23106,16 @@
       },
       "homepage": "https://developers.zoom.us/",
       "category": "development"
+    },
+    {
+      "name": "zoominfo",
+      "description": "ZoomInfo MCP plugin",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Zoominfo/zoominfo-mcp-plugin.git",
+        "sha": "14752e4553312d8af3eb3a3264a97d76bb3e0215"
+      },
+      "homepage": "https://github.com/Zoominfo/zoominfo-mcp-plugin"
     },
     {
       "name": "zscaler",
