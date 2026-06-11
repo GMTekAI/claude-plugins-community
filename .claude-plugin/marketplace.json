@@ -462,6 +462,18 @@
       "homepage": "https://github.com/haoranc/agent-estimate"
     },
     {
+      "name": "agent-guard",
+      "description": "Prompt-injection screening for Claude Code: auto-blocks risky tool input and flagged tool results. A PreToolUse hook screens tool input params (WebFetch prompts, WebSearch queries, Bash commands) and denies risky direct-injection content before the tool runs. A PostToolUse hook screens returned content (fetched pages, file reads, MCP output) for indirect prompt injection and tells Claude the result is untrusted. Both reuse Agent Guard's Content Guard engine and shared trust list / threshold config.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/dannyliv/agent-guard-plugins.git",
+        "path": "claude-code-plugin",
+        "ref": "main",
+        "sha": "ebf43c94651c92ddde4ed40f02014ffe81b402af"
+      },
+      "homepage": "https://github.com/dannyliv/agent-guard-plugins/tree/main/claude-code-plugin"
+    },
+    {
       "name": "agent-guardrails-template",
       "description": "Core safety skills for AI-assisted development: Four Laws, Three Strikes, production-first, scope validation, and environment separation. 11 skills enforce guardrails on every operation so agents build at full velocity without breaking production.",
       "source": {
@@ -786,9 +798,11 @@
       "name": "agnix",
       "description": "Lint agent configurations before they silently fail. 414 validation rules across Claude Code, Codex CLI, OpenCode, Cursor, GitHub Copilot, Gemini CLI, Cline, Windsurf, Roo Code, Amp, and Kiro - validates CLAUDE.md, AGENTS.md, SKILL.md, hooks.json, MCP server configs, and plugin manifests. Auto-fix included for safe issues; SARIF output for GitHub Code Scanning. Distributed as CLI (npm + Cargo), official GitHub Action (`agent-sh/agnix`), and IDE extensions for VS Code, JetBrains, Neovim, and Zed. Rules sourced from official specs, academic research on agent prompt design, and real-world failure patterns from production deployments. Mentioned in awesome-claude-code.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/agent-sh/agnix.git",
-        "sha": "c9e47613dc1d1eb63fb7f42ceced8f06df5b326e"
+        "path": "plugin",
+        "ref": "main",
+        "sha": "e1679f7ea842fcb5c6d044157c6a6be791e294cf"
       },
       "homepage": "https://agent-sh.github.io/agnix/"
     },
@@ -1995,9 +2009,9 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/auth0/agent-skills.git",
-        "path": "plugins/auth0-sdks",
+        "path": "plugins/auth0",
         "ref": "main",
-        "sha": "7eb7159b6f1eec9522249e28da49c476c23765bd"
+        "sha": "bdf0dc23f8b17446b2c94bc9f2e5a58d3f1bc114"
       },
       "homepage": "https://github.com/auth0/agent-skills"
     },
@@ -2265,6 +2279,18 @@
         "sha": "9c89778e729e31522b3130d214f2aa6db4ec3332"
       },
       "homepage": "https://github.com/publicala/bake-claude-md-files"
+    },
+    {
+      "name": "barista",
+      "description": "Automatically caffeinate your Mac while Claude is working\n\nbarista keeps the Mac awake for exactly as long as Claude is actually busy, including background processes and Monitor tool waits, and lets it sleep again the instant the session goes idle.\n\nWhy? Claude Code's built-in 5-minute caffeinate window can run out mid-turn on long agentic loops, letting your Mac sleep while work is still in flight. Running caffeinate manually leaves your laptop awake indefinitely, possibly draining battery.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wlenig/barista.git",
+        "path": "plugins/barista",
+        "ref": "main",
+        "sha": "1d685ffc072a5029bafd8ccca3083cf8e6315414"
+      },
+      "homepage": "https://willem.lol/blog/barista/"
     },
     {
       "name": "barker-stablecoin-skills",
@@ -3512,6 +3538,18 @@
       "homepage": "https://github.com/markiv25/claude-antimem"
     },
     {
+      "name": "claude-anvil",
+      "description": "Evidence-first coding agent for Claude Code CLI. It verifies every change before you see it — builds, tests, lints, runs IDE diagnostics, then has other AI models (Claude, GPT, Gemini, Ollama) try to break it. Every check is INSERTed into a SQLite ledger; the final Evidence Bundle is a SELECT, not prose. If the INSERT didn't happen, the verification didn't happen.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/allut/claude-anvil.git",
+        "path": "plugin",
+        "ref": "master",
+        "sha": "5df0a19605b7968b4212362f536a3c652c267bad"
+      },
+      "homepage": "https://allut.github.io/claude-anvil"
+    },
+    {
       "name": "claude-auto-setup",
       "description": "claude-auto-setup is shipped as package + claude skill.\n\nOne prompt more. That's all it costs to have Claude Code search the web, find the right skills, MCPs, hooks, and agents for your task, configure everything automatically, and put your work in an isolated environment you can resume, share, or discard cleanly.\n\nclaude-auto-setup enables the creation of the best set of skills completely automatically without the need of manual setup and project engineering: those steps are crucial for a big project or enterprise repo but most of the times with the smaller tasks none of this is worht to be setted up. The package is seamlessy integrated with the skill and enable the creation of a whole set of configs, that can be coupled with one or more claude chats and remains completely isolated thanks to a dedicated worktree.",
       "source": {
@@ -4746,6 +4784,18 @@
       "homepage": "https://github.com/arpan-k09/claude-voice-cue"
     },
     {
+      "name": "claude-webcache",
+      "description": "claude-webcache adds cross-session persistence to Claude Code's WebFetch tool. Claude Code's built-in WebFetch caches results for 15 minutes within a session, then evicts. claude-webcache extends that across sessions (TTL 7 days, configurable). Same URL + same prompt in any new session returns an instant cache hit instead of re-fetching. SQLite-backed (uses Node 22.5+ built-in node:sqlite, no native deps), 4 MCP tools (cached_fetch, cache_store  cache_stats, cache_list), plus a SessionStart hook printing one-line cache stats. MIT licensed, ~200 lines of code.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/theYahia/claude-webcache.git",
+        "path": "plugin",
+        "ref": "main",
+        "sha": "25753b39ae23cf13aa7b1ce6b7d12ff4b946eff1"
+      },
+      "homepage": "https://www.npmjs.com/package/@theyahia/claude-webcache"
+    },
+    {
       "name": "claude-workflow",
       "description": "A Claude Code plugin that drives agents through YAML-defined state machines. Define workflows as YAML with states, transitions, and prompts.\nThe engine tracks state, enforces guards, manages nested sub-workflow stacks, and persists every mutation atomically.\nIncludes 16 bundled workflows covering the full agent lifecycle — from task routing and coding to review, testing, and reflection.\nShips with a web dashboard for real-time session monitoring and workflow graph visualization.",
       "source": {
@@ -5718,6 +5768,18 @@
       "homepage": "https://conduitai.app"
     },
     {
+      "name": "conjure",
+      "description": "Build Claude Code skills, agents, hooks, and MCP servers from plain-language descriptions. Describe what you want, conjure classifies the type, asks targeted questions, and writes a production-ready artifact — no boilerplate, no manual wiring.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/john-farina/claude-plugins.git",
+        "path": "plugins/conjure",
+        "ref": "main",
+        "sha": "d97d75d6912d38bf56a32538775799d05f45fca5"
+      },
+      "homepage": "https://github.com/john-farina/claude-plugins"
+    },
+    {
       "name": "conotate",
       "description": "A toolkit for generating and managing structured knowledge bases of code domains — explore, document, and navigate large codebases with AI-assisted markdown knowledge files",
       "source": {
@@ -6595,11 +6657,9 @@
       "name": "datarobot-agent-skills",
       "description": "DataRobot Agent Skills - Agentic skills for DataRobot enterprise AI and ML workflows. Covers model training, deployment, predictions, feature engineering, monitoring, explainability, data preparation, App Framework CI/CD, and external agent monitoring.",
       "source": {
-        "source": "git-subdir",
-        "url": "datarobot-oss/datarobot-agent-skills",
-        "path": ".claude-plugin/plugin.json",
-        "ref": "main",
-        "sha": "03eec8b991123e23315abe57235c785ef7529cbe"
+        "source": "url",
+        "url": "https://github.com/datarobot-oss/datarobot-agent-skills.git",
+        "sha": "ec2ecdd49d54ef490b344a850cff1feb1230c409"
       },
       "homepage": "https://af.datarobot.com/"
     },
@@ -7263,6 +7323,18 @@
         "sha": "f035014cf709724c049082c887fc91d64e600862"
       },
       "homepage": "https://github.com/kevdogg102396-afk/djclaude"
+    },
+    {
+      "name": "dobox-cowork",
+      "description": "View your DoBox tasks from this+that in any MCP-compatible AI client",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thisnthat-lab/mcp-server.git",
+        "path": "dobox-cowork",
+        "ref": "main",
+        "sha": "9e8818e9eca7872186d9d2c92cb6b3ae7fdd3f5d"
+      },
+      "homepage": "https://www.thisandthat.chat/mcp"
     },
     {
       "name": "doc-authoring-skills",
@@ -8317,6 +8389,16 @@
         "sha": "8b987ade2d04b85ea82c109f48d7234838b28b82"
       },
       "homepage": "https://docs.voxel51.com/"
+    },
+    {
+      "name": "figma-mcp",
+      "description": "Skill that teaches what tokens, variables, styles, and components are and how to use them on the canvas",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/figma/mcp-server-guide.git",
+        "sha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4"
+      },
+      "homepage": "https://github.com/figma"
     },
     {
       "name": "figma-suite",
@@ -9579,9 +9661,11 @@
       "name": "hackflow-ppt",
       "description": "AI-powered hackathon PPT generator for Claude Code. One /ppt command to\n   analyze your project codebase, choose from 6 stunning visual styles\n  (Gradient Glass, Apple Vision, Google Material, Microsoft Fluent,\n  Vercel Mono, Linear Mesh), and generate 4K presentation slides using\n  Gemini 3.1 Flash Image. Supports custom style creation — describe your\n  vision and AI writes a complete style template. Content is\n  auto-structured around 6 hackathon judging dimensions with storytelling\n   hooks for maximum pitch impact. Outputs a ready-to-present PPTX file.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/qwwzdyj/hackflow-ppt-skill.git",
-        "sha": "d2d1e2f3afa032633409db3bbb5364c999872a4d"
+        "path": "plugins/hackflow-ppt",
+        "ref": "main",
+        "sha": "79e269edc9f9cf22573f81c7f817a44464ef0956"
       },
       "homepage": "https://github.com/qwwzdyj/hackflow-ppt-skill"
     },
@@ -12083,6 +12167,18 @@
       "homepage": "https://lotlytics.us"
     },
     {
+      "name": "lua-agent-builder",
+      "description": "Build, test, and deploy Lua AI agents (heylua.ai) without leaving Claude Code. Wraps the lua-cli toolchain in 14 slash commands, 5 specialised subagents, and an MCP server: from architecting an agent (lua-architect drafts persona + primitive plan from a fuzzy goal) to scaffolding skills/webhooks/jobs, OAuth-connecting 250+ third-party integrations (Stripe, Google Calendar, Salesforce, etc.) via Unified.to, sandbox-testing, and one-gate production deploys. Designed around an MCP-first architecture:   every connected integration auto-provisions its own MCP server, so the agent talks to external systems through MCP rather than custom API wrappers — you write business logic, not boilerplate.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lua-ai-global/claude-code-lua-plugin.git",
+        "path": "plugins/lua-agent-builder",
+        "ref": "main",
+        "sha": "73711b0744e9682195c43f46c99d05ba7717a9de"
+      },
+      "homepage": "https://heylua.ai/claude-code"
+    },
+    {
       "name": "luciq",
       "description": "Luciq mobile observability: Investigate crashes, trace production signals to source code, integrate the Luciq SDK, and handle version migrations.",
       "source": {
@@ -12267,11 +12363,9 @@
       "name": "mapbox",
       "description": "Comprehensive AI skills that teach Claude Code how to build fast, beautiful, and secure Mapbox applications. Specialized skills covering geospatial operations, cartographic design, web performance, search integration, framework patterns (React/Vue/Svelte/Angular/Next.js),   mobile development (iOS/Android), platform migration (MapLibre, Google Maps), token security, and MCP agent patterns. Includes MCP server integration for style management, geocoding, and map previews.",
       "source": {
-        "source": "git-subdir",
-        "url": "mapbox/mapbox-agent-skills",
-        "path": ".claude-plugin/plugin.json",
-        "ref": "main",
-        "sha": "ca6db8f0528ca0415d51bfaf2c4c10f83277e726"
+        "source": "url",
+        "url": "https://github.com/mapbox/mapbox-agent-skills.git",
+        "sha": "75ac667cae24c7ad7bdbbac55ac0a64d2df1543e"
       },
       "homepage": "https://mapbox.com"
     },
@@ -12630,9 +12724,11 @@
       "name": "mem0",
       "description": "Connect Mem0 to Claude to give your agent persistent memory across sessions. Claude can store user preferences, project context, and conversation history, then search, update, or forget them as new information comes in. Useful for coding assistants that remember your codebase conventions, support agents that recall customer history, research workflows that build context over weeks, or any use case where Claude resets back to zero today. Memories are scoped per user, agent, or session. Cloud-hosted, no local install.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/mem0ai/mem0.git",
-        "sha": "54a03cc7217c22afdc6153a9e61cc6413416001f"
+        "path": "mem0-plugin",
+        "ref": "main",
+        "sha": "366945965df43aa7084be98d1b5073b62a20b431"
       },
       "homepage": "https://docs.mem0.ai/integrations/claude-code"
     },
@@ -13172,6 +13268,18 @@
       "homepage": "https://github.com/chiKeka/mmpm-cos"
     },
     {
+      "name": "mnemo",
+      "description": "Persistent memory for AI coding agents. mnemo stores decisions, bugs, conventions, and discoveries across sessions in a local SQLite database. A one-command setup wires it into Claude Code or Cursor via hooks and MCP.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jmeiracorbal/mnemo.git",
+        "path": "plugin/claude-code",
+        "ref": "main",
+        "sha": "3c6ee215b690938eb35678f0e5340f331e2d24d4"
+      },
+      "homepage": "https://github.com/jmeiracorbal/mnemo"
+    },
+    {
       "name": "mnemopay",
       "description": "Payment infrastructure for AI agents. Agent Credit Score (300-850), real payment rails\n(Stripe/Paystack/Lightning), autonomous shopping with escrow, hash-chained ledger, and behavioral\nfinance. Charge for tool usage, track spending, shop autonomously, and build agent creditworthiness\nall from Claude Code.",
       "source": {
@@ -13491,6 +13599,18 @@
       "homepage": "https://github.com/JPVT1977/n360-marketplace"
     },
     {
+      "name": "n3mc-workingmemory",
+      "description": "Ephemeral 7-day hybrid (vector + BM25) working-memory MCP server backed by Redis Stack. Multilingual out of the box (NFKC + bigram coverage for CJK / Hangul / Thai / Lao / Myanmar / Khmer + diacritic fold for Latin scripts). Designed as a working-memory layer that pairs cleanly with any persistent memory MCP — ephemerality (7-day TTL) is a design feature, not a missing capability.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NeuralNexusNote/n3mcmcp-lite.git",
+        "path": "plugins/n3mc-workingmemory",
+        "ref": "main",
+        "sha": "389773fab52ee6cfaf3710ed3b3e70a83c293e83"
+      },
+      "homepage": "https://neuralnexusnote.com/doc/n3mcmcp-lite-guide.html"
+    },
+    {
       "name": "nagomi",
       "description": "Forensic-grade PubMed research engine for Claude Code. Search 36M+ biomedical articles with PICO-structured queries, synthesize evidence with GRADE confidence ratings, critically\nappraise article trustworthiness using Oxford CEBM hierarchy, verify citation accuracy against PubMed records, and export references in APA/Vancouver/BibTeX. Includes a\nresearch-assistant agent for comprehensive literature reviews. No API key required — queries PubMed E-utilities directly.",
       "source": {
@@ -13551,6 +13671,18 @@
         "sha": "d437f4b38de9e689a1c3c4c3d8c15828d08b4141"
       },
       "homepage": "https://narrateai.app/demomaker"
+    },
+    {
+      "name": "needle-engine",
+      "description": "Needle Engine is a web-first 3D engine built on Three.js. This plugin provides an MCP server for searching Needle Engine documentation, forum posts, and community discussions, plus a skill with component API reference, scripting patterns, serialization, input handling, physics, networking, WebXR, progressive loading, and deployment guides. Install the plugin to get Needle Engine context automatically when working in any Needle Engine project.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/needle-tools/ai.git",
+        "path": "providers/claude/plugin",
+        "ref": "main",
+        "sha": "ce197a2ae2f7b26017afec2957f5ea7c47e2f002"
+      },
+      "homepage": "https://github.com/needle-tools/ai"
     },
     {
       "name": "neko-gundan",
@@ -13621,6 +13753,18 @@
         "sha": "7ebc591bb1cb9d6be3629e4e0595ae9bd431bab4"
       },
       "homepage": "https://github.com/Softtor/nestjs-hexagonal"
+    },
+    {
+      "name": "neus-mcp",
+      "description": "NEUS MCP connects your AI assistant to a hosted trust layer—so identity, ownership, and verification aren’t one-off checks; they become reusable trust receipts your workflows can lean on.\n\nShip faster with less guesswork: your agent gets a clear path from context to what’s already proven, then guided steps only when something’s missing. Whether you’re wiring apps, agents, wallets, or orgs, NEUS turns messy “are we sure?” moments into something you can look up, reuse, and stand behind.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/neus/network.git",
+        "path": "plugins/neus-mcp",
+        "ref": "main",
+        "sha": "36673d0a0f8709b5c64282a59f473a37800a9721"
+      },
+      "homepage": "https://docs.neus.network/mcp/setup"
     },
     {
       "name": "neutrally",
@@ -15509,8 +15653,10 @@
       "name": "preserve-session",
       "description": "Preserves Claude Code session history across project directory renames, moves, and copies by assigning each project a path-independent UUID and maintaining a global registry mapping UUID to current path.\n\nAddresses a long-standing pain point: --resume and --continue silently lose session history when paths change. Closes anthropics/claude-code#5768; also tracked in #38089, #28745, #26766, #27883.\n\nCommands: /preserve-session:fix recovers sessions after rename/move (with copy detection and automatic .jsonl merge on destination collision), /preserve-session:inherit copies session history from another registered project, /preserve-session:doctor diagnoses hash/registry state and slug collisions including non-ASCII path issues on macOS, /preserve-session:uninstall removes all preserve-session data with a preview-then-confirm safety pattern. A SessionStart hook auto-initializes .claude/hash.txt on first run — zero manual setup.\n\n  Demo: https://www.youtube.com/watch?v=lWMrzASG7_o\n\n  Quality signals: 24 verified test scenarios (rename, move, copy, slug collision, non-ASCII paths, registry corruption recovery, full --resume E2E). Atomic registry writes via fcntl.LOCK_EX + tempfile.mkstemp + os.replace. NFC slug normalization to match Claude Code's path encoding on macOS. Python heredoc isolation against shell injection. Symlink-safe uninstall (isinstance/dict guards).\n  Shared helpers in hooks/common.sh with cross-platform Python discovery and uuidgen fallback.\n\n  Full design rationale, security notes, and test plan are in two related submissions:\n  • https://github.com/anthropics/claude-code/pull/39148 (initial bundled-plugin attempt; comprehensive design + 24-item test plan with collapsible sections)\n  • https://github.com/anthropics/claude-plugins-official/pull/1347 (auto-closed by submission bot; retained as reference for the proposed marketplace.json entry)\n\n  Plugin location: lives at plugins/preserve-session/ inside the wonbywondev/claude-plugins monorepo. The marketplace entry should use the git-subdir source format pointing to that subdirectory.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/wonbywondev/claude-plugins.git",
+        "path": "plugins/preserve-session",
+        "ref": "main",
         "sha": "547f0c416a69a37c418d57c9d69a6df65bb75781"
       },
       "homepage": "https://github.com/wonbywondev/claude-plugins/tree/main/plugins/preserve-session"
@@ -15564,6 +15710,18 @@
         "sha": "3093dca688029189842d8f2fc556a665968e1447"
       },
       "homepage": "https://github.com/rshelekhov/prisma-zod-consistency"
+    },
+    {
+      "name": "prismer-claude-code-plugin",
+      "description": "Prismer Evolution plugin for Claude Code (v3). Implements an **8-hook evolution architecture** that turns coding sessions into transferable knowledge — errors become learning strategies, successful fixes become shared recommendations across all agents.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Prismer-AI/PrismerCloud.git",
+        "path": "sdk/prismer-cloud/claude-code-plugin",
+        "ref": "main",
+        "sha": "e79942045cc30bc3e51348a8fa118aeeb870ec81"
+      },
+      "homepage": "https://prismer.cloud/docs/en"
     },
     {
       "name": "privacypilot",
@@ -15850,6 +16008,18 @@
         "sha": "e6083935fea1585bcfeaadf7afd9ccf5b3452cdd"
       },
       "homepage": "https://promptbook.gg/"
+    },
+    {
+      "name": "promptcellar",
+      "description": "Promptcellar logs every prompt into a structured, append-only, file-based standard for capturing prompts. JSON Lines on disk. Mergeable across branches. Secrets auto-redacted.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/dominiek/promptcellar-for-claude-code.git",
+        "path": "plugin",
+        "ref": "main",
+        "sha": "409738354ada9ef2bc95c974dc0c044644322c9d"
+      },
+      "homepage": "https://promptcellar.io/"
     },
     {
       "name": "promptfoo-evals",
@@ -16659,9 +16829,11 @@
       "description": "Configure RevenueCat projects, apps, products, entitlements, and offerings directly from Claude Code. Manage your in-app purchase backend without leaving your development workflow.",
       "category": "development",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/RevenueCat/rc-claude-code-plugin.git",
-        "sha": "7ab10c0b1ab497fb586b21fdf594bc944f16643c"
+        "path": "revenuecat",
+        "ref": "main",
+        "sha": "473fd504bf13d25e76bf4a0267b42be3794f6266"
       },
       "homepage": "https://www.revenuecat.com"
     },
@@ -17024,6 +17196,18 @@
       "homepage": "https://github.com/jiten-singh-shahi/salesforce-claude-code/blob/main/README.md"
     },
     {
+      "name": "salesforce-crm",
+      "description": "Connect your Salesforce CRM to Claude. Search, create, and manage leads, contacts, accounts, and opportunities. Log activities, run SOQL queries, and explore your Salesforce schema — all through natural conversation. Supports both Username/Password and OAuth authentication. No server deployment needed — runs locally via PHP.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/appquipo/salesforce-mcp-server.git",
+        "path": "cowork-plugin",
+        "ref": "main",
+        "sha": "d39ae361bfbe7be8d77644d6bc90ebe7e387a6cd"
+      },
+      "homepage": "https://github.com/appquipo/salesforce-mcp-server"
+    },
+    {
       "name": "sanctuary-framework",
       "description": "Sovereignty infrastructure for AI agents. Gives your agent encrypted state (AES-256-GCM), self-custodied identity (Ed25519), selective disclosure (Pedersen commitments, Schnorr proofs), portable reputation, and sovereignty verification — all as MCP tools. Includes a sovereignty audit tool that detects gaps in OpenClaw and other agent harnesses.",
       "source": {
@@ -17216,6 +17400,18 @@
       "homepage": "https://plugins.2389.dev/"
     },
     {
+      "name": "sceneview",
+      "description": "Toolkit for building 3D and AR apps with SceneView — the cross-platform 3D & AR SDK for Android (Jetpack Compose), iOS / macOS / visionOS (SwiftUI), and Web (Kotlin/JS). Bundles the sceneview-mcp server (28 tools, full API reference, code validator) plus 11 namespaced contributor commands (/sceneview:contribute, /release, /review, /test, /document, /quality-gate, /publish-check, /sync-check, /version-bump, /evaluate, /maintain) and cross-platform reminder hooks that nudge API parity between Android (Filament), iOS (RealityKit), Web (Filament.js), Flutter, and React Native. Open-source Apache-2.0.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sceneview/claude-marketplace.git",
+        "path": "plugins/sceneview",
+        "ref": "main",
+        "sha": "faf7a14b510a28bbbcdb5eb7a480c80f4a84e86b"
+      },
+      "homepage": "https://sceneview.github.io"
+    },
+    {
       "name": "scheduler",
       "description": "Schedule recurring Claude Code tasks with cron expressions",
       "source": {
@@ -17264,6 +17460,18 @@
         "sha": "9c55fe19fa0a90428bb2afa9fba5cf99417edbb4"
       },
       "homepage": "https://github.com/tauseef-cmyk/Supply-Chain-Multi-Orchestrator-AI-Agent-Plug-ins"
+    },
+    {
+      "name": "scope-bid",
+      "description": "The vertical-services MCP platform: skills, slash commands, and agents for legal, claims, and AEC vendor dispatch. Five plugins in one marketplace - scope-core (shared skills + MCP connectors), scope-legal (live), scope-claims (preview Q3 2026), scope-aec (preview 2027), and scope-dispatch-agent (end-to-end matter intake to staged vendor quotes). Skills auto-fire on matter descriptions; slash commands give the lawyer a fast path; the dispatch agent stages every result for the human's review. Scope drafts; the lawyer commits.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/scope-bid/scope-platform.git",
+        "path": "plugins/partner-built/_example-partner-plugin",
+        "ref": "main",
+        "sha": "961d04c00c686c23bf7f2832eb1241ba89527d9b"
+      },
+      "homepage": "https://scope.bid"
     },
     {
       "name": "scout",
@@ -17430,6 +17638,18 @@
         "sha": "906be7b89993fe57f14bc69fa8372dbbb0ca4cf7"
       },
       "homepage": "https://github.com/ORG028658/TheSecondBrain/blob/main/README.md"
+    },
+    {
+      "name": "second-line-financial-services",
+      "description": "Plugins for second-line and 1.5-line financial-services work. Skills cover what risk and compliance teams (and the advisory practitioners who support them) actually produce: scoping a review, mapping obligations, building a control matrix, drafting a model card, writing up an issue, building a vendor-diligence pack, packaging a risk-committee read, working a SAR / no-SAR file, prepping for a supervisory cycle, and so on. Skills are grounded in regulatory and standards material, with sector context (banking, capital markets, insurance, payments / fintech) loaded conditionally from the scoping record.\n\nBuilt primarily for Claude (and Claude Code), but the skill files follow the open SKILL.md format and can be loaded into other agentic systems that support it: GPT, Gemini, in-house open-weights deployments, or anything else that reads agent skills. The skills are markdown plus optional schemas; the format is the standard, the work product is what travels.\n\nThe repo extends Anthropic's published financial-services plugin family. Where Anthropic's plugins cover the cross-industry first-line baseline (financial analysis, banking deal work, equity research, PE, wealth, fund admin, ops), these go deeper into US second-line and 1.5-line work and US supervisory expectations.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anotb/second-line-financial-services.git",
+        "path": "plugins/sector-plugins/banking-risk-compliance",
+        "ref": "main",
+        "sha": "031afbd31c08c2de14c0f81ed0d393d9aefd0398"
+      },
+      "homepage": "https://github.com/anotb/second-line-financial-services"
     },
     {
       "name": "secure-sdlc-agents",
@@ -17857,6 +18077,18 @@
         "sha": "7e8f40327b7fab62e21b748ad4dc5005bd623625"
       },
       "homepage": "https://www.leadershipbydesign.co/shift-methodology"
+    },
+    {
+      "name": "shinobidata",
+      "description": "ShinobiData turns Claude Code into your portfolio analyst. Install the plugin, authorize once via OAuth, and ask: \"how concentrated am I in tech?\", \"did I beat the S&P last year?\", \"who are NVDA's peers?\", \"is AAPL cheap vs its 10-year history?\". 32 tools across portfolio CRUD (create, add holdings, transactions), portfolio analytics (overview, performance, risk, dividends, fundamentals), 360° market research (compare, sector / industry / market overviews, top movers, calendars, valuation history, quality scores, news), and discovery (cursor-paginated screen). US equities, USD-only, free.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/niyamvora/shinobidata.git",
+        "path": "plugins/shinobidata",
+        "ref": "main",
+        "sha": "7e60bb93faf9cead12bc4bd8280a13b26632142b"
+      },
+      "homepage": "https://shinobidata.com/mcp"
     },
     {
       "name": "ship",
@@ -19197,6 +19429,18 @@
       "homepage": "https://striderlabs.ai"
     },
     {
+      "name": "stripe-projects",
+      "description": "Stripe Projects lets you provision, pay for, and manage third-party cloud services for any project, directly from your terminal.\n\nBrowse a curated catalog across databases, hosting, AI models, authentication, analytics, email, storage, search, queues, browser automation, observability, domains, and more. Add services like Supabase, Vercel, Clerk, Sentry, PostHog, Daytona, Upstash, Inngest, OpenRouter, ElevenLabs, Hugging Face, Neon, PlanetScale, Cloudflare, Turso, Twilio, Browserbase, and Algolia with a single command. See projects.dev/providers for the full list.\n\nStripe Projects handles account linking, provisioning, credentials, environment variables, and billing, so agents can assemble and manage a production-ready stack without bouncing between dashboards. Project configuration can be shared with teammates or imported into new projects, making setup repeatable across local environments.\n\n**Key capabilities**\n\n* Browse and search a curated service catalog\n* Provision services with managed credentials and env vars\n* Link existing cloud provider accounts\n* Share and import project configurations\n* Manage billing and plans per service",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/stripe/ai.git",
+        "path": "providers/claude/plugin",
+        "ref": "main",
+        "sha": "d076d0558c3b3d86149c2dddc84054fe9c6dd3e0"
+      },
+      "homepage": "https://projects.dev"
+    },
+    {
       "name": "study-with-claude",
       "description": "Study with Claude: A plugin to help you learn and understand coding skills.",
       "source": {
@@ -19325,9 +19569,11 @@
       "description": "SumUp payment integrations across terminal and online checkout flows. Build Android and iOS POS apps with SumUp card readers, online checkout with server SDKs and the checkout widget, and control card readers remotely via Cloud API.",
       "category": "development",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/sumup/sumup-skills.git",
-        "sha": "a4b5a9789e10e27fb375b68279bb0916074b8dd4"
+        "path": "providers/claude/plugin",
+        "ref": "main",
+        "sha": "5b9b2d72c63fefd9038db0a9c571d3d64ff6353c"
       },
       "homepage": "https://www.sumup.com/"
     },
@@ -20236,9 +20482,11 @@
       "name": "tinyfish",
       "description": "Gives your agent a toolkit to access and work with anything one the web. Spin up a dedicated agent to retrieve data, fill in forms, or perform fast indexed search on a topic, or fetch the contents of a webpage as markdown, or even rent your own browser via CDP and take action on it! You can do anything on the web, with TinyFish!",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/tinyfish-io/tinyfish-cookbook.git",
-        "sha": "d8663c2c28b98a2e8c03d93ec81bb7f1eae37321"
+        "path": "plugins/tinyfish",
+        "ref": "main",
+        "sha": "3a5668096191093069c8f31124b3442e574f1eac"
       },
       "homepage": "https://docs.tinyfish.ai"
     },
@@ -20423,6 +20671,18 @@
         "sha": "4e16206b0ab93059164a764a40ea57964c09edce"
       },
       "homepage": "https://trackian.com"
+    },
+    {
+      "name": "trade-router",
+      "description": "Non-custodial Solana swap and limit-order MCP server for AI agents. 21 tools: instant swap, limit orders, trailing stops, TWAP, DCA, and four combo orders that chain those primitives server-side. Multi-DEX routing across Raydium, PumpSwap, Orca, and Meteora. MEV-protected by default via Jito bundles. The private key is read once from TRADEROUTER_PRIVATE_KEY, used for local signing with @solana/web3.js plus tweetnacl, and never transmitted, logged, or persisted. Only signed transactions leave the agent. Replaces what is currently 4 separate integrations (Jupiter for routing, a separate Limit Order Program, a separate DCA Program, manual Jito wiring) with one wallet-keyed API. No API key, no bearer token, no auth header — your wallet address is the identity. Includes TRADEROUTER_DRY_RUN safe-mode that short-circuits every write tool so agents can be evaluated end-to-end without touching mainnet. Server-side order callbacks are Ed25519-signed against a baked-in trust anchor so agents can verify fills cryptographically. Already in the official MCP Registry as ai.traderouter/trade-router-mcp.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/TradeRouter/trade-router-mcp.git",
+        "path": "claude-plugin",
+        "ref": "main",
+        "sha": "95d9ace3fa586bc626704e84054302048559b35a"
+      },
+      "homepage": "https://traderouter.ai"
     },
     {
       "name": "tradememory",
@@ -21546,6 +21806,18 @@
       "homepage": "https://thegeolab.net"
     },
     {
+      "name": "vscode-review",
+      "description": "Receive line-level code review feedback from VS Code directly in your Claude Code session. Users annotate code in VS Code's native comment UI, and structured reviews with file context, line numbers, and comments are pushed into the conversation via the Channels API.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/etsd-tech/vscode-agent-reviewer.git",
+        "path": "plugin",
+        "ref": "master",
+        "sha": "f60303690e2df7bde3afee19a4fea10f24939243"
+      },
+      "homepage": "https://github.com/etsd-tech/vscode-agent-reviewer"
+    },
+    {
       "name": "vue-lsp",
       "description": "Vue 3 LSP plugin for Claude Code. Combines vue-language-server (Volar v3) with typescript-language-server into a single LSP server, providing full TypeScript intelligence for .vue files — hover,\ngo-to-definition, references, document symbols, call hierarchy, diagnostics, completions, and rename.",
       "source": {
@@ -22392,9 +22664,11 @@
       "name": "zilliz",
       "description": "Zilliz Cloud management plugin — 14 skills covering cluster lifecycle, collection schema, vector search, index tuning, bulk import, RBAC, backups, monitoring. No MCP server — pure skills/commands.",
       "source": {
-        "source": "url",
+        "source": "git-subdir",
         "url": "https://github.com/zilliztech/zilliz-plugin.git",
-        "sha": "bc59907dafea901b5d4120877d16d1e5e662241d"
+        "path": "plugins/zilliz",
+        "ref": "main",
+        "sha": "e960396da0bd0b1cb219fa97e3bcbb425ee1abbd"
       },
       "homepage": "https://github.com/zilliztech/zilliz-plugin"
     },
