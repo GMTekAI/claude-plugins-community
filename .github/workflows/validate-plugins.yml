@@ -27,9 +27,13 @@ jobs:
       - name: bump-plugin-shas skip/freeze tests
         run: bash .github/actions/bump-plugin-shas/test-bump.sh
 
+      - name: External manifest resolution tests
+        run: bash .github/actions/validate-plugins/test-external-manifest.sh
+
       # Dogfood: this repo uses its own local copy of the action.
       # External consumers MUST pin a SHA — see the action README.
       - uses: ./.github/actions/validate-plugins
         with:
           marketplace-path: .claude-plugin/marketplace.json
           skip-local-folders: "true"
+          scope-errors-to-changed: "true"
