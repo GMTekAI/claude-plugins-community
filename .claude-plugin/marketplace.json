@@ -14460,7 +14460,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/opensearch-project/opensearch-agent-skills.git",
-        "sha": "c0955df1ef86f196124870fb4971e617a9ac5379"
+        "sha": "d8b8c00d6cc2928361db64b292230a9469bbf801"
       },
       "homepage": "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/opensearch-agent-skills.html"
     },
@@ -14470,7 +14470,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/opensearch-project/opensearch-agent-skills.git",
-        "sha": "c0955df1ef86f196124870fb4971e617a9ac5379"
+        "sha": "d8b8c00d6cc2928361db64b292230a9469bbf801"
       },
       "homepage": "https://opensearch.org/"
     },
