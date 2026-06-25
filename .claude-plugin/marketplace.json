@@ -22660,6 +22660,14 @@
         "sha": "3cd46256306c60e0f435ac77ebe599d225984b92"
       },
       "homepage": "https://zuckerbot.ai"
+    },
+    {
+      "name": "auth0",
+      "source": "./auth0",
+      "strict": false,
+      "description": "Auth0 skills for quickstarts, migration, major version upgrades, MFA, branding, custom domains, Advanced Custom Universal Login (ACUL) screen generation, and framework-specific SDK integrations for React, Next.js, Vue, Nuxt, Angular, Express, Fastify, FastAPI, Flask, Go, Spring Boot, Java MVC, Swift, Android, Flutter, Flutter Web, ASP.NET Core, React Native, Expo, Ionic React (Capacitor), Ionic Angular (Capacitor), and Ionic Vue (Capacitor).",
+      "category": "security",
+      "homepage": "https://github.com/auth0/agent-skills"
     }
   ]
 }
