@@ -22660,6 +22660,20 @@
         "sha": "3cd46256306c60e0f435ac77ebe599d225984b92"
       },
       "homepage": "https://zuckerbot.ai"
+    },
+    {
+      "name": "waldo-fyi",
+      "source": "./waldo-fyi",
+      "strict": false,
+      "description": "Waldo strategy agent skills for ad intelligence, social listening, web research, data analysis, and archival knowledge — powered by the Waldo MCP connector",
+      "category": "development",
+      "homepage": "https://github.com/waldo-fyi/waldo-claude-plugin.git",
+      "mcpServers": {
+        "waldo": {
+          "type": "http",
+          "url": "https://mcp.waldo.fyi/strategy"
+        }
+      }
     }
   ]
 }
