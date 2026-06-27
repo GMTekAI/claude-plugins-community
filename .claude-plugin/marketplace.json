@@ -22660,6 +22660,20 @@
         "sha": "3cd46256306c60e0f435ac77ebe599d225984b92"
       },
       "homepage": "https://zuckerbot.ai"
+    },
+    {
+      "name": "testdino",
+      "source": "./testdino",
+      "strict": false,
+      "description": "Use TestDino inside Claude Code through the hosted remote MCP server to inspect test runs, debug failing test cases, manage manual tests, and run TestDino audits.",
+      "category": "development",
+      "homepage": "https://github.com/testdino-hq/TestDino-Plugins",
+      "mcpServers": {
+        "testdino": {
+          "type": "http",
+          "url": "https://mcp.testdino.com"
+        }
+      }
     }
   ]
 }
