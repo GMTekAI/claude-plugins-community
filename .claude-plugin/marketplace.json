@@ -23953,6 +23953,19 @@
       "description": "Saleshandy prospecting and enrichment for Claude Code — natural-language ICP search and one-shot lead enrichment, wired through the Saleshandy MCP server.",
       "category": "development",
       "homepage": "https://github.com/saleshandy/saleshandy-plugin"
+    },
+    {
+      "name": "prismatic-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/prismatic-io/prismatic-skills",
+        "path": "plugin",
+        "ref": "main",
+        "sha": "87e7c91ed746f1f93195886202e2df98da2dd9d8"
+      },
+      "description": "Build and deploy Prismatic custom components, Code Native Integrations, and embedded marketplace experiences",
+      "category": "development",
+      "homepage": "https://github.com/prismatic-io/prismatic-skills"
     }
   ]
 }
