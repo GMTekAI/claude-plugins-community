@@ -24008,6 +24008,20 @@
       "description": "Build and deploy Prismatic custom components, Code Native Integrations, and embedded marketplace experiences",
       "category": "development",
       "homepage": "https://github.com/prismatic-io/prismatic-skills"
+    },
+    {
+      "name": "credible",
+      "description": "Credible analysis tools (Malloy semantic model search, query execution, and analysis skills) for your Credible workspaces.",
+      "author": {
+        "name": "Credible Data"
+      },
+      "category": "database",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/credibledata/credible-plugin.git",
+        "sha": "47ef29a4751a8782607cd4d90ccb602ffd5b4638"
+      },
+      "homepage": "https://credibledata.com"
     }
   ]
 }
