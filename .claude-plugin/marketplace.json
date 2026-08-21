@@ -23918,6 +23918,13 @@
         "sha": "47ef29a4751a8782607cd4d90ccb602ffd5b4638"
       },
       "homepage": "https://credibledata.com"
+    },
+    {
+      "name": "eli5",
+      "source": "./eli5",
+      "strict": false,
+      "description": "Explain any topic like I'm 5: a dead-simple HTML picture explainer with big visuals and few words. Use /eli5 <topic>.",
+      "category": "learning"
     }
   ]
 }
