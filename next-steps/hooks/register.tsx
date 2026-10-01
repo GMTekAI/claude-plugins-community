@@ -1,0 +1,143 @@
+/* @jsxRuntime classic */
+/* @jsx h */
+/* @jsxFrag Fragment */
+// next-steps: when a turn ends, fork the session (shares the prompt cache, so
+// it has full context for the price of one short reply) and ask for up to
+// three likely next prompts. Draw them as 1/2/3 buttons in the band above the
+// composer; a press writes that prompt into the real composer as the person's
+// draft ($.prompt.fill) for them to edit and Enter; 0 dismisses. The top
+// suggestion is also offered as the composer's dim Tab-to-take ghost text
+// ($.prompt.suggest). Nothing is submitted by the plugin, so no origin framing.
+
+import type { EngineInterface, Register, RenderElement } from 'claude-code'
+
+type Suggestion = { label: string; prompt: string }
+
+type View =
+  | { kind: 'hidden' }
+  | { kind: 'loading'; turnId: string }
+  | { kind: 'offer'; items: Suggestion[] }
+
+const MAX_SUGGESTIONS = 3
+const LABEL_MAX = 48
+
+const FORK_PROMPT =
+  'Do not continue the task. Instead, predict what the user is most likely to ask you next, ' +
+  `as up to ${MAX_SUGGESTIONS} concrete prompts written in the user's voice (imperative, specific to ` +
+  'this conversation: name the file, test, PR, or follow-up they would actually type). Prefer the ' +
+  'obvious next action (run the tests, commit, fix the thing you flagged, do the same for X) over generic ' +
+  'ones. If the conversation is clearly finished or nothing useful comes to mind, return an empty list.\n\n' +
+  'Answer with ONLY a JSON array, no prose, no code fence: ' +
+  `[{"label": "<≤${LABEL_MAX} chars shown on a button>", "prompt": "<full prompt text>"}]`
+
+function parseSuggestions(reply: string): Suggestion[] {
+  const start = reply.indexOf('[')
+  const end = reply.lastIndexOf(']')
+  if (start === -1 || end <= start) return []
+  let parsed: unknown
+  try {
+    parsed = JSON.parse(reply.slice(start, end + 1))
+  } catch {
+    return []
+  }
+  if (!Array.isArray(parsed)) return []
+  const items: Suggestion[] = []
+  for (const entry of parsed) {
+    if (typeof entry !== 'object' || entry === null) continue
+    const label = (entry as { label?: unknown }).label
+    const prompt = (entry as { prompt?: unknown }).prompt
+    if (typeof prompt !== 'string' || prompt.trim() === '') continue
+    const shown = typeof label === 'string' && label.trim() !== '' ? label.trim() : prompt.trim()
+    items.push({
+      label: shown.length > LABEL_MAX ? `${[...shown].slice(0, LABEL_MAX - 1).join('')}…` : shown,
+      prompt: prompt.trim(),
+    })
+    if (items.length === MAX_SUGGESTIONS) break
+  }
+  return items
+}
+
+// Session-local view state; a hot reload resets it, which is fine.
+let view: View = { kind: 'hidden' }
+
+function show($: EngineInterface, nextView: View): void {
+  view = nextView
+  $.ui.invalidate('ui.render')
+}
+
+export const register: Register = (on, options) => {
+  const minTurnChars = typeof options?.minAnswerChars === 'number' ? options.minAnswerChars : 80
+
+  // A new turn (typed or otherwise) hides whatever was offered.
+  on('turn.start', async ($, e, next) => {
+    if (view.kind !== 'hidden') show($, { kind: 'hidden' })
+    return next(e)
+  })
+
+  // Turn over: ask the fork, detached, so the turn's completion never waits on it.
+  on('turn.complete', async ($, e, next) => {
+    const result = await next(e)
+    if (e.reason !== 'answer' || e.answer.trim().length < minTurnChars) return result
+    const turnId = e.turnId
+    show($, { kind: 'loading', turnId })
+    void (async () => {
+      let items: Suggestion[] = []
+      try {
+        const reply = await $.model.fork({ prompt: FORK_PROMPT })
+        items = reply.isAnswered ? parseSuggestions(reply.text) : []
+      } catch (error) {
+        $.ui.log(`fork failed: ${String(error)}`)
+      }
+      // A newer turn started (or another completed) while we waited: drop ours.
+      if (view.kind !== 'loading' || view.turnId !== turnId) return
+      show($, items.length === 0 ? { kind: 'hidden' } : { kind: 'offer', items })
+      if (items[0] !== undefined) void $.prompt.suggest({ text: items[0].prompt }).catch(() => undefined)
+    })()
+    return result
+  })
+
+  on('ui.render', { component: 'AbovePrompt' }, async ($, e, next): Promise<RenderElement> => {
+    const below = await next(e)
+    if (e.props.hasSurvey || e.props.isWorking || view.kind === 'hidden') return below
+    const { Box, Text, Button } = $.ui.resolve(e)
+
+    if (view.kind === 'loading') {
+      return (
+        <Box flexDirection="column">
+          {below}
+          <Box marginTop={1}>
+            <Text dimColor>next steps…</Text>
+          </Box>
+        </Box>
+      )
+    }
+
+    const items = view.items
+    return (
+      <Box flexDirection="column">
+        {below}
+        <Box marginTop={1} />
+        <Text dimColor>next:</Text>
+        {items.map((item, index) => (
+          <Box key={`s${index}`} marginLeft={2}>
+            <Button
+              hotkey={String(index + 1)}
+              plain
+              label={item.label}
+              onPress={() => {
+                show($, { kind: 'hidden' })
+                void $.prompt.fill({ text: item.prompt }).then(
+                  r => r.isFilled || $.ui.toast('could not fill the prompt box'),
+                  error => $.ui.toast(`could not fill: ${String(error)}`),
+                )
+              }}
+            />
+          </Box>
+        ))}
+        <Box marginLeft={2}>
+          <Button hotkey="0" plain label="dismiss" onPress={() => show($, { kind: 'hidden' })} />
+        </Box>
+      </Box>
+    )
+  })
+}
