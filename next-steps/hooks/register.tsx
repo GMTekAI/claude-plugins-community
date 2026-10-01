@@ -20,6 +20,27 @@ type View =
 
 const MAX_SUGGESTIONS = 3
 const LABEL_MAX = 48
+const PROMPT_MAX = 600
+
+// Suggestions are model output, and the model reads untrusted text (files,
+// tool results, web pages). Before any of it reaches the screen or the prompt
+// box: drop terminal escape sequences, control characters and invisible or
+// direction-changing characters, fold whitespace to single spaces, and cap
+// the length by code point.
+const ESCAPE_SEQUENCES =
+  /\x1b\[[0-?]*[ -/]*[@-~]|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)|\x1b[@-Z\\-_]/g
+const UNSAFE_CHARACTERS =
+  /[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069\ufeff]/g
+
+function clean(text: string, max: number): string {
+  const safe = text
+    .replace(ESCAPE_SEQUENCES, '')
+    .replace(/\s+/g, ' ')
+    .replace(UNSAFE_CHARACTERS, '')
+    .trim()
+  const points = [...safe]
+  return points.length > max ? `${points.slice(0, max - 1).join('')}…` : safe
+}
 
 const FORK_PROMPT =
   'Do not continue the task. Instead, predict what the user is most likely to ask you next, ' +
@@ -46,12 +67,11 @@ function parseSuggestions(reply: string): Suggestion[] {
     if (typeof entry !== 'object' || entry === null) continue
     const label = (entry as { label?: unknown }).label
     const prompt = (entry as { prompt?: unknown }).prompt
-    if (typeof prompt !== 'string' || prompt.trim() === '') continue
-    const shown = typeof label === 'string' && label.trim() !== '' ? label.trim() : prompt.trim()
-    items.push({
-      label: shown.length > LABEL_MAX ? `${[...shown].slice(0, LABEL_MAX - 1).join('')}…` : shown,
-      prompt: prompt.trim(),
-    })
+    if (typeof prompt !== 'string') continue
+    const filled = clean(prompt, PROMPT_MAX)
+    if (filled === '') continue
+    const named = typeof label === 'string' ? clean(label, LABEL_MAX) : ''
+    items.push({ label: named === '' ? clean(filled, LABEL_MAX) : named, prompt: filled })
     if (items.length === MAX_SUGGESTIONS) break
   }
   return items
