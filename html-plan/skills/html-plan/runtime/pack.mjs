@@ -35,16 +35,26 @@ const blockSrc = (inner) => { const m = inner.match(/<script\s+type=["']?text\/(
 const real = (p) => { try { return realpathSync(p); } catch { return null; } };
 const FENCE = [...new Set([...roots, baseDir, here])].map(real).filter(Boolean);
 const inside = (f) => FENCE.some((d) => f === d || f.startsWith(d.endsWith(sep) ? d : d + sep));
-const SECRET_NAME = /(^|[\\/])(\.env(\.[^\\/]*)?|\.netrc|\.npmrc|\.pypirc|\.git-credentials|id_(rsa|dsa|ecdsa|ed25519)[^\\/]*|credentials[^\\/]*|secrets?\.[^\\/]*|[^\\/]*\.(pem|key|p12|pfx|keystore|jks))$/i;
+const SECRET_NAME = new RegExp([
+  String.raw`(^|[\\/])\.(git|ssh|aws|azure|gnupg|kube|docker|password-store)([\\/]|$)`,                        // whole folders
+  String.raw`(^|[\\/])(\.env(\.[^\\/]*)?|\.netrc|\.npmrc|\.yarnrc(\.yml)?|\.pypirc|\.pgpass|\.my\.cnf|\.git-credentials|\.htpasswd)$`,
+  String.raw`(^|[\\/])(id_(rsa|dsa|ecdsa|ed25519)[^\\/]*|credentials[^\\/]*|secrets?(\.[^\\/]*)?|[^\\/]*_history|[^\\/]*\.local\.json)$`,
+  String.raw`\.(pem|key|p12|pfx|keystore|jks|tfvars|tfstate(\.backup)?|sqlite3?|db|kdbx|ovpn)$`,
+].join('|'), 'i');
+const SECRET_TEXT = /sk-ant-|sk-[A-Za-z0-9]{32,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|xox[abeprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{30,}|eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}\.|(?:password|passwd|secret|api[_-]?key|access[_-]?token|auth[_-]?token)["']?\s*[:=]\s*["'][^"'\s$<{]{12,}["']/i;
+const reads = new Set();   // every file whose text ends up in the page
 const refused = new Set();
 const findFile = (p) => { for (const cand of [...roots.map((r) => resolve(r, p)), resolve(baseDir, p)]) { if (!existsSync(cand) || !statSync(cand).isFile()) continue; const f = real(cand);
     if (!f || !inside(f)) { if (!refused.has(p)) { refused.add(p); err(`"${p}" is outside --root and the page's folder — not reading it. Pass --root <dir> for the checkout it lives in`); } continue; }
     if (SECRET_NAME.test(f)) { if (!refused.has(p)) { refused.add(p); err(`"${p}" looks like a secrets file — not reading it`); } continue; }
     return f; } return null; };
 /** read a file at a git ref: tries `git show ref:path` in each --root that is a git checkout */
+const git = (r, ...args) => execFileSync('git', ['-c', 'core.fsmonitor=false', '-c', 'core.hooksPath=/dev/null', '-c', 'core.pager=cat', '-c', 'diff.external=', '-c', 'core.sshCommand=false', '-C', r, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64e6, env: { ...process.env, GIT_OPTIONAL_LOCKS: '0', GIT_TERMINAL_PROMPT: '0' } });
+/** short sha of the --root checkout a file sits in (+wt when the file has uncommitted changes); '' when it is not under a root or not in git */
+const stamp = (f, wt) => { for (const r of roots) { const rr = real(r); if (!rr || !(f === rr || f.startsWith(rr + sep))) continue; try { const top = git(rr, 'rev-parse', '--short', 'HEAD').trim(); return top + (wt && git(rr, 'status', '--porcelain', '--', relative(rr, f)).trim() ? '+wt' : ''); } catch {} } return ''; };
 const REF_OK = /^[A-Za-z0-9][\w.\/^~@{}-]*$/;
 const gitShow = (ref, p) => { if (!REF_OK.test(ref) || /(^|\/)\.\.(\/|$)/.test(p) || p.startsWith('/') || p.startsWith('-') || SECRET_NAME.test(p)) { if (!refused.has(ref + ':' + p)) { refused.add(ref + ':' + p); err(`ref="${ref}" with "${p}" — not a plain git ref and a path inside the repo; not running git`); } return null; }
-  for (const r of roots) { try { return { text: execFileSync('git', ['-C', r, 'show', '--end-of-options', `${ref}:${p}`], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64e6 }), where: `${r}@${ref}` }; } catch {} } return null; };
+  for (const r of roots) { try { return { text: git(r, 'show', '--end-of-options', `${ref}:${p}`), where: `${r}@${ref}` }; } catch {} } return null; };
 const wc = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
 const stripTags = (t) => t.replace(/<[^>]+>/g, ' ');
 
@@ -89,11 +99,12 @@ html = html.replace(/<(doc-(?!plan\b|claim\b)[a-z]+)\b([^>]*)>([\s\S]*?)<\/\1>/g
       let added = 0, missing = 0, extra = '';
       const seen = new Set();
       for (const nd of m.nodes) { if (!nd.file || !nd.line || nd.gap) continue; const key = `${nd.file}:${nd.line}`; if (have.has(key) || seen.has(key)) continue; seen.add(key);
-        let text = null, sha = ''; const g = a.ref ? gitShow(a.ref, nd.file) : null; if (g) { text = g.text; sha = a.ref; } else { const f = findFile(nd.file); if (f) { text = readFileSync(f, 'utf8'); try { sha = execFileSync('git', ['-C', dirname(f), 'rev-parse', '--short', 'HEAD'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); } catch {} } }
+        let text = null, sha = ''; const g = a.ref ? gitShow(a.ref, nd.file) : null; if (g) { text = g.text; sha = a.ref; } else { const f = findFile(nd.file); if (f) { text = readFileSync(f, 'utf8'); sha = stamp(f, false); } }
         if (text == null) { missing++; continue; }
         const L = text.split('\n'); const ln = +String(nd.line).split('-')[0]; if (ln < 1 || ln > L.length) { warn(`${at}: ${key} — file has ${L.length} lines`); continue; }
-        if (/(sk-ant-|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY)/.test(text)) { warn(`${at}: ${nd.file} looks like it contains a secret — no excerpt`); continue; }
+        
         const s0 = Math.max(1, ln - CTX), s1 = Math.min(L.length, ln + CTX); const slice = L.slice(s0 - 1, s1).join('\n').replace(/<\/script/gi, '<\\/script');
+        if (SECRET_TEXT.test(slice)) { warn(`${at}: ${key} looks like it holds a secret — no excerpt`); continue; } reads.add(nd.file);
         extra += `\n<script type="text/plain" data-excerpt="${key}" data-start="${s0}"${sha ? ` data-sha="${sha}"` : ''}>\n${slice}\n</script>`; added++; }
       if (added) info.push(`doc-calls${a.id ? '#' + a.id : ''}: embedded ${added} code excerpt${added > 1 ? 's' : ''} (click a row → its code)`);
       if (missing && !added) warn(`${at}: ${missing} rows point at files not found under ${roots.map((r) => relative(process.cwd(), r) || '.').join(', ')} — pass --root <checkout> (and ref="<sha>" for a merged PR) so rows can open their code`);
@@ -121,10 +132,10 @@ html = html.replace(/<(doc-(?!plan\b|claim\b)[a-z]+)\b([^>]*)>([\s\S]*?)<\/\1>/g
         else { if (a.ref) { const f0 = findFile(a.src); if (!f0) { err(`${at}: src="${a.src}" ref="${a.ref}" — git show failed in ${roots.map((r) => relative(process.cwd(), r) || '.').join(', ')} and no plain file by that path either (is --root a checkout with that ref, or a snapshot dir containing the file?)`); return whole; } info.push(`${a.src}: no git ref ${a.ref} under the roots — using the plain file (assuming it is a snapshot at that ref)`); sha = a.ref; }
           const all = roots.map((r) => resolve(r, a.src)).filter((c) => existsSync(c)); if (all.length > 1) warn(`${at}: src="${a.src}" exists under ${all.length} roots (${all.map((x) => relative(process.cwd(), x)).join(', ')}) — using the first; reorder --root or make the path more specific`);
           const f = findFile(a.src); if (!f) { err(`${at}: src="${a.src}" not found (looked under ${roots.concat([baseDir]).map((r) => relative(process.cwd(), r) || '.').join(', ')})`); return whole; } text = readFileSync(f, 'utf8'); where = relative(process.cwd(), f); if (!roots.some((r) => f.startsWith(r))) warn(`${at}: src="${a.src}" resolved OUTSIDE --root, at ${where} — check it's the file you mean`);
-          if (!sha) { try { const top = execFileSync('git', ['-C', dirname(f), 'rev-parse', '--short', 'HEAD'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); const dirty = execFileSync('git', ['-C', dirname(f), 'status', '--porcelain', '--', f], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); sha = top + (dirty ? '+wt' : ''); } catch {} } }
+          if (!sha) sha = stamp(f, true); }
         const total = text.split('\n').length; let start = 1;
         if (a.lines) { const mm = a.lines.match(/^(\d+)(?:-(\d+))?$/); if (!mm) err(`${at}: lines="${a.lines}" should look like 40-72`); else { start = +mm[1]; const end = +(mm[2] || mm[1]);   /* lines="40" is that one line */ if (end > total || start < 1 || start > end) err(`${at}: lines="${a.lines}" but ${a.src} has ${total} lines at ${where} — is --root (or ref=) at the commit you're citing?`); text = text.split('\n').slice(start - 1, end).join('\n'); } }
-        if (/(sk-ant-|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY)/.test(text)) { err(`${at}: ${a.src} looks like it contains a secret — not packaging it`); return whole; }
+        if (SECRET_TEXT.test(text)) { err(`${at}: ${a.src} looks like it holds a secret — not packaging it`); return whole; } reads.add(a.src);
         const nl = text.split('\n').length; if (nl > 120) warn(`${at}: ${nl} lines of code — readers skim past long listings; slice with lines="a-b"`); else if (nl > 40 && !('collapsed' in a)) warn(`${at}: ${nl}-line slice — over ~40 lines either trim to the part that carries the point or add collapsed`);
         const extra = (a.file ? '' : ` file="${a.src}"`) + (a.start || !a.lines ? '' : ` start="${start}"`) + (sha && !a.sha ? ` sha="${String(sha).slice(0, 12)}"` : '');
         info.push(`filled <${tag} src="${a.src}"${a.lines ? ` lines=${a.lines}` : ''}> from ${where}`);
@@ -255,6 +266,7 @@ if (!quiet) {
 if (errors.length) { console.log(`\n✗ ${errors.length} error(s), ${warns.length} warning(s) — fix and re-run.`); process.exit(1); }
 if (lintOnly) { console.log(`✓ lint clean${warns.length ? ` (${warns.length} warning${warns.length > 1 ? 's' : ''})` : ''}`); process.exit(0); }
 writeFileSync(outPath, packed);
+if (reads.size && (!quiet || argv.includes('--artifact'))) console.log(`  code from ${reads.size} file${reads.size > 1 ? 's' : ''} is now inside the page: ${[...reads].sort().join(', ')}`);
 if (argv.includes('--artifact')) {   // the Artifact tool wraps the page in its own <html><head><body>: publish content only
   const bodyAttrs = attrs((packed.match(/<body\b([^>]*)>/i) || [])[1] || ''); const data = Object.fromEntries(Object.entries(bodyAttrs).filter(([k]) => k.startsWith('data-')).map(([k, v]) => [k.slice(5).replace(/-(\w)/g, (m, c) => c.toUpperCase()), v]));
   let art = packed.replace(/<!doctype[^>]*>\s*/i, '').replace(/<\/?html\b[^>]*>\s*/gi, '').replace(/<meta\b[^>]*charset[^>]*>\s*/i, '').replace(/<\/?head\b[^>]*>\s*/gi, '').replace(/<\/?body\b[^>]*>\s*/gi, '');

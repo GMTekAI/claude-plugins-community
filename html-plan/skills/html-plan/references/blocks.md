@@ -214,7 +214,7 @@ node runtime/pack.mjs plan.html [--root <repo>]… [-o out.html] [--lint-only] [
 ```
 
 - Lints every block with the same parsers the browser uses, and the shape of the tree.
-- Fills `src=` blocks and call-row excerpts from `--root` (or from git with `ref=`). With several `--root`s it looks in each in order, then beside the page. It refuses files that look like they hold a secret.
+- Fills `src=` blocks and call-row excerpts from `--root` (or from git with `ref=`). With several `--root`s it looks in each in order, then beside the page. It reads nothing outside those folders, refuses files that look like they hold a secret, and ends by listing every file whose code is now inside the page. Check that list before you publish or share.
 - Inlines the runtime and local images. Writes `plan.packed.html`.
 - `--artifact` also writes `plan.artifact.html`, the page without its own `<html>` and `<body>`, for a host that adds them.
 - Errors stop the write. Warnings are budgets for words and phone width: fix them or accept them knowingly.
