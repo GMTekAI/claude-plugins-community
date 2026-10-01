@@ -24,19 +24,28 @@ const PROMPT_MAX = 600
 
 // Suggestions are model output, and the model reads untrusted text (files,
 // tool results, web pages). Before any of it reaches the screen or the prompt
-// box: drop terminal escape sequences, control characters and invisible or
-// direction-changing characters, fold whitespace to single spaces, and cap
-// the length by code point.
+// box, keep only what a person can see: drop terminal escape sequences, then
+// every control, format, unassigned, private-use and surrogate character (by
+// Unicode category, so the list cannot fall behind), variation selectors and
+// the letters that render blank; fold whitespace to single spaces; keep at
+// most three combining marks in a row; and cap the length by code point.
+// Text carrying Unicode tag characters is refused outright: they have no use
+// in a prompt except to hide one.
 const ESCAPE_SEQUENCES =
   /\x1b\[[0-?]*[ -/]*[@-~]|\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)|\x1b[@-Z\\-_]/g
-const UNSAFE_CHARACTERS =
-  /[\x00-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069\ufeff]/g
+const TAG_CHARACTERS = /[\u{E0000}-\u{E007F}]/u
+const UNSEEN_CHARACTERS =
+  /[\p{Cc}\p{Cf}\p{Cn}\p{Co}\p{Cs}\p{Variation_Selector}\u115f\u1160\u3164\uffa0]/gu
+const COMBINING_RUN = /(\p{M}{3})\p{M}+/gu
 
 function clean(text: string, max: number): string {
+  if (TAG_CHARACTERS.test(text)) return ''
   const safe = text
     .replace(ESCAPE_SEQUENCES, '')
     .replace(/\s+/g, ' ')
-    .replace(UNSAFE_CHARACTERS, '')
+    .replace(UNSEEN_CHARACTERS, '')
+    .replace(COMBINING_RUN, '$1')
+    .replace(/ {2,}/g, ' ')
     .trim()
   const points = [...safe]
   return points.length > max ? `${points.slice(0, max - 1).join('')}…` : safe
