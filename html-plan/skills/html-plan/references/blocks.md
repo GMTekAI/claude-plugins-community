@@ -4,21 +4,28 @@ Every block's **source text goes in `<script type="text/plain">…</script>` as 
 
 One convention runs through the line-based blocks: start a line with **`+`** for added or proposed, **`-`** for removed, **`~`** for changed.
 
-Everything the reader can see is a comment target: claims, code lines, call rows, arrows, `data-ref` elements and pins in mockups, quotes, notes, list items. You write nothing for that.
+Everything the reader can see is a comment target: claims, code lines, call rows, arrows, `data-ref` elements in mockups, quotes, notes, list items. You write nothing for that.
 
 ## `doc-plan` and `doc-claim`
 
 | Attribute | On | Does |
 |---|---|---|
-| `open="0…3"` or `open="needs"` | `doc-plan` | how far the tree starts open. Default `1`: behaviours open, hows closed. `needs` opens only the paths to decisions |
+| `open="0…3"` or `open="needs"` | `doc-plan` | how far the tree starts open. Default `0`: every claim closed, so the page starts as the list of level-1 claims. Leave it at the default. `needs` opens only the paths to decisions |
 | `aux="shared"` / `aux="scope"` | `doc-claim` | the two unnumbered last branches |
 | `at="path:line"` | level-3 `doc-claim` | a tap on the call row with the same `@ path:line` opens this claim. With no `<p>`, the file name becomes the claim |
-| `kind="…"` | `doc-claim` | overrides the chip on the row (normally read from the exhibit: screen, states, calls, schema, code) |
 | `id` | `doc-claim` | for links: `<a href="#id">`. A link into a closed claim opens the way to it |
 
 The first child of a claim is a `<p>` with the claim; `<code>` and `<b>` are fine inside it. Then one exhibit. Then, if needed, a `doc-ask` or a `doc-note`. Then child claims.
 
-The reader gets: numbered claims; **open to What › How › Where › Code**; **Needs you**; a count of decisions on every closed parent; parents that stay pinned while scrolling; a comment button on every claim.
+The reader gets: numbered claims; a tap on a claim opens it and every claim under it; a count of decisions on every closed parent; parents that stay pinned while scrolling; a comment button on every claim.
+
+## `doc-changes` — the size of the proposed change
+
+```html
+<doc-changes new="5" changed="4" deleted="1"></doc-changes>
+```
+
+Put it in the `<header>`, after the `h1`. It shows “Proposed · 10 files · +5 new · ~4 changed · −1 deleted”, like a diff stat. Count files only. Leave out an attribute that is zero. Do not write the number of decisions here; the page counts them.
 
 ## `doc-mock` — real HTML in a frame, scaled to fit
 
@@ -38,7 +45,7 @@ The reader gets: numbered claims; **open to What › How › Where › Code**; *
 - **Draw the smallest region that makes the point**: one card, one menu, one row, at `w` ≤ 480 with `frame="none"`. It then stays readable on a phone. A full window is an overview only; add `thumbnail` to say you mean it.
 - Write real markup with inline styles or a `<style>` in the template. Several mocks of one app share CSS through one page-level `<style data-mock-shared>…</style>`.
 - The terminal frame is a dark mono surface with helpers: `<b>`, `.dim .g .r .y .b .m .o .inv .box`. Keep it to `w` ≤ 480, about 55 columns.
-- `data-ref="name"` makes an element a comment target. `<doc-pin ref="name" title="…">` puts a numbered pin on its corner (`anchor="tr|tl|br|bl|r|l|c"`, `offset="dx,dy"`). `at="x%,y%"` places a pin with no element. The `title` is the point, in a few words; the body is optional. Give two pins on neighbours different anchors.
+- `data-ref="name"` makes an element a comment target. `<doc-pin ref="name" title="…">` puts a numbered pin on its corner (`anchor="tr|tl|br|bl|r|l|c"`, `offset="dx,dy"`). `at="x%,y%"` places a pin with no element. A pin is a description only: the reader taps the number and reads the title and one sentence. Keep it to what the reader must notice. The reader comments on the mockup, not on a pin. The `title` is the point, in a few words; the body is optional. Give two pins on neighbours different anchors.
 - **A behaviour whose output is text** (a CLI, a log, a generated file) is a `frame="terminal"` mock, or a `doc-code` of the output.
 - `doc-shot src="before.png"` is the same for a screenshot. Use screenshots for UI that exists and mocks for UI that does not.
 

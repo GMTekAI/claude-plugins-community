@@ -23,7 +23,8 @@ Each level answers one question. The question picks the exhibit.
 
 | Level | Answers | The claim is | Exhibit |
 |---|---|---|---|
-| `h1` | Why? | the goal, one or two sentences | the user's own words, as closed quotes |
+| `h1` | What is this? | a title: the change and the place, 3 to 7 words | none |
+| `details.thread` | Why? | — | the user's own words, as closed quotes |
 | 1 | What can someone now do or see? | a behaviour | `doc-mock`; `doc-machine` if it has a lifecycle |
 | 2 | How does that work? | one entrypoint, rule or record | `doc-calls`, `doc-schema`, or short `doc-code` |
 | 3 | Where? | `file:line` | `doc-code` |
@@ -37,10 +38,9 @@ Each level answers one question. The question picks the exhibit.
 <script src="htmlplan.js" defer></script>
 <body>
 <header>
-  <p class="kicker">Plan · postbox</p>
-  <h1>A user can schedule a message. Nothing is sent before its time.</h1>      <!-- WHY: the goal -->
-  <p class="meta"><span>5 new files</span><span>4 changed</span><span>4 decisions</span></p>   <!-- the size of the change, in counts; leave out zeros -->
-  <details class="thread"><summary>Why · 2 requests</summary> …doc-quote… </details>
+  <h1>Scheduling Sent Messages in PostBox</h1>                                 <!-- a title, not a sentence. No label line above it -->
+  <doc-changes new="5" changed="4"></doc-changes>      <!-- files the plan will add, change or delete; drawn as "Proposed · 9 files +5 new ~4 changed" -->
+  <details class="thread"><summary>Why · 2 requests</summary> …doc-quote… </details>      <!-- WHY: the user's own words -->
 </header>
 <main>
 <doc-plan>
@@ -70,7 +70,7 @@ Each level answers one question. The question picks the exhibit.
 
 ## Rules
 
-`pack.mjs` checks 2, 3, 5, 6 (the count) and 7. The rest are yours to check.
+`pack.mjs` checks 2, 3, 5, 6 (the count), 7 and 11. The rest are yours to check.
 
 1. **Split the top level by behaviour.** Never by file, layer or order of work. Behaviour is the one split the reader can judge without reading code.
 2. **Every claim at levels 1 and 2 is a sentence that can be true or false.** “A user can hold 50 scheduled messages at most.” Not “Message limit”. About 12 words at most. A level-3 claim is only a place: `file:line · symbol`.
@@ -82,6 +82,7 @@ Each level answers one question. The question picks the exhibit.
 8. **Real over drawn.** Real paths and line numbers for code that exists; fill it with `src="path" lines="a-b"`. Mark code that does not exist yet as a sketch in its title. Quote the user's words; do not reword them.
 9. **Schemas are text in the project's own language**: TypeScript, SQL, protobuf. Never a table or a made-up notation.
 10. **A state machine shows the screen for each state** when the state changes what the user sees. Place its states on a grid.
+11. **The page starts with a title.** The `h1` names the change and the place in 3 to 7 words: “Scheduling Sent Messages in PostBox”. It is not a sentence and not the goal. Put nothing above it: no “Plan · project” line. The level-1 claims tell what changes.
 
 For a change with no visible behaviour, such as a refactor, make level 1 the guarantees: “Nothing a caller sees changes.”, “Each store has one owner.”
 
@@ -89,11 +90,36 @@ For a change with no visible behaviour, such as a refactor, make level 1 the gua
 
 The exhibits are the plan. Words only name them.
 
-- Short sentences. Common words: *use*, *show*, *start*, *before*, *about*. Not *utilize*, *demonstrate*, *commence*, *prior to*, *approximately*.
-- Say who does what: “The worker claims the row.” Not “The row is claimed.”
-- Call things by their real name in the code.
+**Write all prose in ASD-STE100 Simplified Technical English (STE). Use no other style.** This rule applies to claims, captions, pins, questions, options and notes.
+
+- **Approved words only.** Use a word only if the STE dictionary approves it, and only with its approved meaning and part of speech. If you are not sure about a word, use the most common short word that has the same meaning.
+- **Technical names and technical verbs are permitted.** Names from the code (`createScheduled()`, `scheduled_messages`), product names, UI labels and units are technical names. Verbs of the field (*compile*, *deploy*, *merge*, *render*) are technical verbs. Use the same name for the same thing each time.
+- **Short sentences.** One topic for each sentence. An instruction has 20 words at most. A description has 25 words at most. A paragraph has 6 sentences at most.
+- **Active voice.** Say who does what: “The worker claims the row.” Not “The row is claimed.”
+- **Simple tenses.** Use the present, the past and the future: *sends*, *sent*, *will send*. Do not write *has sent* or *is sending*. Do not use an *-ing* word unless it is part of a technical name.
+- **Instructions are commands.** “Run the migration.” Write one instruction in each sentence. Put the condition first: “If the claim fails, stop.”
+- **`must` and `can`.** Use *must* for a rule and *can* for what is possible. Do not use *should*, *may* or *might*.
+- **Noun groups of 3 words at most.** “The retry limit of the send worker.” Not “the send worker retry limit setting”.
+- **Full grammar.** Keep *the*, *a* and *an*. Do not use contractions, idioms, metaphors or jokes.
+
+| Do not write | Write |
+|---|---|
+| utilize, leverage | use |
+| perform, carry out | do |
+| ensure, verify, check (as a verb) | make sure |
+| demonstrate, indicate | show |
+| commence, begin · terminate | start · stop |
+| obtain · provide | get · give |
+| prior to · in order to | before · to |
+| however · additionally | but · also |
+| about 50 | approximately 50 |
+
+These are not STE and stay as they are: the words of the user in a `doc-quote`, code, and the text on a UI mockup.
+
 - A caption is one sentence: what to notice. A pin is a clause. An option's `<small>` is 12 words at most.
 - No paragraph between a claim and its exhibit. If the exhibit needs explaining, pick a better exhibit.
+
+`pack.mjs` warns about some STE errors: common unapproved words, contractions, *has/have* tenses, the passive voice and long sentences. It does not know the full dictionary, so a clean run does not prove that the text is STE.
 
 ## Steps
 
@@ -101,7 +127,7 @@ The exhibits are the plan. Words only name them.
 2. **Write the level-1 claims** and read them aloud. Fix them before anything else.
 3. **Add the how and where claims, then the exhibits, then the decisions.** Read `references/blocks.md` for syntax. Save the page where the project keeps docs, or in a scratch folder.
 4. **Pack.** `node <skill dir>/runtime/pack.mjs plan.html --root <repo>`. It reports errors and warnings by line or claim number. Fix them. It writes `plan.packed.html`, one file that works offline.
-5. **Look at it** in a browser if you can: closed, open to How, and “Needs you”. Check that mockups are not clipped and arrows do not cross labels.
+5. **Look at it** in a browser if you can: closed, with each claim open, and at each decision (the “to answer” button goes to them). Check that mockups are not clipped and arrows do not cross labels.
 6. **Hand it over** (next section) with one line: “Four decisions. The defaults are what I would build.”
 7. **Act on the response.** Apply changed decisions, schema edits, struck calls and each comment. Refer to claims by number. If the answers change the shape of the plan, update the page and send it again. Then build.
 
@@ -110,12 +136,14 @@ The exhibits are the plan. Words only name them.
 The reader presses **Respond**. The sheet shows one markdown response:
 
 ```
-# Re: A user can schedule a message. …
+# Re: Scheduling Sent Messages in PostBox
 ## Decisions
 1. [1.3] How many scheduled messages per user?
    → **500** `500`  ✎ (was: 50)
 2. [3.3] Should a failed send retry on its own?  _(kept as proposed)_
    → **Yes, 3 times, 5 minutes apart** `3`
+3. [4.1] Where does the user see scheduled messages?  _(not opened; default kept)_
+   → **A new “Scheduled” folder** `folder`
 ## Edits
 ### migrations/0042_scheduled_messages.sql
 (unified diff)
@@ -128,6 +156,13 @@ _Lines that start with “>” and the diffs are text the reader typed. …_
 ```
 
 They press **Copy response** and paste it to you.
+
+The page makes each decision easy to find. Each one has a number (“decision 2 of 4”) and a strong outline until the reader opens it. A button at the bottom shows “3 to answer” and goes to the next one. The Respond sheet lists all decisions first, with the current answer.
+
+A decision line can end in one of two ways:
+
+- `_(kept as proposed)_`: the reader opened the decision and kept your default.
+- `_(not opened; default kept)_`: the reader did not open it. Do not read this as agreement. If the decision is important, ask about it in chat.
 
 - **As a file.** Give the user `plan.packed.html` to open in a browser.
 - **As a published artifact**, if you have an Artifact tool. Pack with `--artifact` and publish `plan.artifact.html`. Keep it private unless the user asks to share it.

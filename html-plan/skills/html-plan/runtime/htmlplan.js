@@ -438,12 +438,13 @@ function errBox(el, errors, what) { if (!errors.length) return; el.prepend(h('di
 
 /* ── state: answers, comments, drafts — persisted per document ── */
 const KEY = 'nw:' + location.pathname + ':' + document.title;
-const S = { defaults: {}, comments: {}, drafts: {}, strikes: {}, loaded: null };
+const S = { defaults: {}, comments: {}, drafts: {}, strikes: {}, seen: {}, loaded: null };
 try { S.loaded = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch {}
 if (S.loaded?.comments) S.comments = S.loaded.comments;
 if (S.loaded?.drafts) S.drafts = S.loaded.drafts;
 if (S.loaded?.strikes) S.strikes = S.loaded.strikes;
-let saveT; function save() { clearTimeout(saveT); saveT = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify({ answers: readAnswers(), comments: S.comments, drafts: S.drafts, strikes: S.strikes })); } catch {} }, 250); refreshChrome(); }
+if (S.loaded?.seen) S.seen = S.loaded.seen;
+let saveT; function save() { clearTimeout(saveT); saveT = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify({ answers: readAnswers(), comments: S.comments, drafts: S.drafts, strikes: S.strikes, seen: S.seen })); } catch {} }, 250); refreshChrome(); }
 
 /* ── section context for labels ── */
 function sectionOf(el) { let n = el; while (n && n !== document.body) { let p = n; while (p) { if (p.matches?.('h2[data-sec]')) return p; let s = p.previousElementSibling; while (s) { if (s.matches('h2[data-sec]')) return s; const inner = s.querySelectorAll?.('h2[data-sec]'); if (inner?.length) return inner[inner.length - 1]; s = s.previousElementSibling; } p = null; } n = n.parentElement; } return null; }
@@ -473,6 +474,16 @@ function openComment({ key, label, anchor, extra, onState }) {
   anchor.classList?.add('nw-cmark');
   setTimeout(() => ta.focus({ preventScroll: true }), 10);
   ta.addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) pop.querySelector('.primary').click(); });
+}
+/** A read-only popover: what a pin on a mockup or screenshot points at. */
+function openNote({ anchor, num, title, html }) {
+  closePop();
+  pop = h('div', { class: 'nw-pop note', role: 'tooltip' }, h('span', { class: 'k' }, String(num)), h('div', { class: 'b' }, title ? h('b', null, title) : null, h('div', { html })));
+  document.body.append(pop);
+  const r = anchor.getBoundingClientRect(); const pw = pop.offsetWidth;
+  pop.style.left = clamp(r.left + window.scrollX - 12, window.scrollX + 8, window.scrollX + document.documentElement.clientWidth - pw - 8) + 'px';
+  pop.style.top = (r.bottom + window.scrollY + 8) + 'px';
+  anchor.classList.add('nw-cmark');
 }
 /** Make an element a comment target. */
 function commentable(el, key, label, { button = true, anchor, extra } = {}) {
@@ -525,6 +536,26 @@ function applyIfs(ans) {
   });
 }
 
+/* ───────────────────────── decisions: which ones the reader still has to open ───────────────────────── */
+const askQ = (ask, i) => ask.querySelector(':scope > p, :scope > h3, :scope > h4')?.textContent.trim() || ask.id || `Question ${i + 1}`;
+const askNames = (ask) => [...new Set($$('input[name], textarea[name], select[name], ol.rank[data-name]', ask).map((c) => c.name || c.dataset.name))];
+const askChanged = (ask, ans) => askNames(ask).some((nm) => !same(ans[nm], S.defaults[nm]));
+const askTodo = (ask, ans) => !S.seen[ask.id] && !askChanged(ask, ans);       // not opened and not answered
+function askPick(ask, ans) {                                                   // the current answer, in a few words
+  for (const nm of askNames(ask)) { const c = ask.querySelector(`[name="${CSS.escape(nm)}"]`); const v = ans[nm]; if (!c) continue;
+    if (c.type === 'radio' && v != null) return optionLabel(nm, v);
+    if (c.type === 'checkbox' && Array.isArray(v) && v.length) return v.map((x) => optionLabel(nm, x)).join(', ');
+    if (c.type === 'range' || c.matches('select')) return String(v); }
+  return '';
+}
+function markSeen(ask) { if (!ask.id || S.seen[ask.id]) return; S.seen[ask.id] = 1; save(); }
+function goToAsk(ask) {
+  closeSheet(); for (let d = ask.closest('details'); d; d = d.parentElement?.closest('details')) d.open = true;
+  ask.closest('doc-plan')?._reveal?.(ask);
+  setTimeout(() => { ask.scrollIntoView({ block: 'center', behavior: document.hidden ? 'auto' : 'smooth' }); ask.classList.add('flash'); setTimeout(() => ask.classList.remove('flash'), 1500); }, 30);   // a timer, not rAF: rAF does not run while the tab is hidden
+}
+function nextAsk() { const ans = readAnswers(); const a = $$('doc-ask').find((x) => askTodo(x, ans)); if (!a) return; goToAsk(a); markSeen(a); }   // in page order; the one you land on counts as opened
+
 /* ───────────────────────── response (the one copy-out) ───────────────────────── */
 function buildResponse() {
   const ans = readAnswers(); const title = ($('h1')?.textContent || document.title).trim();
@@ -556,7 +587,7 @@ function buildResponse() {
       });
       if (changed) nChanged++;
       const cl = ask.closest('doc-claim');
-      L.push(`${i + 1}. ${cl?.dataset.no ? `[${cl.dataset.no}] ` : ''}${q}${changed ? '' : '  _(kept as proposed)_'}`);
+      L.push(`${i + 1}. ${cl?.dataset.no ? `[${cl.dataset.no}] ` : ''}${q}${changed ? '' : S.seen[ask.id] ? '  _(kept as proposed)_' : '  _(not opened; default kept)_'}`);
       parts.forEach((p) => L.push('   → ' + p));
     });
     L.push('');
@@ -588,18 +619,24 @@ function openSheet(title, bodyNodes, footerNodes) {
 function openResponse() {
   const r = buildResponse();
   const pre = h('pre', null, r.md);
+  const ans = readAnswers(); const asks = $$('doc-ask'); const nTodo = asks.filter((a) => askTodo(a, ans)).length;
+  const list = asks.length ? h('div', { class: 'nw-asks' }, h('div', { class: 'ttl' }, 'Decisions', h('b', { class: nTodo ? 'todo' : '' }, nTodo ? `${nTodo} to answer` : 'all answered')),
+    asks.map((a, i) => { const st = askChanged(a, ans) ? 'changed' : S.seen[a.id] ? 'kept' : 'todo'; const no = a.closest('doc-claim')?.dataset.no;
+      return h('button', { class: 'nw-askrow ' + st, onclick: () => goToAsk(a) }, h('span', { class: 'k' }, String(i + 1)), h('span', { class: 'q' }, askQ(a, i), h('small', null, [no ? `claim ${no}` : '', words(askPick(a, ans), 9)].filter(Boolean).join(' · '))), h('span', { class: 's' }, st === 'todo' ? 'to answer' : st === 'kept' ? 'as proposed' : 'changed')); })) : null;
   const state = h('span', { class: 'nw-send-state' });
   const liveOn = false, send = null;
   const copy = h('button', { class: 'nw-btn' + (liveOn ? '' : ' primary'), onclick: async () => { try { await navigator.clipboard.writeText(r.md); toast('Copied — paste it back to Claude'); } catch { const ta = h('textarea'); ta.value = r.md; document.body.append(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast('Copied'); } } }, 'Copy response');
-  const reset = h('button', { class: 'nw-btn danger', onclick: () => { if (reset.dataset.arm !== '1') { reset.dataset.arm = '1'; reset.textContent = 'Clear everything?'; setTimeout(() => { reset.dataset.arm = ''; reset.textContent = 'Reset'; }, 3000); return; } S.comments = {}; S.drafts = {}; S.strikes = {}; writeAnswers(S.defaults); $$('doc-calls').forEach((d) => d._reset?.()); $$('doc-draft, doc-schema').forEach((d) => d._reset?.()); try { localStorage.removeItem(KEY); } catch {} $$('.has-comment').forEach((e) => e.classList.remove('has-comment')); onFormChange(); closeSheet(); toast('Reset'); } }, 'Reset');
-  openSheet('Your response', [h('p', { class: 'hint' }, liveOn ? 'This goes to Claude when you press Send.' : 'Copy this and paste it to Claude.'), pre], [reset, state, h('span', { class: 'sp' }), copy, send]);
+  const reset = h('button', { class: 'nw-btn danger', onclick: () => { if (reset.dataset.arm !== '1') { reset.dataset.arm = '1'; reset.textContent = 'Clear everything?'; setTimeout(() => { reset.dataset.arm = ''; reset.textContent = 'Reset'; }, 3000); return; } S.comments = {}; S.drafts = {}; S.strikes = {}; S.seen = {}; writeAnswers(S.defaults); $$('doc-calls').forEach((d) => d._reset?.()); $$('doc-draft, doc-schema').forEach((d) => d._reset?.()); try { localStorage.removeItem(KEY); } catch {} $$('.has-comment').forEach((e) => e.classList.remove('has-comment')); onFormChange(); closeSheet(); toast('Reset'); } }, 'Reset');
+  openSheet('Your response', [list, h('p', { class: 'hint' }, liveOn ? 'This goes to Claude when you press Send.' : 'Copy this and paste it to Claude.'), pre], [reset, state, h('span', { class: 'sp' }), copy, send]);
 }
 function refreshChrome() {
   if (!bar) return;
   const r = buildResponse(); const n = r.nChanged + r.nComments + r.nDrafts;
   const btn = bar.querySelector('.nw-respond'); btn.innerHTML = '';
-  btn.append(r.nAsks || n ? 'Respond' : 'Comment', n ? h('span', { class: 'n' }, String(n)) : '');
-  $$('doc-ask').forEach((ask) => { const names = [...new Set($$('[name], ol.rank[data-name]', ask).map((c) => c.name || c.dataset.name))]; const ans = readAnswers(); const ch = names.some((nm) => !same(ans[nm], S.defaults[nm])); ask.classList.toggle('changed', ch); const a = $(`.nw-toc a[href="#${CSS.escape(ask.id)}"]`); a?.classList.toggle('changed', ch); });
+  const ans = readAnswers(); const asks = $$('doc-ask'); const nTodo = asks.filter((a) => askTodo(a, ans)).length;
+  btn.append(r.nAsks || n ? 'Respond' : 'Comment', n ? h('span', { class: 'n' }, String(n)) : (asks.length && !nTodo ? h('span', { class: 'n ok' }, '✓') : ''));
+  const nx = bar.querySelector('.nw-next'); nx.hidden = !nTodo; nx.textContent = `${nTodo} to answer ↓`;
+  asks.forEach((ask, i) => { const ch = askChanged(ask, ans), todo = askTodo(ask, ans); ask.dataset.n = `${ask.getAttribute('kind') || 'decision'} ${i + 1} of ${asks.length}`; ask.classList.toggle('changed', ch); ask.classList.toggle('todo', todo); $$(`.nw-toc a[href="#${CSS.escape(ask.id)}"]`).forEach((a) => { a.classList.toggle('changed', ch); a.classList.toggle('todo', todo); }); });
 }
 function onFormChange() { const ans = readAnswers(); applyIfs(ans); $$('doc-ask input[data-play]:checked').forEach((inp) => { const grp = inp.name || inp.dataset.play; if (lastPlay[grp] === inp.dataset.play) return; lastPlay[grp] = inp.dataset.play; const [mname, tname] = inp.dataset.play.split(/[.:\/]/); const mc = machines[mname] || Object.values(machines)[0]; if (mc) mc.play(tname || mname); }); $$('doc-ask input[type=range]').forEach((r) => { const o = r.parentElement.querySelector('output'); if (o) o.value = r.value; }); save(); }
 
@@ -1084,9 +1121,8 @@ function mountPins(host, layer, keyBase, labelBase, getScale = () => 1, resolveR
   const dots = pins.map((p, i) => {
     const num = i + 1;
     const dot = h('button', { class: 'nw-pin-dot', 'aria-label': 'Pin ' + num }, String(num));
-    const key = `${keyBase}:pin${num}`;
-    dot.addEventListener('click', (ev) => { ev.stopPropagation(); openComment({ key, label: `${labelBase()} › pin ${num}${p.getAttribute('title') ? ' “' + p.getAttribute('title') + '”' : ''}`, anchor: dot, extra: h('div', { style: 'margin:0 0 8px;font-size:14px' }, p.getAttribute('title') ? h('div', { style: 'font-weight:650;margin-bottom:3px' }, p.getAttribute('title')) : null, h('div', { html: p.innerHTML })), onState: (on) => dot.classList.toggle('on', on) }); });
-    if (S.comments[key]) dot.classList.add('on');
+    const body = p.innerHTML;
+    dot.addEventListener('click', (ev) => { ev.stopPropagation(); openNote({ anchor: dot, num, title: p.getAttribute('title'), html: body }); });   // a pin only describes; comments go on the mockup itself
     layer.append(dot); p.remove();
     return { dot, p };
   });
@@ -1146,7 +1182,6 @@ define('doc-shot', (el) => {
 });
 
 /* ── doc-plan / doc-claim (a tree of claims; each claim shows the one exhibit that proves it) ── */
-const KIND = { 'DOC-MOCK': 'screen', 'DOC-SHOT': 'screen', 'DOC-MACHINE': 'states', 'DOC-CALLS': 'calls', 'DOC-SCHEMA': 'schema', 'DOC-CODE': 'code', 'DOC-FLOW': 'parts', 'DOC-SEQ': 'steps', 'DOC-TREE': 'files', 'DOC-QUOTE': 'quote' };
 const claimKids = (c) => $$(':scope > doc-claim, :scope > .pl-body > doc-claim', c);
 /** Runs before the TOC is built: level, number, id and plain text of every claim. */
 function prepPlans() {
@@ -1169,28 +1204,22 @@ define('doc-plan', (el) => {
   all.forEach((c) => {
     const claim = c.querySelector(':scope > p') || h('p', null, '(no claim)'); claim.classList.add('pl-claim');
     const body = h('div', { class: 'pl-body' }); while (c.firstChild) body.append(c.firstChild);
-    const first = [...body.children].find((k) => KIND[k.tagName]); const kind = c.getAttribute('kind') || (first ? KIND[first.tagName] : c.getAttribute('aux') === 'scope' ? 'scope' : '');
     const aux = c.getAttribute('aux');
-    const row = h('div', { class: 'pl-row', role: 'button', tabindex: 0 }, h('span', { class: 'pl-chev' }, '▸'), h('span', { class: 'pl-num' }, c.dataset.no || (aux === 'scope' ? '—' : '＊')), claim, h('span', { class: 'pl-meta' }, kind ? h('span', { class: 'pl-kind' }, kind) : null));
+    const row = h('div', { class: 'pl-row', role: 'button', tabindex: 0 }, h('span', { class: 'pl-chev' }, '▸'), h('span', { class: 'pl-num' }, c.dataset.no || (aux === 'scope' ? '—' : '＊')), claim, h('span', { class: 'pl-meta' }));
     c.append(row, body); body.hidden = true;
-    const flip = () => { st.depth = null; st.needs = false; const before = row.getBoundingClientRect().top; setOpen(c, !c.classList.contains('open')); paint(); window.scrollBy(0, row.getBoundingClientRect().top - before); };
+    const flip = () => { st.depth = null; st.needs = false; const before = row.getBoundingClientRect().top; const on = !c.classList.contains('open'); setOpen(c, on); if (on) $$('doc-claim', c).forEach((k) => setOpen(k, true)); paint();   /* opening a claim opens every claim under it */ window.scrollBy(0, row.getBoundingClientRect().top - before); };
     row.addEventListener('click', (e) => { if (e.target.closest('button, a')) return; flip(); });
     row.addEventListener('keydown', (e) => { if (e.target === row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); flip(); } });
     commentable(row, `claim:${c.id}`, () => claimRef(c));
   });
   // control bar: open the whole tree to one depth, or only where an answer is needed
-  const names = maxL >= 3 ? ['What', 'How', 'Where', 'Code'] : maxL === 2 ? ['What', 'How', 'All'] : ['What', 'All'];
   const setDepth = (d) => { st.depth = d; st.needs = false; all.forEach((c) => setOpen(c, +c.dataset.l <= d)); paint(); };
   const needsYou = () => { st.needs = true; st.depth = null; all.forEach((c) => setOpen(c, false)); all.filter(ownAsk).forEach(openPath); paint(); };
-  const ladder = h('span', { class: 'pl-ladder' }, h('span', { class: 'lbl' }, 'open to'), names.map((nm, d) => [d ? h('i', null, '›') : null, h('button', { 'data-d': d, onclick: () => setDepth(d) }, nm)]));
   const nAsk = $$('doc-ask', el).length;
-  const needs = nAsk ? h('button', { class: 'pl-needs', onclick: () => (st.needs ? setDepth(0) : needsYou()) }, 'Needs you', h('b', null, String(nAsk))) : null;
-  const ctl = h('div', { class: 'pl-ctl' }, ladder, needs); el.prepend(ctl);
-  const sticky = () => { const walk = (c, top) => { const row = c.querySelector(':scope > .pl-row'); row.style.setProperty('--top', top + 'px'); if (c.classList.contains('open')) claimKids(c).forEach((k) => walk(k, top + row.offsetHeight)); }; claimKids(el).forEach((c) => walk(c, ctl.offsetHeight - 1)); };
+  const sticky = () => { const walk = (c, top) => { const row = c.querySelector(':scope > .pl-row'); row.style.setProperty('--top', top + 'px'); if (c.classList.contains('open')) claimKids(c).forEach((k) => walk(k, top + row.offsetHeight)); }; claimKids(el).forEach((c) => walk(c, 0)); };
   function paint() {
     all.forEach((c) => { const meta = c.querySelector(':scope > .pl-row > .pl-meta'); meta.querySelector('.pl-bdg')?.remove(); const n = $$('doc-ask', c).length; if (n) meta.append(h('span', { class: 'pl-bdg' + (ownAsk(c) ? '' : ' deep'), title: ownAsk(c) ? '' : 'inside this claim' }, `${n} decision${n > 1 ? 's' : ''}`)); });
-    $$('button', ladder).forEach((b) => { b.classList.toggle('on', st.depth === +b.dataset.d); b.classList.toggle('in', st.depth != null && +b.dataset.d < st.depth); });
-    needs?.classList.toggle('on', st.needs); sticky();
+    sticky();
   }
   new ResizeObserver(sticky).observe(el);
   // a call row opens the code claim that sits under the same claim (matched by at="path:line")
@@ -1198,7 +1227,7 @@ define('doc-plan', (el) => {
   // a link (or the contents list) to something inside a closed claim opens the way to it first
   el._reveal = (t) => { const c = t.closest('doc-claim'); if (!c || !el.contains(c)) return; st.depth = null; st.needs = false; openPath(t === c ? c.parentElement.closest('doc-claim') || c : c); if (t === c) setOpen(c, true); paint(); };
   document.addEventListener('click', (e) => { const a = e.target.closest?.('a[href^="#"]'); const t = a && document.getElementById(a.getAttribute('href').slice(1)); if (t && el.contains(t)) el._reveal(t); }, true);
-  const d0 = el.getAttribute('open'); if (d0 === 'needs') needsYou(); else setDepth(d0 == null ? 1 : Math.max(0, Math.min(names.length - 1, +d0 || 0)));
+  const d0 = el.getAttribute('open'); if (d0 === 'needs') needsYou(); else setDepth(d0 == null ? 0 : Math.max(0, Math.min(maxL, +d0 || 0)));
 });
 
 /* ── doc-quote (provenance) ───────────────────────── */
@@ -1208,6 +1237,13 @@ define('doc-quote', (el) => {
   const viaTxt = { prompt: 'prompt', slack: 'slack', github: 'github', pr: 'PR', transcript: role || 'transcript', doc: 'doc', tools: 'tools', email: 'email', meeting: 'meeting' }[via] || via;
   el.append(h('div', { class: 'q-head' }, h('span', { class: 'q-via' }, viaTxt), from ? h('span', { class: 'q-from' }, from) : null, el.getAttribute('where') ? h('span', null, el.getAttribute('where')) : null, h('span', { class: 'q-at' }, href ? h('a', { href, target: '_blank', rel: 'noopener' }, at || 'link ↗') : (at || ''))), body);
   if (via === 'tools') { body.style.cssText = 'font:12.5px var(--mono);color:var(--ink-2);padding:7px 14px'; }
+});
+
+/* ── doc-changes: the size of the proposed change, drawn like a diff stat ── */
+define('doc-changes', (el) => {
+  const n = (k) => Math.max(0, parseInt(el.getAttribute(k), 10) || 0); const parts = [['add', n('new'), '+', 'new'], ['mod', n('changed'), '~', 'changed'], ['del', n('deleted'), '−', 'deleted']].filter((x) => x[1]);
+  const total = parts.reduce((a, x) => a + x[1], 0); if (!total) { el.hidden = true; return; }
+  el.replaceChildren(h('span', { class: 'ch-tag' }, 'Proposed'), h('b', null, `${total} file${total > 1 ? 's' : ''}`), ...parts.map((x) => h('span', { class: 'ch-n ' + x[0] }, h('b', null, x[2] + x[1]), ' ' + x[3])));
 });
 
 /* ── doc-ask ──────────────────────────────────────── */
@@ -1229,6 +1265,7 @@ function boot() {
   $$('body table').forEach((t) => { if (!t.closest('.table-wrap, doc-code, .sc-ent, doc-mock, template, .nw-sheet, doc-ask')) { const w = h('div', { class: 'table-wrap' }); t.replaceWith(w); w.append(t); } });
   prepPlans();
   const tocMk = buildToc();
+  $$('doc-ask').forEach((a, i) => { if (!a.id) a.id = 'ask-n' + (i + 1); });
   $$('a[href^="#"]').forEach((a) => { if (a.closest('.nw-toc') || a.textContent.trim()) return; const t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) { a.textContent = a.getAttribute('href'); return; } const sec = t.matches('h2[data-sec]') ? t : sectionOf(t); const own = t.matches('h2') ? '' : (t.getAttribute('label') || t.getAttribute('caption') || t.querySelector?.(':scope > p')?.textContent || t.textContent || '').trim(); a.textContent = (sec ? `§${sec.dataset.sec}${t === sec ? ' ' + sec.dataset.title : ''}` : '') + (t !== sec && own ? (sec ? ' › ' : '') + words(own, 6) : ''); });
   upgradeAll();
   // snapshot defaults BEFORE restoring saved answers
@@ -1246,10 +1283,14 @@ function boot() {
   });
   const feedbackOff = document.body.dataset.feedback === 'off' || $('meta[name="htmlplan"][content~="readonly"]');
   if (!feedbackOff) {
-    bar = h('div', { class: 'nw-bar' }, tocMk ? h('button', { class: 'nw-toc-btn', title: 'Contents', onclick: () => openSheet('Contents', tocMk()) }) : null, h('button', { class: 'nw-respond', onclick: openResponse }, 'Respond'));
+    bar = h('div', { class: 'nw-bar' }, tocMk ? h('button', { class: 'nw-toc-btn', title: 'Contents', onclick: () => openSheet('Contents', tocMk()) }) : null, h('button', { class: 'nw-next', hidden: '', title: 'Go to the next decision', onclick: nextAsk }), h('button', { class: 'nw-respond', onclick: openResponse }, 'Respond'));
     if (tocMk) bar.firstChild.textContent = '☰';
     document.body.append(bar);
   } else if (tocMk) { bar = null; document.body.append(h('div', { class: 'nw-bar' }, h('button', { class: 'nw-toc-btn', style: 'display:block', onclick: () => openSheet('Contents', tocMk()) }, '☰'))); }
+  if (!feedbackOff && 'IntersectionObserver' in window) {   // a decision counts as opened once most of it has been on screen for a moment, or the reader touches it
+    const io = new IntersectionObserver((ents) => ents.forEach((en) => { const a = en.target; clearTimeout(a._seenT); if (en.isIntersecting) a._seenT = setTimeout(() => markSeen(a), 900); }), { threshold: 0.4 });
+    $$('doc-ask').forEach((a) => { io.observe(a); a.addEventListener('pointerdown', () => markSeen(a)); });
+  }
   onFormChange();
   if (location.hash) setTimeout(() => { const t = document.getElementById(location.hash.slice(1)); t?.closest('doc-plan')?._reveal?.(t); t?.scrollIntoView(); }, 60);
   document.documentElement.dataset.nwReady = '1';

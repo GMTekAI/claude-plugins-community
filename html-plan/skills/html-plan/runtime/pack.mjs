@@ -49,12 +49,14 @@ const findFile = (p) => { for (const cand of [...roots.map((r) => resolve(r, p))
     if (SECRET_NAME.test(f)) { if (!refused.has(p)) { refused.add(p); err(`"${p}" looks like a secrets file — not reading it`); } continue; }
     return f; } return null; };
 /** read a file at a git ref: tries `git show ref:path` in each --root that is a git checkout */
-const git = (r, ...args) => execFileSync('git', ['-c', 'core.fsmonitor=false', '-c', 'core.hooksPath=/dev/null', '-c', 'core.pager=cat', '-c', 'diff.external=', '-c', 'core.sshCommand=false', '-C', r, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64e6, env: { ...process.env, GIT_OPTIONAL_LOCKS: '0', GIT_TERMINAL_PROMPT: '0' } });
+// Only two plumbing commands are ever run: `rev-parse` and `cat-file blob`. Neither touches the work tree, so no filter, hook, fsmonitor,
+// pager, diff or credential program named in a repo's config can be started. (`status`, `diff` and `show` can start one, so they are not used.)
+const git = (r, cmd, ...args) => { if (cmd !== 'rev-parse' && cmd !== 'cat-file') throw new Error('git ' + cmd + ' is not allowed'); return execFileSync('git', ['-c', 'core.fsmonitor=false', '-c', 'core.hooksPath=/dev/null', '-C', r, cmd, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64e6, env: { ...process.env, GIT_OPTIONAL_LOCKS: '0', GIT_TERMINAL_PROMPT: '0', GIT_PAGER: 'cat' } }); };
 /** short sha of the --root checkout a file sits in (+wt when the file has uncommitted changes); '' when it is not under a root or not in git */
-const stamp = (f, wt) => { for (const r of roots) { const rr = real(r); if (!rr || !(f === rr || f.startsWith(rr + sep))) continue; try { const top = git(rr, 'rev-parse', '--short', 'HEAD').trim(); return top + (wt && git(rr, 'status', '--porcelain', '--', relative(rr, f)).trim() ? '+wt' : ''); } catch {} } return ''; };
+const stamp = (f, wt) => { for (const r of roots) { const rr = real(r); if (!rr || !(f === rr || f.startsWith(rr + sep))) continue; try { const top = git(rr, 'rev-parse', '--short', 'HEAD').trim(); let same = true; if (wt) { try { same = git(rr, 'cat-file', 'blob', `HEAD:${relative(rr, f).split(sep).join('/')}`) === readFileSync(f, 'utf8'); } catch { same = false; } } return top + (same ? '' : '+wt'); } catch {} } return ''; };
 const REF_OK = /^[A-Za-z0-9][\w.\/^~@{}-]*$/;
 const gitShow = (ref, p) => { if (!REF_OK.test(ref) || /(^|\/)\.\.(\/|$)/.test(p) || p.startsWith('/') || p.startsWith('-') || SECRET_NAME.test(p)) { if (!refused.has(ref + ':' + p)) { refused.add(ref + ':' + p); err(`ref="${ref}" with "${p}" — not a plain git ref and a path inside the repo; not running git`); } return null; }
-  for (const r of roots) { try { return { text: git(r, 'show', '--end-of-options', `${ref}:${p}`), where: `${r}@${ref}` }; } catch {} } return null; };
+  for (const r of roots) { try { return { text: git(r, 'cat-file', 'blob', `${ref}:${p}`), where: `${r}@${ref}` }; } catch {} } return null; };
 const wc = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
 const stripTags = (t) => t.replace(/<[^>]+>/g, ' ');
 
@@ -64,7 +66,7 @@ if (!/<h1[\s>]/i.test(html)) warn('no <h1> — the response header uses it');
 if (!/<meta[^>]+charset/i.test(html)) warn('missing <meta charset="utf-8">');
 if (!/htmlplan\.css/.test(html) && !/<style[^>]*data-htmlplan/.test(html)) err('htmlplan.css is not linked — add <link rel="stylesheet" href="…/htmlplan.css">');
 if (!/htmlplan\.js/.test(html) && !/<script[^>]*data-htmlplan/.test(html)) err('htmlplan.js is not included — add <script src="…/htmlplan.js" defer></script>');
-const KNOWN = new Set(['doc-code', 'doc-pin', 'doc-flow', 'doc-seq', 'doc-schema', 'doc-tree', 'doc-calls', 'doc-machine', 'doc-mock', 'doc-shot', 'doc-quote', 'doc-ask', 'doc-note', 'doc-draft', 'doc-plan', 'doc-claim']);
+const KNOWN = new Set(['doc-code', 'doc-pin', 'doc-flow', 'doc-seq', 'doc-schema', 'doc-tree', 'doc-calls', 'doc-machine', 'doc-mock', 'doc-shot', 'doc-quote', 'doc-ask', 'doc-note', 'doc-draft', 'doc-plan', 'doc-claim', 'doc-changes']);
 for (const m of html.matchAll(/<(doc-[a-z]+)\b/g)) if (!KNOWN.has(m[1])) err(`line ${lineOf(m.index)}: unknown element <${m[1]}> — known: ${[...KNOWN].join(' ')}`);
 const ids = {}; for (const m of html.matchAll(/\sid=["']([^"']+)["']/g)) { if (ids[m[1]]) err(`duplicate id="${m[1]}" (lines ${ids[m[1]]} and ${lineOf(m.index)})`); ids[m[1]] = lineOf(m.index); }
 for (const m of html.matchAll(/href=["']#([^"']+)["']/g)) if (!ids[m[1]] && !/^s\d+/.test(m[1])) warn(`line ${lineOf(m.index)}: href="#${m[1]}" points at no id`);
@@ -101,6 +103,7 @@ html = html.replace(/<(doc-(?!plan\b|claim\b)[a-z]+)\b([^>]*)>([\s\S]*?)<\/\1>/g
       for (const nd of m.nodes) { if (!nd.file || !nd.line || nd.gap) continue; const key = `${nd.file}:${nd.line}`; if (have.has(key) || seen.has(key)) continue; seen.add(key);
         let text = null, sha = ''; const g = a.ref ? gitShow(a.ref, nd.file) : null; if (g) { text = g.text; sha = a.ref; } else { const f = findFile(nd.file); if (f) { text = readFileSync(f, 'utf8'); sha = stamp(f, false); } }
         if (text == null) { missing++; continue; }
+        if (SECRET_TEXT.test(text)) { warn(`${at}: ${nd.file} looks like it holds a secret somewhere — no excerpt from it`); continue; }
         const L = text.split('\n'); const ln = +String(nd.line).split('-')[0]; if (ln < 1 || ln > L.length) { warn(`${at}: ${key} — file has ${L.length} lines`); continue; }
         
         const s0 = Math.max(1, ln - CTX), s1 = Math.min(L.length, ln + CTX); const slice = L.slice(s0 - 1, s1).join('\n').replace(/<\/script/gi, '<\\/script');
@@ -133,6 +136,7 @@ html = html.replace(/<(doc-(?!plan\b|claim\b)[a-z]+)\b([^>]*)>([\s\S]*?)<\/\1>/g
           const all = roots.map((r) => resolve(r, a.src)).filter((c) => existsSync(c)); if (all.length > 1) warn(`${at}: src="${a.src}" exists under ${all.length} roots (${all.map((x) => relative(process.cwd(), x)).join(', ')}) — using the first; reorder --root or make the path more specific`);
           const f = findFile(a.src); if (!f) { err(`${at}: src="${a.src}" not found (looked under ${roots.concat([baseDir]).map((r) => relative(process.cwd(), r) || '.').join(', ')})`); return whole; } text = readFileSync(f, 'utf8'); where = relative(process.cwd(), f); if (!roots.some((r) => f.startsWith(r))) warn(`${at}: src="${a.src}" resolved OUTSIDE --root, at ${where} — check it's the file you mean`);
           if (!sha) sha = stamp(f, true); }
+        if (SECRET_TEXT.test(text)) { err(`${at}: ${a.src} looks like it holds a secret somewhere in the file — not packaging any of it`); return whole; }
         const total = text.split('\n').length; let start = 1;
         if (a.lines) { const mm = a.lines.match(/^(\d+)(?:-(\d+))?$/); if (!mm) err(`${at}: lines="${a.lines}" should look like 40-72`); else { start = +mm[1]; const end = +(mm[2] || mm[1]);   /* lines="40" is that one line */ if (end > total || start < 1 || start > end) err(`${at}: lines="${a.lines}" but ${a.src} has ${total} lines at ${where} — is --root (or ref=) at the commit you're citing?`); text = text.split('\n').slice(start - 1, end).join('\n'); } }
         if (SECRET_TEXT.test(text)) { err(`${at}: ${a.src} looks like it holds a secret — not packaging it`); return whole; } reads.add(a.src);
@@ -227,6 +231,14 @@ if (/<doc-plan\b/.test(html)) {
   const nAsk = (flat.match(/<doc-ask\b/g) || []).length; if (nAsk > 6) warn(`doc-plan: ${nAsk} decisions — 2 to 5; ask only about forks that change what you build, and default the rest`);
 }
 
+for (const m of html.matchAll(/<doc-changes\b([^>]*)>/g)) { const a = attrs(m[1]); if (!['new', 'changed', 'deleted'].some((k) => parseInt(a[k], 10) > 0)) warn(`line ${lineOf(m.index)} <doc-changes>: give new="N", changed="N" or deleted="N" (files) — with none it draws nothing`); }
+
+if (/<doc-plan\b/.test(html)) {   // a plan starts with a title, not a label line or a goal sentence
+  const k = html.match(/<p\s+class=["']?kicker\b/i); if (k) warn(`line ${lineOf(k.index)}: a plan has no label line above its title — remove <p class="kicker">; the page hides it`);
+  const m = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i); const t = m ? stripTags(m[1]).replace(/\s+/g, ' ').trim() : '';
+  if (t && (wc(t) > 8 || /[.!?](\s|$)/.test(t))) warn(`line ${lineOf(m.index)}: the <h1> of a plan is a title, not a sentence — name the change and the place in 3 to 7 words ("Scheduling Sent Messages in PostBox"); the level-1 claims say what changes`);
+}
+
 /* ── words: the blocks are the document; prose only joins them ── */
 { const main = (html.match(/<main[\s\S]*<\/main>/i) || [html])[0];
   const blocks = (main.match(/<doc-(code|flow|seq|schema|tree|calls|machine|mock|shot|ask|draft)\b/g) || []).length;
@@ -236,9 +248,19 @@ if (/<doc-plan\b/.test(html)) {
   if (long) warn(`${long} paragraph${long > 1 ? 's' : ''} over 40 words (longest ${longest}) — two short sentences, then a block; move the rest into a caption, a pin or a table`);
   if (slow) warn(`${slow} sentence${slow > 1 ? 's' : ''} over 25 words — split them; one idea per sentence`);
   if (total > 350 || (blocks && total / blocks > 45)) warn(`${total} words of prose for ${blocks} block${blocks === 1 ? '' : 's'} — aim for ≤ 350 words and ≤ ~30 per block; cut, or show it as a block`);
-  const FANCY = { utilize: 'use', utilizes: 'uses', leverage: 'use', leverages: 'uses', facilitate: 'help', facilitates: 'helps', 'in order to': 'to', subsequently: 'then', aforementioned: 'this', 'prior to': 'before', additionally: 'also', furthermore: 'also', comprehensive: 'full', robust: 'solid', seamless: 'smooth', seamlessly: 'smoothly', holistic: 'whole', paradigm: 'model', numerous: 'many', commence: 'start', terminate: 'end', approximately: 'about', demonstrate: 'show', demonstrates: 'shows', 'with respect to': 'about', 'due to the fact that': 'because' };
-  const text = stripTags(bare).toLowerCase(); const hits = Object.keys(FANCY).filter((w) => new RegExp(`\\b${w}\\b`).test(text));
-  if (hits.length) warn(`plain words: ${hits.slice(0, 6).map((w) => `"${w}" → "${FANCY[w]}"`).join(', ')}${hits.length > 6 ? ` … ${hits.length - 6} more` : ''}`); }
+  // ASD-STE100 (Simplified Technical English). This is a partial check: it knows a few common unapproved words and the countable writing rules, not the full dictionary.
+  const STE = { utilize: 'use', utilizes: 'uses', leverage: 'use', leverages: 'uses', facilitate: 'help', facilitates: 'helps', 'in order to': 'to', subsequently: 'then', aforementioned: 'this', 'prior to': 'before', additionally: 'also', furthermore: 'also', however: 'but', comprehensive: 'full', robust: 'strong', seamless: 'smooth', seamlessly: 'smoothly', numerous: 'many', commence: 'start', commences: 'starts', begin: 'start', begins: 'starts', terminate: 'stop', terminates: 'stops', demonstrate: 'show', demonstrates: 'shows', indicate: 'show', indicates: 'shows', ensure: 'make sure', ensures: 'makes sure', verify: 'make sure', verifies: 'makes sure', perform: 'do', performs: 'does', 'carry out': 'do', 'carries out': 'does', obtain: 'get', obtains: 'gets', provide: 'give', provides: 'gives', should: 'must', shall: 'must', might: 'can', 'with respect to': 'about', 'due to the fact that': 'because' };
+  const prose = stripTags(bare.replace(/<(code|kbd|pre)\b[\s\S]*?<\/\1>/gi, ' ')); const text = prose.toLowerCase();
+  const hits = Object.keys(STE).filter((w) => new RegExp(`\\b${w}\\b`).test(text)); if (/[a-z,] may\b/.test(prose)) { hits.push('may'); STE.may = 'can'; }
+  if (hits.length) warn(`ASD-STE100 words: ${hits.slice(0, 8).map((w) => `"${w}" → "${STE[w]}"`).join(', ')}${hits.length > 8 ? ` … ${hits.length - 8} more` : ''}`);
+  const contr = [...new Set(text.match(/\b(?:\w+n['’]t|(?:it|that|there|here|what|let|who)['’]s|\w+['’](?:re|ve|ll))\b/g) || [])];
+  if (contr.length) warn(`ASD-STE100: no contractions — ${contr.slice(0, 6).join(', ')}`);
+  const perfect = [...new Set(text.match(/\b(?:has|have|had) (?:been|already|not|never|just) \w+|\b(?:has|have|had) \w+ed\b/g) || [])];
+  if (perfect.length) warn(`ASD-STE100: use simple tenses, not "has/have + verb" — ${perfect.slice(0, 4).map((x) => `"${x}"`).join(', ')}`);
+  const passive = [...new Set(text.match(/\b(?:is|are|was|were|be|been|being) (?:\w+ed|written|sent|made|done|shown|taken|given|kept|held|read|run|set|put|built|chosen) by\b/g) || [])];
+  if (passive.length) warn(`ASD-STE100: use the active voice — ${passive.slice(0, 4).map((x) => `"${x}"`).join(', ')} (say who does it first)`);
+  let six = 0; for (const m of bare.matchAll(/<(p|li|dd|doc-note)\b[^>]*>([\s\S]*?)<\/\1>/gi)) if (stripTags(m[2]).split(/(?<=[.!?])\s+/).filter((x) => x.trim()).length > 6) six++;
+  if (six) warn(`ASD-STE100: ${six} paragraph${six > 1 ? 's' : ''} with more than 6 sentences — split`); }
 
 /* ── inline assets ── */
 let packed = html; let inlined = 0;
