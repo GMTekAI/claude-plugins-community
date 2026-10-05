@@ -23932,6 +23932,13 @@
       "strict": false,
       "description": "After each turn, suggests up to three next prompts above the input. Press 1, 2 or 3 to put one in the prompt box as a draft you can edit, 0 to dismiss.",
       "category": "productivity"
+    },
+    {
+      "name": "html-plan",
+      "source": "./html-plan",
+      "strict": false,
+      "description": "Write an implementation plan as one interactive HTML page: a tree of claims, each proved by a mockup, state machine, call stack, schema or code, with the decisions you need to make placed where they matter. Use /html-plan <what to build>.",
+      "category": "development"
     }
   ]
 }
